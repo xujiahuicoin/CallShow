@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="07734f1c-9ed9-41b7-965d-c0d1bc88f9d6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/CallShow.xcodeproj/project.pbxproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/AppDelegate+JPush.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/AppDelegate.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/AppIcon.appiconset/屏幕快照 2018-09-07 上午9.37.35iPadApp_76pt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/AppIcon.appiconset/屏幕快照 2018-09-07 上午9.37.35iPadApp_76pt@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/AppIcon.appiconset/屏幕快照 2018-09-07 上午9.37.35iPadNotifications_20pt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/AppIcon.appiconset/屏幕快照 2018-09-07 上午9.37.35iPadNotifications_20pt@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/AppIcon.appiconset/屏幕快照 2018-09-07 上午9.37.35iPadProApp_83.5pt@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/AppIcon.appiconset/屏幕快照 2018-09-07 上午9.37.35iPadSpootlight5_29pt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/AppIcon.appiconset/屏幕快照 2018-09-07 上午9.37.35iPadSpootlight5_29pt@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/AppIcon.appiconset/屏幕快照 2018-09-07 上午9.37.35iPadSpootlight7_40pt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/AppIcon.appiconset/屏幕快照 2018-09-07 上午9.37.35iPadSpootlight7_40pt@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/AppIcon.appiconset/屏幕快照 2018-09-07 上午9.37.35iPhoneApp_60pt@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/AppIcon.appiconset/屏幕快照 2018-09-07 上午9.37.35iPhoneApp_60pt@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/AppIcon.appiconset/屏幕快照 2018-09-07 上午9.37.35iPhoneNotification_20pt@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/AppIcon.appiconset/屏幕快照 2018-09-07 上午9.37.35iPhoneNotification_20pt@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/AppIcon.appiconset/屏幕快照 2018-09-07 上午9.37.35iPhoneSpootlight5_29pt@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/AppIcon.appiconset/屏幕快照 2018-09-07 上午9.37.35iPhoneSpootlight5_29pt@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/AppIcon.appiconset/屏幕快照 2018-09-07 上午9.37.35iPhoneSpootlight7_40pt@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/AppIcon.appiconset/屏幕快照 2018-09-07 上午9.37.35iPhoneSpootlight7_40pt@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/AppIcon.appiconset/屏幕快照 2018-09-07 上午9.37.35store_1024pt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/dian.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/dian.imageset/dian.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/dian.imageset/dian@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/dian.imageset/dian@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/huati0.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/huati0.imageset/shequ备份@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/huati0.imageset/shequ备份@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/huati1.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/huati1.imageset/shequ@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/huati1.imageset/shequ@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/mainpage_img10.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/mainpage_img10.imageset/shouye备份 17@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/mainpage_img10.imageset/shouye备份 17@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/mainpage_img11.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/mainpage_img11.imageset/shouye@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/mainpage_img11.imageset/shouye@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/mypage_img0.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/mypage_img0.imageset/wode-copy-copy备份 3@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/mypage_img0.imageset/wode-copy-copy备份 3@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/mypage_img1.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/mypage_img1.imageset/wode-copy-copy@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/mypage_img1.imageset/wode-copy-copy@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/qushitu_img0.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/qushitu_img0.imageset/market备份@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/qushitu_img0.imageset/market备份@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/qushitu_img1.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/qushitu_img1.imageset/market@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/qushitu_img1.imageset/market@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/shijianzhong_img.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/shijianzhong_img.imageset/flash_news_time_icon@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/shijianzhong_img.imageset/flash_news_time_icon@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/xinwend_img0.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/xinwend_img0.imageset/denglucelveguanli备份@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/xinwend_img0.imageset/denglucelveguanli备份@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/xinwend_img1.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/xinwend_img1.imageset/denglucelveguanli@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/tab/xinwend_img1.imageset/denglucelveguanli@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/whole/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/whole/balloon.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/whole/balloon.imageset/baloon.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/whole/close.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/whole/close.imageset/close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/whole/fanhuibai_img1.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/whole/fanhuibai_img1.imageset/返 回 (4).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/whole/fanhuibai_img1.imageset/返 回 (5).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/whole/goinright.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/whole/goinright.imageset/arrow_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/whole/goinright.imageset/arrow_icon@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/whole/goinright.imageset/arrow_icon@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/whole/nodata.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/whole/nodata.imageset/无数据 (7).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/whole/nodata.imageset/无数据 (8).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/whole/zhanweitu.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/whole/zhanweitu.imageset/zhanweitu@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Assets.xcassets/whole/zhanweitu.imageset/zhanweitu@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/ChangeCoin-Bridging-Header.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/FilesTools/CodeHeader.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/FilesTools/EnumFileHeader.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/FilesTools/MarkTool/xjh_CoinDataTool.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/FilesTools/MarkTool/xjh_CoinDataTool.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/FilesTools/UIButton+TimeInterval.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/FilesTools/UIButton+TimeInterval.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/FilesTools/func_Expantion.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CallShow/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
+    <ignored path="$USER_HOME$/Library/Caches/AppCode2019.1/DerivedData/ChangeCoin-gvfnjtfukvpwdqcdxevdeoqryakk/Build/Intermediates.noindex/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="286" />
+    <option name="y" value="427" />
+    <option name="width" value="1154" />
+    <option name="height" value="471" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="Cidr.FilesView" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Cidr.FilesView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ChangeCoin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CallShow" type="47feb1d3:ProjectViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Alamofire" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Pods" TARGET_NAME="Alamofire" CONFIG_NAME="Debug" SCHEME_NAME="Alamofire" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <embedded_app_extension_list />
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="07734f1c-9ed9-41b7-965d-c0d1bc88f9d6" name="Default Changelist" comment="" />
+      <created>1574663751337</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574663751337</updated>
+      <workItem from="1574663757528" duration="52000" />
+      <workItem from="1574663816711" duration="10000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="62000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="286" y="427" width="1154" height="471" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30125898" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
