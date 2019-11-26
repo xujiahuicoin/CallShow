@@ -17,20 +17,25 @@ enum CSID_MethodType : String {
 }
 
 class CSID_RequestManager {
-    
-    /// 网络请求
-    ///
-    /// - Parameters:
-    ///   - type: 请求类型 get/post
-    ///   - url: 链接
-    ///   - params: 参数
-    ///   - success: 成功回调
-    ///   - failure: 失败回调
+
+    // - Parameters:
+    //   - type: 请求类型 get/post
+    //   - url: 链接
+    //  - params: 参数
+    //   - success: 成功回调
+    //  - failure: 失败回调
     class func request(_ type : CSID_MethodType = .get, url : String, params : [String : Any]?, success : @escaping(_ data : Any) ->(), failure : @escaping (_ error : CSID_Error) ->()){
+        
+ 
+        var commonDict = ["channel":"appstore","osType":"ios","token":"ddmh%402018","udid":"com.CallShow.www","version":"1.0","vestId":"be5d3132-ff21-4add-a95c-50f3104abc4b"]as[String:Any]
+        
+        for(key,value)in params!{
+            commonDict[key]=value
+        }
         
         let method = type == .get ? HTTPMethod.get : HTTPMethod.post
         
-        Alamofire.request(url, method: method, parameters: params).responseJSON(completionHandler: { (response) in
+        Alamofire.request(url, method: method, parameters: commonDict).responseJSON(completionHandler: { (response) in
             
             if let json = response.result.value {
 
@@ -51,8 +56,6 @@ class CSID_RequestManager {
             }
         })
     }
-    
-    
     
     
     class func requestHeader(_ type : CSID_MethodType = .get, url : String, params : [String : Any]?,headers:[String:Any], success : @escaping(_ data : Any) ->(), failure : @escaping (_ error : CSID_Error) ->()){

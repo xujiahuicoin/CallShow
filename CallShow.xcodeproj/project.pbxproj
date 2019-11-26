@@ -61,17 +61,19 @@
 		043516AF235DAD8A00764962 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042D4274235DAA5E0075B700 /* Assets.xcassets */; };
 		043911E52355620700636064 /* CodeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043911AE2355620700636064 /* CodeHeader.swift */; };
 		043911EB2355688100636064 /* AppDelegate+JPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043911E82355688100636064 /* AppDelegate+JPush.swift */; };
-		0469C98E238BCCA2008FA4FD /* CSID_CallShowMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469C98C238BCCA2008FA4FD /* CSID_CallShowMe.swift */; };
-		0469C98F238BCCA2008FA4FD /* CSID_CallShowMe.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0469C98D238BCCA2008FA4FD /* CSID_CallShowMe.xib */; };
-		049034B6238CC53B00C91F08 /* CSID_BuyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049034B4238CC53B00C91F08 /* CSID_BuyVC.swift */; };
-		049034B7238CC53B00C91F08 /* CSID_BuyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049034B5238CC53B00C91F08 /* CSID_BuyVC.xib */; };
-		049034BA238CC5A500C91F08 /* CSID_FeedbackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049034B8238CC5A500C91F08 /* CSID_FeedbackVC.swift */; };
-		049034BB238CC5A500C91F08 /* CSID_FeedbackVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049034B9238CC5A500C91F08 /* CSID_FeedbackVC.xib */; };
-		049034BE238CD0B600C91F08 /* yinsi.html in Resources */ = {isa = PBXBuildFile; fileRef = 049034BC238CD0B600C91F08 /* yinsi.html */; };
-		049034BF238CD0B600C91F08 /* server.html in Resources */ = {isa = PBXBuildFile; fileRef = 049034BD238CD0B600C91F08 /* server.html */; };
-		049034C1238CD13E00C91F08 /* CSID_WkWebViC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049034C0238CD13D00C91F08 /* CSID_WkWebViC.swift */; };
-		049034C3238CDA6000C91F08 /* CSID_MyHelpsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049034C2238CDA6000C91F08 /* CSID_MyHelpsVC.swift */; };
+		049034D1238CDEA100C91F08 /* yinsi.html in Resources */ = {isa = PBXBuildFile; fileRef = 049034C5238CDEA100C91F08 /* yinsi.html */; };
+		049034D2238CDEA100C91F08 /* CSID_CallShowMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049034C7238CDEA100C91F08 /* CSID_CallShowMe.swift */; };
+		049034D3238CDEA100C91F08 /* CSID_CallShowMe.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049034C8238CDEA100C91F08 /* CSID_CallShowMe.xib */; };
+		049034D4238CDEA100C91F08 /* CSID_WkWebViC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049034CA238CDEA100C91F08 /* CSID_WkWebViC.swift */; };
+		049034D5238CDEA100C91F08 /* CSID_MyHelpsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049034CB238CDEA100C91F08 /* CSID_MyHelpsVC.swift */; };
+		049034D6238CDEA100C91F08 /* CSID_BuyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049034CC238CDEA100C91F08 /* CSID_BuyVC.xib */; };
+		049034D7238CDEA100C91F08 /* CSID_BuyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049034CD238CDEA100C91F08 /* CSID_BuyVC.swift */; };
+		049034D8238CDEA100C91F08 /* CSID_FeedbackVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049034CE238CDEA100C91F08 /* CSID_FeedbackVC.xib */; };
+		049034D9238CDEA100C91F08 /* CSID_FeedbackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049034CF238CDEA100C91F08 /* CSID_FeedbackVC.swift */; };
+		049034DA238CDEA100C91F08 /* server.html in Resources */ = {isa = PBXBuildFile; fileRef = 049034D0238CDEA100C91F08 /* server.html */; };
+		049034F3238CF85F00C91F08 /* CSID_BuyTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049034F2238CF85F00C91F08 /* CSID_BuyTool.swift */; };
 		0494ADDD235475EE00DEE0B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494ADDC235475EE00DEE0B2 /* AppDelegate.swift */; };
+		04C7C902238CBAFE00E72693 /* CallShowPortHeaderFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7C901238CBAFE00E72693 /* CallShowPortHeaderFile.swift */; };
 		04DF583823714ED00079669B /* EnumFileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF583723714ED00079669B /* EnumFileHeader.swift */; };
 		04DF5854237271B20079669B /* func_Expantion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF5853237271B20079669B /* func_Expantion.swift */; };
 		4F30EFB98176F64FA26EEA28 /* Pods_CallShow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F52B52DED5FE0F3B8F6A635 /* Pods_CallShow.framework */; };
@@ -153,21 +155,23 @@
 		043911AE2355620700636064 /* CodeHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeHeader.swift; sourceTree = "<group>"; };
 		043911E82355688100636064 /* AppDelegate+JPush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+JPush.swift"; sourceTree = "<group>"; };
 		0439120F235572C100636064 /* CallShow-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CallShow-Bridging-Header.h"; sourceTree = "<group>"; };
-		0469C98C238BCCA2008FA4FD /* CSID_CallShowMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_CallShowMe.swift; sourceTree = "<group>"; };
-		0469C98D238BCCA2008FA4FD /* CSID_CallShowMe.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CSID_CallShowMe.xib; sourceTree = "<group>"; };
-		049034B4238CC53B00C91F08 /* CSID_BuyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_BuyVC.swift; sourceTree = "<group>"; };
-		049034B5238CC53B00C91F08 /* CSID_BuyVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CSID_BuyVC.xib; sourceTree = "<group>"; };
-		049034B8238CC5A500C91F08 /* CSID_FeedbackVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_FeedbackVC.swift; sourceTree = "<group>"; };
-		049034B9238CC5A500C91F08 /* CSID_FeedbackVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CSID_FeedbackVC.xib; sourceTree = "<group>"; };
-		049034BC238CD0B600C91F08 /* yinsi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = yinsi.html; sourceTree = "<group>"; };
-		049034BD238CD0B600C91F08 /* server.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = server.html; sourceTree = "<group>"; };
-		049034C0238CD13D00C91F08 /* CSID_WkWebViC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSID_WkWebViC.swift; sourceTree = "<group>"; };
-		049034C2238CDA6000C91F08 /* CSID_MyHelpsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSID_MyHelpsVC.swift; sourceTree = "<group>"; };
+		049034C5238CDEA100C91F08 /* yinsi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = yinsi.html; sourceTree = "<group>"; };
+		049034C7238CDEA100C91F08 /* CSID_CallShowMe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSID_CallShowMe.swift; sourceTree = "<group>"; };
+		049034C8238CDEA100C91F08 /* CSID_CallShowMe.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSID_CallShowMe.xib; sourceTree = "<group>"; };
+		049034CA238CDEA100C91F08 /* CSID_WkWebViC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSID_WkWebViC.swift; sourceTree = "<group>"; };
+		049034CB238CDEA100C91F08 /* CSID_MyHelpsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSID_MyHelpsVC.swift; sourceTree = "<group>"; };
+		049034CC238CDEA100C91F08 /* CSID_BuyVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSID_BuyVC.xib; sourceTree = "<group>"; };
+		049034CD238CDEA100C91F08 /* CSID_BuyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSID_BuyVC.swift; sourceTree = "<group>"; };
+		049034CE238CDEA100C91F08 /* CSID_FeedbackVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSID_FeedbackVC.xib; sourceTree = "<group>"; };
+		049034CF238CDEA100C91F08 /* CSID_FeedbackVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSID_FeedbackVC.swift; sourceTree = "<group>"; };
+		049034D0238CDEA100C91F08 /* server.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = server.html; sourceTree = "<group>"; };
+		049034F2238CF85F00C91F08 /* CSID_BuyTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_BuyTool.swift; sourceTree = "<group>"; };
 		0494ADD9235475EE00DEE0B2 /* CallShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CallShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0494ADDC235475EE00DEE0B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0494ADEA235475F200DEE0B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0494ADEF235475F200DEE0B2 /* CallShowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallShowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0494ADFA235475F300DEE0B2 /* CallShowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallShowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04C7C901238CBAFE00E72693 /* CallShowPortHeaderFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallShowPortHeaderFile.swift; sourceTree = "<group>"; };
 		04DF583723714ED00079669B /* EnumFileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumFileHeader.swift; sourceTree = "<group>"; };
 		04DF5853237271B20079669B /* func_Expantion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = func_Expantion.swift; sourceTree = "<group>"; };
 		5A7E1DCF7E9F8317DC87C391 /* Pods-ChangeCoin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChangeCoin.debug.xcconfig"; path = "Target Support Files/Pods-ChangeCoin/Pods-ChangeCoin.debug.xcconfig"; sourceTree = "<group>"; };
@@ -206,24 +210,12 @@
 		04089A402361B9A700452304 /* CallShowCode */ = {
 			isa = PBXGroup;
 			children = (
+				049034DB238CE1D500C91F08 /* In-appbuy */,
 				04B0BB60238BAB8800DBFF12 /* CallShow_Recommend */,
 				04B0BB56238BAB8700DBFF12 /* CallShow_CallShowSite */,
-				04B0BB5B238BAB8700DBFF12 /* CallShow_Me */,
+				049034C4238CDEA100C91F08 /* CallShow_Me */,
 			);
 			path = CallShowCode;
-			sourceTree = "<group>";
-		};
-		0425E6E1238CC3CC00CA8745 /* subVC */ = {
-			isa = PBXGroup;
-			children = (
-				049034C2238CDA6000C91F08 /* CSID_MyHelpsVC.swift */,
-				049034C0238CD13D00C91F08 /* CSID_WkWebViC.swift */,
-				049034B4238CC53B00C91F08 /* CSID_BuyVC.swift */,
-				049034B5238CC53B00C91F08 /* CSID_BuyVC.xib */,
-				049034B8238CC5A500C91F08 /* CSID_FeedbackVC.swift */,
-				049034B9238CC5A500C91F08 /* CSID_FeedbackVC.xib */,
-			);
-			path = subVC;
 			sourceTree = "<group>";
 		};
 		042D4113238BAEFA0034DE84 /* BaseCode */ = {
@@ -421,6 +413,47 @@
 			path = ViewObject;
 			sourceTree = "<group>";
 		};
+		049034C4238CDEA100C91F08 /* CallShow_Me */ = {
+			isa = PBXGroup;
+			children = (
+				049034C6238CDEA100C91F08 /* Controller */,
+				049034D0238CDEA100C91F08 /* server.html */,
+				049034C5238CDEA100C91F08 /* yinsi.html */,
+			);
+			path = CallShow_Me;
+			sourceTree = "<group>";
+		};
+		049034C6238CDEA100C91F08 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				049034C7238CDEA100C91F08 /* CSID_CallShowMe.swift */,
+				049034C8238CDEA100C91F08 /* CSID_CallShowMe.xib */,
+				049034C9238CDEA100C91F08 /* subVC */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		049034C9238CDEA100C91F08 /* subVC */ = {
+			isa = PBXGroup;
+			children = (
+				049034CD238CDEA100C91F08 /* CSID_BuyVC.swift */,
+				049034CC238CDEA100C91F08 /* CSID_BuyVC.xib */,
+				049034CF238CDEA100C91F08 /* CSID_FeedbackVC.swift */,
+				049034CE238CDEA100C91F08 /* CSID_FeedbackVC.xib */,
+				049034CB238CDEA100C91F08 /* CSID_MyHelpsVC.swift */,
+				049034CA238CDEA100C91F08 /* CSID_WkWebViC.swift */,
+			);
+			path = subVC;
+			sourceTree = "<group>";
+		};
+		049034DB238CE1D500C91F08 /* In-appbuy */ = {
+			isa = PBXGroup;
+			children = (
+				049034F2238CF85F00C91F08 /* CSID_BuyTool.swift */,
+			);
+			path = "In-appbuy";
+			sourceTree = "<group>";
+		};
 		0494ADD0235475EE00DEE0B2 = {
 			isa = PBXGroup;
 			children = (
@@ -496,50 +529,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		04B0BB5B238BAB8700DBFF12 /* CallShow_Me */ = {
-			isa = PBXGroup;
-			children = (
-				049034BC238CD0B600C91F08 /* yinsi.html */,
-				049034BD238CD0B600C91F08 /* server.html */,
-				04B0BB5C238BAB8700DBFF12 /* Logic */,
-				04B0BB5D238BAB8700DBFF12 /* Controller */,
-				04B0BB5E238BAB8700DBFF12 /* Model */,
-				04B0BB5F238BAB8700DBFF12 /* View */,
-			);
-			path = CallShow_Me;
-			sourceTree = "<group>";
-		};
-		04B0BB5C238BAB8700DBFF12 /* Logic */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Logic;
-			sourceTree = "<group>";
-		};
-		04B0BB5D238BAB8700DBFF12 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				0425E6E1238CC3CC00CA8745 /* subVC */,
-				0469C98C238BCCA2008FA4FD /* CSID_CallShowMe.swift */,
-				0469C98D238BCCA2008FA4FD /* CSID_CallShowMe.xib */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		04B0BB5E238BAB8700DBFF12 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		04B0BB5F238BAB8700DBFF12 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		04B0BB60238BAB8800DBFF12 /* CallShow_Recommend */ = {
 			isa = PBXGroup;
 			children = (
@@ -583,6 +572,7 @@
 		04DF582D23712E590079669B /* FilesTools */ = {
 			isa = PBXGroup;
 			children = (
+				04C7C901238CBAFE00E72693 /* CallShowPortHeaderFile.swift */,
 				043911AE2355620700636064 /* CodeHeader.swift */,
 				04DF583723714ED00079669B /* EnumFileHeader.swift */,
 				04DF5853237271B20079669B /* func_Expantion.swift */,
@@ -717,12 +707,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				042D417B238BAEFB0034DE84 /* CSID_NilDataTableViewCell.xib in Resources */,
-				0469C98F238BCCA2008FA4FD /* CSID_CallShowMe.xib in Resources */,
-				049034BB238CC5A500C91F08 /* CSID_FeedbackVC.xib in Resources */,
+				049034D1238CDEA100C91F08 /* yinsi.html in Resources */,
+				049034D6238CDEA100C91F08 /* CSID_BuyVC.xib in Resources */,
 				043516AF235DAD8A00764962 /* Assets.xcassets in Resources */,
-				049034BF238CD0B600C91F08 /* server.html in Resources */,
-				049034BE238CD0B600C91F08 /* yinsi.html in Resources */,
-				049034B7238CC53B00C91F08 /* CSID_BuyVC.xib in Resources */,
+				049034D3238CDEA100C91F08 /* CSID_CallShowMe.xib in Resources */,
+				049034DA238CDEA100C91F08 /* server.html in Resources */,
+				049034D8238CDEA100C91F08 /* CSID_FeedbackVC.xib in Resources */,
 				042D4198238BAEFB0034DE84 /* RefreshTableView.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -790,6 +780,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049034D9238CDEA100C91F08 /* CSID_FeedbackVC.swift in Sources */,
 				042D4185238BAEFB0034DE84 /* UITextView+Extentions.swift in Sources */,
 				042D418B238BAEFB0034DE84 /* MFPageContentView.swift in Sources */,
 				042D418E238BAEFB0034DE84 /* CSID_BaseView.swift in Sources */,
@@ -799,21 +790,22 @@
 				042D4190238BAEFB0034DE84 /* CSID_AlertView.swift in Sources */,
 				042D416E238BAEFB0034DE84 /* CSID_Error.swift in Sources */,
 				042D417D238BAEFB0034DE84 /* CSID_BaseTableView.swift in Sources */,
+				049034D2238CDEA100C91F08 /* CSID_CallShowMe.swift in Sources */,
 				042D4189238BAEFB0034DE84 /* CSID_NoDataView.swift in Sources */,
-				049034C1238CD13E00C91F08 /* CSID_WkWebViC.swift in Sources */,
+				04C7C902238CBAFE00E72693 /* CallShowPortHeaderFile.swift in Sources */,
 				04DF5854237271B20079669B /* func_Expantion.swift in Sources */,
 				042D4172238BAEFB0034DE84 /* ThumbView.swift in Sources */,
 				042D41A0238BAF490034DE84 /* CSID_CallShowSiteVC.swift in Sources */,
 				04DF583823714ED00079669B /* EnumFileHeader.swift in Sources */,
+				049034D5238CDEA100C91F08 /* CSID_MyHelpsVC.swift in Sources */,
 				042D4177238BAEFB0034DE84 /* CSID_BaseTabBarController.swift in Sources */,
+				049034D7238CDEA100C91F08 /* CSID_BuyVC.swift in Sources */,
 				042D417C238BAEFB0034DE84 /* CSID_NilDataTableViewCell.m in Sources */,
 				042D418C238BAEFB0034DE84 /* MFPageTitleView.swift in Sources */,
 				042D4192238BAEFB0034DE84 /* CSID_BaseBannerView.swift in Sources */,
 				042D4184238BAEFB0034DE84 /* UIButton+Extentions.swift in Sources */,
 				042D417A238BAEFB0034DE84 /* CSID_BaseCollectionViewCell.swift in Sources */,
 				042D4196238BAEFB0034DE84 /* BFRefreshLoadingView.swift in Sources */,
-				0469C98E238BCCA2008FA4FD /* CSID_CallShowMe.swift in Sources */,
-				049034B6238CC53B00C91F08 /* CSID_BuyVC.swift in Sources */,
 				042D4193238BAEFB0034DE84 /* myButton.m in Sources */,
 				042D4175238BAEFB0034DE84 /* CSID_BaseViewController.swift in Sources */,
 				042D4182238BAEFB0034DE84 /* UIImageView+Extensions.swift in Sources */,
@@ -836,17 +828,17 @@
 				042D419D238BAEFB0034DE84 /* CSID_ViewObject.swift in Sources */,
 				042D4195238BAEFB0034DE84 /* BFRefreshNoDataView.swift in Sources */,
 				042D4167238BAEFB0034DE84 /* FRFExtension.swift in Sources */,
-				049034BA238CC5A500C91F08 /* CSID_FeedbackVC.swift in Sources */,
 				042D419B238BAEFB0034DE84 /* ViewDataObject.swift in Sources */,
 				042D4194238BAEFB0034DE84 /* BFRefreshHeader.swift in Sources */,
 				042D418F238BAEFB0034DE84 /* BaseViewExtension.swift in Sources */,
 				0494ADDD235475EE00DEE0B2 /* AppDelegate.swift in Sources */,
 				042D4197238BAEFB0034DE84 /* BFRefreshRequestErrorView.swift in Sources */,
 				042D4171238BAEFB0034DE84 /* BalloonView.swift in Sources */,
+				049034D4238CDEA100C91F08 /* CSID_WkWebViC.swift in Sources */,
 				042D4179238BAEFB0034DE84 /* CSID_BaseCollectionView.swift in Sources */,
-				049034C3238CDA6000C91F08 /* CSID_MyHelpsVC.swift in Sources */,
 				042D418D238BAEFB0034DE84 /* MFPageTitleViewConfig.swift in Sources */,
 				042D419A238BAEFB0034DE84 /* UIScrollView-BFRefresh.swift in Sources */,
+				049034F3238CF85F00C91F08 /* CSID_BuyTool.swift in Sources */,
 				042D4176238BAEFB0034DE84 /* CSID_BaseNavigationController.swift in Sources */,
 				042D4178238BAEFB0034DE84 /* NirKxMenu.m in Sources */,
 			);
@@ -1015,6 +1007,7 @@
 					"$(PROJECT_DIR)/Class/Extension",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/CallShow/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1048,6 +1041,7 @@
 					"$(PROJECT_DIR)/Class/Extension",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/CallShow/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

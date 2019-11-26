@@ -32,4 +32,11 @@ class CSID_ProgressHUD: NSObject {
         HUD.flash(.label(message), delay: 1.5, completion: nil)
     }
     
+    class func show()  {
+        HUD.show(.label("加载中..."))
+    }
+    class func hide()  {
+        HUD.hide()
+    }
+    
 }

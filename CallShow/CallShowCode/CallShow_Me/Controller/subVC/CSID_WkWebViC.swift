@@ -33,6 +33,10 @@ class CSID_WkWebViC: CSID_BaseViewController,WKUIDelegate,WKNavigationDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //隐藏 bannar 广告
+        self.bannerShow = false
+        
         self.title = CSID_Str_title
         self.view.addSubview(CSID_Wk_webV)
         CSID_Wk_webV.snp.makeConstraints { (ma) in

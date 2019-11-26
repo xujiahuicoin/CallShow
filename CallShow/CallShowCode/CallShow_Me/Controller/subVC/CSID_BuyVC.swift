@@ -32,9 +32,15 @@ class CSID_BuyVC: CSID_BaseViewController {
         super.viewDidLoad()
         
         addlineDown()
+        //隐藏 bannar 广告
+        self.bannerShow = false
         // Do any additional setup after loading the view.
     }
-    
+    ///购买成功
+    @objc override func paySeccessAction(){
+        
+        goLeftVC()
+    }
     func addlineDown(){
         
         serverBtn.underline()
@@ -45,9 +51,12 @@ class CSID_BuyVC: CSID_BaseViewController {
     
     ///试用3天，月订阅
     @IBAction func buyActionTesting(_ sender: Any) {
+        CSID_BuyTool().applePayWithProductId(ProductId: "78909")
+        
     }
     ///购买半年
     @IBAction func buyActionHalfYear(_ sender: Any) {
+        CSID_BuyTool().applePayWithProductId(ProductId: "78909")
     }
     ///服务协议
     @IBAction func searverAction(_ sender: Any) {
@@ -62,6 +71,7 @@ class CSID_BuyVC: CSID_BaseViewController {
     }
     ///恢复购买
     @IBAction func returnbuyAction(_ sender: Any) {
+        CSID_BuyTool().restorePurchase()
     }
     ///隐私政策
     @IBAction func yinsiAction(_ sender: Any) {
