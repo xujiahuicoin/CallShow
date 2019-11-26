@@ -12,6 +12,7 @@ import ESPullToRefresh
 import Kingfisher
 import SCLAlertView
 
+let CSID_leftMargin_CP = 20
 ///是否测试
 let appTesting = true
 
@@ -110,7 +111,6 @@ let CSID_FontNum_Small : CGFloat = 13
 func FontBold(font: CGFloat) -> (UIFont) {
     
     return UIFont.boldSystemFont(ofSize: font)
-    
 }
 
 ///正常

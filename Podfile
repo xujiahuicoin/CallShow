@@ -30,4 +30,8 @@ pod 'ViewAnimator'
 pod 'Segmentio'
 #Alert
 pod 'SCLAlertView'
+
+#google 广告
+pod 'Google-Mobile-Ads-SDK'
+
 end

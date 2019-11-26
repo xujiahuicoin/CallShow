@@ -10,7 +10,6 @@ import UIKit
 import NVActivityIndicatorView
 import PKHUD
 
-
 class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivityIndicatorViewable {
     
     override var prefersStatusBarHidden: Bool{
