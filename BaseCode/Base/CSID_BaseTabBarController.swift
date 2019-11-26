@@ -23,7 +23,6 @@ class CSID_BaseTabBarController: UITabBarController {
         self.addChildrenViewController(viewController: CSID_CallShowMe(), title: "我的", image: UIImage(named: "xinwend_img0")?.original, selectedImage: UIImage(named: "xinwend_img1")?.original)
 
     }
-    
 
     func addChildrenViewController(viewController : UIViewController, title : String, image : UIImage?, selectedImage : UIImage?) {
         

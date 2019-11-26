@@ -67,6 +67,10 @@
 		04C7C904238CC95400E72693 /* CSID_CallShowListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7C903238CC95400E72693 /* CSID_CallShowListModel.swift */; };
 		04C7C906238CCDCD00E72693 /* CSID_CallShowListCommView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7C905238CCDCD00E72693 /* CSID_CallShowListCommView.swift */; };
 		04C7C908238CD22200E72693 /* CSID_CallShowRecommCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7C907238CD22200E72693 /* CSID_CallShowRecommCellCollectionViewCell.swift */; };
+		04C7C90A238D077500E72693 /* CSID_CollectRightSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7C909238D077500E72693 /* CSID_CollectRightSubView.swift */; };
+		04C7C90C238D078F00E72693 /* CSID_CollectRightSubView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C7C90B238D078F00E72693 /* CSID_CollectRightSubView.xib */; };
+		04C7C90E238D294900E72693 /* CSID_ShowPreviewSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7C90D238D294900E72693 /* CSID_ShowPreviewSubView.swift */; };
+		04C7C910238D295500E72693 /* CSID_ShowPreviewSubView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C7C90F238D295500E72693 /* CSID_ShowPreviewSubView.xib */; };
 		04DF583823714ED00079669B /* EnumFileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF583723714ED00079669B /* EnumFileHeader.swift */; };
 		04DF5854237271B20079669B /* func_Expantion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF5853237271B20079669B /* func_Expantion.swift */; };
 		4F30EFB98176F64FA26EEA28 /* Pods_CallShow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F52B52DED5FE0F3B8F6A635 /* Pods_CallShow.framework */; };
@@ -158,6 +162,10 @@
 		04C7C903238CC95400E72693 /* CSID_CallShowListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_CallShowListModel.swift; sourceTree = "<group>"; };
 		04C7C905238CCDCD00E72693 /* CSID_CallShowListCommView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_CallShowListCommView.swift; sourceTree = "<group>"; };
 		04C7C907238CD22200E72693 /* CSID_CallShowRecommCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_CallShowRecommCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		04C7C909238D077500E72693 /* CSID_CollectRightSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_CollectRightSubView.swift; sourceTree = "<group>"; };
+		04C7C90B238D078F00E72693 /* CSID_CollectRightSubView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CSID_CollectRightSubView.xib; sourceTree = "<group>"; };
+		04C7C90D238D294900E72693 /* CSID_ShowPreviewSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_ShowPreviewSubView.swift; sourceTree = "<group>"; };
+		04C7C90F238D295500E72693 /* CSID_ShowPreviewSubView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CSID_ShowPreviewSubView.xib; sourceTree = "<group>"; };
 		04DF583723714ED00079669B /* EnumFileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumFileHeader.swift; sourceTree = "<group>"; };
 		04DF5853237271B20079669B /* func_Expantion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = func_Expantion.swift; sourceTree = "<group>"; };
 		5A7E1DCF7E9F8317DC87C391 /* Pods-ChangeCoin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChangeCoin.debug.xcconfig"; path = "Target Support Files/Pods-ChangeCoin/Pods-ChangeCoin.debug.xcconfig"; sourceTree = "<group>"; };
@@ -552,6 +560,10 @@
 			children = (
 				04C7C905238CCDCD00E72693 /* CSID_CallShowListCommView.swift */,
 				04C7C907238CD22200E72693 /* CSID_CallShowRecommCellCollectionViewCell.swift */,
+				04C7C909238D077500E72693 /* CSID_CollectRightSubView.swift */,
+				04C7C90B238D078F00E72693 /* CSID_CollectRightSubView.xib */,
+				04C7C90D238D294900E72693 /* CSID_ShowPreviewSubView.swift */,
+				04C7C90F238D295500E72693 /* CSID_ShowPreviewSubView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -693,8 +705,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C7C90C238D078F00E72693 /* CSID_CollectRightSubView.xib in Resources */,
 				042D417B238BAEFB0034DE84 /* CSID_NilDataTableViewCell.xib in Resources */,
 				043516AF235DAD8A00764962 /* Assets.xcassets in Resources */,
+				04C7C910238D295500E72693 /* CSID_ShowPreviewSubView.xib in Resources */,
 				042D4198238BAEFB0034DE84 /* RefreshTableView.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -802,6 +816,7 @@
 				042D41A4238BAF670034DE84 /* CSID_CallShowrecommend.swift in Sources */,
 				04C7C904238CC95400E72693 /* CSID_CallShowListModel.swift in Sources */,
 				042D4188238BAEFB0034DE84 /* CSID_ProgressHUD.swift in Sources */,
+				04C7C90A238D077500E72693 /* CSID_CollectRightSubView.swift in Sources */,
 				043911EB2355688100636064 /* AppDelegate+JPush.swift in Sources */,
 				042D417E238BAEFB0034DE84 /* CSID_BaseTableViewCell.swift in Sources */,
 				042D419C238BAEFB0034DE84 /* CSID_BaseModel.swift in Sources */,
@@ -815,6 +830,7 @@
 				0494ADDD235475EE00DEE0B2 /* AppDelegate.swift in Sources */,
 				042D4197238BAEFB0034DE84 /* BFRefreshRequestErrorView.swift in Sources */,
 				042D4171238BAEFB0034DE84 /* BalloonView.swift in Sources */,
+				04C7C90E238D294900E72693 /* CSID_ShowPreviewSubView.swift in Sources */,
 				042D4179238BAEFB0034DE84 /* CSID_BaseCollectionView.swift in Sources */,
 				042D418D238BAEFB0034DE84 /* MFPageTitleViewConfig.swift in Sources */,
 				042D41A2238BAF580034DE84 /* CSID_CallShowMe.swift in Sources */,

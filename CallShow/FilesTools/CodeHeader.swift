@@ -62,6 +62,8 @@ let CSID_HeightTabBom : CGFloat = (isIphoneX ? 83:49)
 
 let CSID_ButtonEdgeInsetWidth : CGFloat = 30
 
+let CSID_DefaultHeight : CGFloat = 50
+
 
 /// 十六进制设置颜色
 func ABCHexColor(_ rgbValue:Int) -> UIColor {

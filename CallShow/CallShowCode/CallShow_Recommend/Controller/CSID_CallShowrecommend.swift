@@ -34,8 +34,23 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
         call_ShowHeaderView.addSubview(call_showMiddleLine)
         
         self.call_showRecommandListNetwork()
+        
+        callShowRecommendView.recommendChangeblock = { (boolVaule) in
+    
+            self.call_show_ShowHeaderSettingwork(vaules: boolVaule)
+        }
+        callShowNewestView.recommendChangeblock = { (boolVaule) in
+         
+            self.call_show_ShowHeaderSettingwork(vaules: boolVaule)
+        }
     }
     
+    func call_show_ShowHeaderSettingwork( vaules : Bool) -> Void {
+        
+        self.call_ShowHeaderView.isHidden = vaules
+        self.tabBarController?.tabBar.isHidden=vaules
+    }
+
     lazy var call_ShowHeaderView : UIView = {
         
         let call_ShowHeaderView : UIView = UIView.init(frame: CGRect.init(x: 0, y:CSID_Status_H, width:CSID_WidthScreen, height: CSID_HeightNav))
@@ -126,21 +141,16 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
     lazy var callShowRecommendView : CSID_CallShowListCommView = {
            
         let callShowRecommendView = CSID_CallShowListCommView(frame:.init(x: 0, y: 0, width: CSID_WidthScreen, height: recommadnScrollView.height))
-           //callShowRecommendView.backgroundColor=UIColor.red
            return callShowRecommendView
     }()
        
       lazy var callShowNewestView : CSID_CallShowListCommView = {
                 
            let callShowNewestView = CSID_CallShowListCommView(frame:.init(x:CSID_WidthScreen, y: 0, width: CSID_WidthScreen, height: recommadnScrollView.height))
-           //callShowNewestView.backgroundColor=UIColor.yellow
            return callShowNewestView
     }()
     
     
-    
-   
-
    func call_showRecommandListNetwork(){
         
     CSID_HUDShow()

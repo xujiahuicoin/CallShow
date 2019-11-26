@@ -37,12 +37,23 @@ class CSID_RequestManager {
         Alamofire.request(url, method: method, parameters: commonDict).responseJSON(completionHandler: { (response) in
             
             if let json = response.result.value {
-
-                let responDict : NSDictionary = json as! NSDictionary
-                let dataDic = responDict["data"] as! NSDictionary
+        
                 
-                success(dataDic)
-           
+                let responDict : NSDictionary = json as! NSDictionary
+                
+                let codeString : NSInteger = responDict["code"] as! NSInteger
+                
+                if codeString == 0 {
+                    
+                    let dataDic = responDict["data"] as! NSDictionary
+                    success(dataDic)
+                    
+                }else{//提示错误信息
+                    
+                  let msgStirng : NSString = responDict["msg"] as! NSString
+                    
+                }
+            
             }else {
                 
                 if let httpResponse = response.response {
