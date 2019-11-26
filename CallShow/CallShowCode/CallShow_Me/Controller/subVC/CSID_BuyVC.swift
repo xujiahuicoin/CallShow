@@ -10,6 +10,10 @@ import UIKit
 
 class CSID_BuyVC: CSID_BaseViewController {
     
+    @IBOutlet weak var closeBtn: UIButton!
+    
+    @IBOutlet weak var juhua: UIActivityIndicatorView!
+    @IBOutlet weak var xiaojuhua: UIView!
     
     @IBOutlet weak var serverBtn: UIButton!
     
@@ -51,13 +55,25 @@ class CSID_BuyVC: CSID_BaseViewController {
     
     ///试用3天，月订阅
     @IBAction func buyActionTesting(_ sender: Any) {
+        buyChangeUI()
+        
         CSID_BuyTool().applePayWithProductId(ProductId: "78909")
         
     }
     ///购买半年
     @IBAction func buyActionHalfYear(_ sender: Any) {
+        buyChangeUI()
+        
         CSID_BuyTool().applePayWithProductId(ProductId: "78909")
     }
+    
+    ///    购买恢复 事件UI
+    func buyChangeUI(){
+        xiaojuhua.isHidden = false
+        juhua.isHidden = false
+        closeBtn.isHidden = true
+    }
+    
     ///服务协议
     @IBAction func searverAction(_ sender: Any) {
         
@@ -71,6 +87,8 @@ class CSID_BuyVC: CSID_BaseViewController {
     }
     ///恢复购买
     @IBAction func returnbuyAction(_ sender: Any) {
+        buyChangeUI()
+        
         CSID_BuyTool().restorePurchase()
     }
     ///隐私政策

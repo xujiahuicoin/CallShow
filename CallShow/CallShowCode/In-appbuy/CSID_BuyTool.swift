@@ -33,7 +33,6 @@ class CSID_BuyTool: NSObject,SKPaymentTransactionObserver,SKProductsRequestDeleg
     ///开始购买产品 根据产品ID
     func applePayWithProductId(ProductId: String){
         
-        CSID_ProgressHUD.show()
         
         SKPaymentQueue.default().add(self)
         //判断app是否支持支付
@@ -48,7 +47,7 @@ class CSID_BuyTool: NSObject,SKPaymentTransactionObserver,SKProductsRequestDeleg
             
             
         }else{
-            CSID_ProgressHUD.hide()
+
             //不支持购买
             CSID_ProgressHUD.showError(message: "购买失败，请重试")
         }
@@ -61,7 +60,7 @@ class CSID_BuyTool: NSObject,SKPaymentTransactionObserver,SKProductsRequestDeleg
         //判断服务器是否有产品
         if response.products.count < 1 {
             //服务器没有产品
-            CSID_ProgressHUD.hide()
+            
             CSID_ProgressHUD.showError(message: "购买失败，请重试")
         }else{
             //有商品  获取订单  目前是一个商品的支付
@@ -77,7 +76,7 @@ class CSID_BuyTool: NSObject,SKPaymentTransactionObserver,SKProductsRequestDeleg
     
     ///请求失败 回调
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
-        CSID_ProgressHUD.hide()
+        
         
         CSID_ProgressHUD.showError(message: "购买失败，请重试")
     }
@@ -89,7 +88,7 @@ class CSID_BuyTool: NSObject,SKPaymentTransactionObserver,SKProductsRequestDeleg
     //---------------恢复购买---------------------
     ///恢复购买
       func restorePurchase(){
-        CSID_ProgressHUD.show()
+        
           //回调已经购买过的商品
                  SKPaymentQueue.default().restoreCompletedTransactions()
       }
@@ -98,7 +97,7 @@ class CSID_BuyTool: NSObject,SKPaymentTransactionObserver,SKProductsRequestDeleg
         
         if queue.transactions.count < 1{
             //没有已购买项目。恢复失败
-            CSID_ProgressHUD.hide()
+            
             CSID_ProgressHUD.showError(message: "恢复购买失败")
             
         }else{
@@ -119,7 +118,7 @@ class CSID_BuyTool: NSObject,SKPaymentTransactionObserver,SKProductsRequestDeleg
     
     //恢复内购失败调用-比如用户没有登录apple id 手动取消恢复
     func paymentQueue(_ queue: SKPaymentQueue, restoreCompletedTransactionsFailedWithError error: Error) {
-        CSID_ProgressHUD.hide()
+        
         
     }
     
@@ -131,7 +130,7 @@ class CSID_BuyTool: NSObject,SKPaymentTransactionObserver,SKProductsRequestDeleg
             switch tran.transactionState {
             case .purchasing:
                 do {
-                CSID_ProgressHUD.hide()
+                
                 print("商品添加进列表")
             }
                 
@@ -150,12 +149,12 @@ class CSID_BuyTool: NSObject,SKPaymentTransactionObserver,SKProductsRequestDeleg
                 }
             case .failed:
                 do{
-                    CSID_ProgressHUD.hide()
+
                     //购买失败
                     SKPaymentQueue.default().finishTransaction(tran)
                 }
             default:
-                CSID_ProgressHUD.hide()
+
                 SKPaymentQueue.default().finishTransaction(tran)
             }
         }
@@ -164,7 +163,6 @@ class CSID_BuyTool: NSObject,SKPaymentTransactionObserver,SKProductsRequestDeleg
     
     ///添加用户权益
     func addUserCount(){
-        CSID_ProgressHUD.hide()
         //成功回调
         //设置VIP
         self.CSID_SetVipUser()
