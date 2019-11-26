@@ -17,11 +17,10 @@ class CSID_BaseTabBarController: UITabBarController {
         self.tabBar.tintColor = CSID_MainTextColor
         
         self.addChildrenViewController(viewController: CSID_CallShowrecommend(), title: "经选推荐", image: UIImage(named: "mainpage_img10")?.original, selectedImage: UIImage(named: "mainpage_img11")?.original)
-//
+        
         self.addChildrenViewController(viewController: CSID_CallShowSiteVC(), title: "来电秀", image: UIImage(named: "qushitu_img0")?.original, selectedImage: UIImage(named: "qushitu_img1")?.original)
         
         self.addChildrenViewController(viewController: CSID_CallShowMe(), title: "我的", image: UIImage(named: "xinwend_img0")?.original, selectedImage: UIImage(named: "xinwend_img1")?.original)
-//
 
     }
     

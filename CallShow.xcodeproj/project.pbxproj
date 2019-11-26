@@ -64,6 +64,9 @@
 		043911EB2355688100636064 /* AppDelegate+JPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043911E82355688100636064 /* AppDelegate+JPush.swift */; };
 		0494ADDD235475EE00DEE0B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494ADDC235475EE00DEE0B2 /* AppDelegate.swift */; };
 		04C7C902238CBAFE00E72693 /* CallShowPortHeaderFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7C901238CBAFE00E72693 /* CallShowPortHeaderFile.swift */; };
+		04C7C904238CC95400E72693 /* CSID_CallShowListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7C903238CC95400E72693 /* CSID_CallShowListModel.swift */; };
+		04C7C906238CCDCD00E72693 /* CSID_CallShowListCommView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7C905238CCDCD00E72693 /* CSID_CallShowListCommView.swift */; };
+		04C7C908238CD22200E72693 /* CSID_CallShowRecommCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7C907238CD22200E72693 /* CSID_CallShowRecommCellCollectionViewCell.swift */; };
 		04DF583823714ED00079669B /* EnumFileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF583723714ED00079669B /* EnumFileHeader.swift */; };
 		04DF5854237271B20079669B /* func_Expantion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF5853237271B20079669B /* func_Expantion.swift */; };
 		4F30EFB98176F64FA26EEA28 /* Pods_CallShow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F52B52DED5FE0F3B8F6A635 /* Pods_CallShow.framework */; };
@@ -152,6 +155,9 @@
 		0494ADEF235475F200DEE0B2 /* CallShowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallShowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0494ADFA235475F300DEE0B2 /* CallShowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallShowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C7C901238CBAFE00E72693 /* CallShowPortHeaderFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallShowPortHeaderFile.swift; sourceTree = "<group>"; };
+		04C7C903238CC95400E72693 /* CSID_CallShowListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_CallShowListModel.swift; sourceTree = "<group>"; };
+		04C7C905238CCDCD00E72693 /* CSID_CallShowListCommView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_CallShowListCommView.swift; sourceTree = "<group>"; };
+		04C7C907238CD22200E72693 /* CSID_CallShowRecommCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_CallShowRecommCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		04DF583723714ED00079669B /* EnumFileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumFileHeader.swift; sourceTree = "<group>"; };
 		04DF5853237271B20079669B /* func_Expantion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = func_Expantion.swift; sourceTree = "<group>"; };
 		5A7E1DCF7E9F8317DC87C391 /* Pods-ChangeCoin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChangeCoin.debug.xcconfig"; path = "Target Support Files/Pods-ChangeCoin/Pods-ChangeCoin.debug.xcconfig"; sourceTree = "<group>"; };
@@ -536,6 +542,7 @@
 		04B0BB63238BAB8800DBFF12 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04C7C903238CC95400E72693 /* CSID_CallShowListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -543,6 +550,8 @@
 		04B0BB64238BAB8800DBFF12 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04C7C905238CCDCD00E72693 /* CSID_CallShowListCommView.swift */,
+				04C7C907238CD22200E72693 /* CSID_CallShowRecommCellCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -757,6 +766,7 @@
 				042D418B238BAEFB0034DE84 /* MFPageContentView.swift in Sources */,
 				042D418E238BAEFB0034DE84 /* CSID_BaseView.swift in Sources */,
 				042D4174238BAEFB0034DE84 /* UIColorDarkMode.swift in Sources */,
+				04C7C908238CD22200E72693 /* CSID_CallShowRecommCellCollectionViewCell.swift in Sources */,
 				042D417F238BAEFB0034DE84 /* CSID_PageResultView.swift in Sources */,
 				042D4170238BAEFB0034DE84 /* BalloonPickerView.swift in Sources */,
 				042D4190238BAEFB0034DE84 /* CSID_AlertView.swift in Sources */,
@@ -775,6 +785,7 @@
 				042D4184238BAEFB0034DE84 /* UIButton+Extentions.swift in Sources */,
 				042D417A238BAEFB0034DE84 /* CSID_BaseCollectionViewCell.swift in Sources */,
 				042D4196238BAEFB0034DE84 /* BFRefreshLoadingView.swift in Sources */,
+				04C7C906238CCDCD00E72693 /* CSID_CallShowListCommView.swift in Sources */,
 				042D4193238BAEFB0034DE84 /* myButton.m in Sources */,
 				042D4175238BAEFB0034DE84 /* CSID_BaseViewController.swift in Sources */,
 				042D4182238BAEFB0034DE84 /* UIImageView+Extensions.swift in Sources */,
@@ -789,6 +800,7 @@
 				042D4186238BAEFB0034DE84 /* UITextField+Extentions.swift in Sources */,
 				042D416F238BAEFB0034DE84 /* CSID_RequestManager.swift in Sources */,
 				042D41A4238BAF670034DE84 /* CSID_CallShowrecommend.swift in Sources */,
+				04C7C904238CC95400E72693 /* CSID_CallShowListModel.swift in Sources */,
 				042D4188238BAEFB0034DE84 /* CSID_ProgressHUD.swift in Sources */,
 				043911EB2355688100636064 /* AppDelegate+JPush.swift in Sources */,
 				042D417E238BAEFB0034DE84 /* CSID_BaseTableViewCell.swift in Sources */,

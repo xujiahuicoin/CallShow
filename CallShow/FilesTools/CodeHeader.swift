@@ -60,6 +60,8 @@ let CSID_HeightNav_top : CGFloat = (isIphoneX ? 88:64)
  */
 let CSID_HeightTabBom : CGFloat = (isIphoneX ? 83:49)
 
+let CSID_ButtonEdgeInsetWidth : CGFloat = 30
+
 
 /// 十六进制设置颜色
 func ABCHexColor(_ rgbValue:Int) -> UIColor {
@@ -87,7 +89,7 @@ var ABCRandomColor: UIColor {
 }
 
 /// 主色
-let CSID_MainColor : UIColor          = RGB(255,g: 255, b: 255)
+let CSID_MainColor : UIColor          = RGB(255,g: 125, b: 0)
 /// 背景色
 let CSID_BackgroundColor_dark :UIColor = RGB(255,g: 255, b: 255)
 /// 分割线颜色
@@ -96,6 +98,7 @@ let CSID_LineColor : UIColor          = RGB(244,g: 245, b: 245)
 let CSID_MainTextColor : UIColor = RGB(18,g: 19, b: 19)
 /// 次级字体颜色
 let CSID_SecondTextColor : UIColor    = RGB(123,g: 124, b: 125)
+
 
 /// 按钮颜色 浅蓝色
 let CSID_ButtonColor_Blue: UIColor    = RGB(37,g: 94, b: 234)

@@ -26,8 +26,7 @@ class CSID_RequestManager {
     //  - failure: 失败回调
     class func request(_ type : CSID_MethodType = .get, url : String, params : [String : Any]?, success : @escaping(_ data : Any) ->(), failure : @escaping (_ error : CSID_Error) ->()){
         
- 
-        var commonDict = ["channel":"appstore","osType":"ios","token":"ddmh%402018","udid":"com.CallShow.www","version":"1.0","vestId":"be5d3132-ff21-4add-a95c-50f3104abc4b"]as[String:Any]
+        var commonDict = ["productId":"d0f140e5-1d1f-4171-a8e7-8a854d450a0b","channel":"appstore","osType":"ios","token":"ddmh%402018","udid":"com.CallShow.www","version":"1.0","vestId":"be5d3132-ff21-4add-a95c-50f3104abc4b"]as[String:Any]
         
         for(key,value)in params!{
             commonDict[key]=value
@@ -39,7 +38,10 @@ class CSID_RequestManager {
             
             if let json = response.result.value {
 
-                    success(json)
+                let responDict : NSDictionary = json as! NSDictionary
+                let dataDic = responDict["data"] as! NSDictionary
+                
+                success(dataDic)
            
             }else {
                 
