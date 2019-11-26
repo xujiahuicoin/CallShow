@@ -9,9 +9,28 @@
 import UIKit
 import NVActivityIndicatorView
 import PKHUD
+import GoogleMobileAds
+class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivityIndicatorViewable,GADInterstitialDelegate,GADBannerViewDelegate,GADUnifiedNativeAdLoaderDelegate, GADVideoControllerDelegate,GADRewardBasedVideoAdDelegate {
 
+    
+    ///是否显示banner广告 默认显示
+    var bannerShow : Bool = true
+    var bannerView: GADBannerView!
+    var interstitial: GADInterstitial!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+        if (CSID_BuyTool().CSID_JudgeIsVipBool()) {
+               ///是VIP了 设置为不显示广告
+            bannerShow = false
+            self.bannerView.removeSubviews()
 
-class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivityIndicatorViewable {
+           }
+           
+        
+    }
     
     override var prefersStatusBarHidden: Bool{
         return false
@@ -30,6 +49,13 @@ class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivi
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : CSID_MainTextColor, NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)]
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
             self.stopAnimating()
+            
+            //添加购买成功通知
+            NotificationCenter.default.addObserver(self, selector: #selector(self.paySeccessAction), name: NSNotification.Name(rawValue:paySuccess), object: nil)
+            
+            //创建广告
+            self.creatADSaction()
+            
         }
 
         // Do any additional setup after loading the view.
@@ -106,4 +132,95 @@ class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivi
         CSID_hideHUD()
         self.navigationController?.popViewController(animated: true)
     }
+    
+    
+    ///购买成功通知
+    @objc func paySeccessAction(){
+        //去除广告
+         self.bannerView.removeSubviews()
+        
+        self.interstitial = nil
+    }
+    
+    //--------------广告服务----------------------
+    
+    ///创建广告
+    func creatADSaction(){
+        if(bannerShow){
+            
+        //bannar广告
+         self.bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+         self.addBannerViewToView(self.bannerView)
+        self.bannerView.adUnitID = BannerADID
+        self.bannerView.rootViewController = self
+         //加载广告
+         self.bannerView.load(GADRequest())
+         //广告事件
+         self.bannerView.delegate = self
+         
+        }
+         //插页 广告
+         self.interstitial = GADInterstitial(adUnitID: InteredADID)
+         let request = GADRequest()
+         self.interstitial.load(request)
+         self.interstitial.delegate = self
+    }
+    
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        view.addConstraints(
+          [NSLayoutConstraint(item: bannerView,
+                              attribute: .bottom,
+                              relatedBy: .equal,
+                              toItem: bottomLayoutGuide,
+                              attribute: .top,
+                              multiplier: 1,
+                              constant: 0),
+           NSLayoutConstraint(item: bannerView,
+                              attribute: .centerX,
+                              relatedBy: .equal,
+                              toItem: view,
+                              attribute: .centerX,
+                              multiplier: 1,
+                              constant: 0)
+          ])
+       }
+    
+    ///bannar动画方式展示
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        self.bannerView.alpha = 0
+      UIView.animate(withDuration: 1, animations: {
+        self.bannerView.alpha = 1
+      })
+    }
+    
+    func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADUnifiedNativeAd) {
+        
+    }
+    
+    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didRewardUserWith reward: GADAdReward) {
+        
+    }
+    
+    func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: GADRequestError) {
+        
+    }
+    
+    //插页广告
+    func doStarInterstitial() {
+        
+        if self.interstitial.isReady {
+        self.interstitial.present(fromRootViewController: self)
+      } else {
+        print("Ad wasn't ready")
+          doStarInterstitial()
+      }
+    }
+    ///插屏广告回调结束
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+         self.interstitial = nil
+    }
+       
 }
+
