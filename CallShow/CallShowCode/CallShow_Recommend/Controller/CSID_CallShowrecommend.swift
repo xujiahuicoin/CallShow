@@ -9,13 +9,14 @@
 import UIKit
 
 class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
-    
-    var callShowsRecommArrays:NSMutableArray = NSMutableArray.init()
-    var callShowNewestArrays:NSMutableArray=NSMutableArray.init()
+
+    var callShowsRecommArrays: Array<CSID_CallShowListModel> = []
+    var callShowNewestArrays: Array<CSID_CallShowListModel> = []
     
     override func viewWillAppear(_ animated: Bool){
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
+        self.tabBarController?.tabBar.backgroundColor = UIColor.clear
         self.tabBarController?.tabBar.shadowImage = UIImage()
         self.tabBarController?.tabBar.backgroundImage = UIImage()
 
@@ -25,7 +26,13 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
         
     }
     override func viewDidLoad() {
+
         super.viewDidLoad()
+
+    
+        self.call_showRecommandListNetwork()
+        self.call_showNewestListNetwork()
+
         
         view.addSubview(recommadnScrollView)
         recommadnScrollView.addSubview(callShowRecommendView)
@@ -35,9 +42,8 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
         call_ShowHeaderView.addSubview(recommBotton)
         call_ShowHeaderView.addSubview(newestBotton)
         call_ShowHeaderView.addSubview(call_showMiddleLine)
-        
-        self.call_showRecommandListNetwork()
-        
+
+                   
         callShowRecommendView.recommendChangeblock = { (boolVaule) in
     
             self.call_show_ShowHeaderSettingwork(vaules: boolVaule)
@@ -175,14 +181,12 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
 
                 let responDict : NSDictionary = resltData as! NSDictionary
                 if let listArray = responDict["list"] as? [[String : Any]] {
-                    let models = [CSID_CallShowListModel].deserialize(from: listArray)
-                    self.callShowsRecommArrays.add(models as Any)
-
+                
+                    self.callShowsRecommArrays = [CSID_CallShowListModel].deserialize(from: listArray) as! Array<CSID_CallShowListModel>
                  }
-        self.callShowRecommendView.csid_CallShow_recommCollectViewRefresh(needArray:self.callShowsRecommArrays)
+             self.callShowRecommendView.csid_CallShow_recommCollectViewRefresh(needArray:self.callShowsRecommArrays as NSArray)
 
-            self.call_showNewestListNetwork()
-                                                                            
+                                                                
             }) { (error) in
 
                 self.CSID_hideHUD()
@@ -201,10 +205,11 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
                                                                                 
                     let responDict : NSDictionary = resltData as! NSDictionary
                     if let listArray = responDict["list"] as? [[String : Any]] {
-                        let models = [CSID_CallShowListModel].deserialize(from: listArray)
-                        self.callShowNewestArrays.add(models as Any)
+                     
+                        self.callShowNewestArrays = [CSID_CallShowListModel].deserialize(from: listArray) as! Array<CSID_CallShowListModel>
+
                      }
-                   self.callShowNewestView.csid_CallShow_recommCollectViewRefresh(needArray: self.callShowNewestArrays)
+            self.callShowNewestView.csid_CallShow_recommCollectViewRefresh(needArray: self.callShowNewestArrays as NSArray)
                                                                                 
                 }) { (error) in
                     

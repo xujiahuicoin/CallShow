@@ -18,6 +18,9 @@ let newestCategoryId = "faca64a6-ed1b-4e92-9ef4-b4720a11b6aa"
 let callShowRecommList = "http://api.wallpaper.taozantek.com/jp/rec/image/list.do"
 
 let callShowloveurl = "http://api.wallpaper.taozantek.com/home/single/wallpaper/dealup.do"
-//来电秀场
+
 let callShowFieldList = "http://api.wallpaper.taozantek.com/home/group/list.do"
 
+let callShowFieldDetailList = "http://api.wallpaper.taozantek.com/home/group/detail.do"
+
+let callShowFieldTopDetailList = "http://api.wallpaper.taozantek.com/home/top/list.do"
