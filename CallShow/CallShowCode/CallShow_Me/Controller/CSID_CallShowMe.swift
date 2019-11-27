@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import StoreKit
 
 
 class CSID_CallShowMe: CSID_BaseViewController {
@@ -46,10 +46,20 @@ class CSID_CallShowMe: CSID_BaseViewController {
         
     }
     
-    ///用户反馈
+    ///用户好评
     @IBAction func CSID_Pri_MyFankui_Acion(){
         
-        self.navigationController?.pushViewController(CSID_MyHelpsVC())
+//        self.navigationController?.pushViewController(CSID_MyHelpsVC())
+     //一句话实现在App内直接评论了。然而需要注意的是：打开次数一年不能多于3次。（当然开发期间可以无限制弹出，方便测试）
+        //import StoreKit
+        if #available(iOS 10.3, *) {
+            SKStoreReviewController.requestReview()
+        } else {
+            // Fallback on earlier versions
+            //当前版本不支持
+            CSID_showProgressHUDWithText(text: "当前版本不支持", view: self.view)
+        }
+        
         
     }
     
@@ -75,8 +85,6 @@ class CSID_CallShowMe: CSID_BaseViewController {
     @IBAction func CSID_Pri_MyBuyApp_Acion(){
         self.navigationController?.pushViewController(CSID_BuyVC())
     }
-    
-    
     
     //删除缓存
     func clearCache() {

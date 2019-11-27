@@ -14,16 +14,19 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
     var callShowNewestArrays:NSMutableArray=NSMutableArray.init()
     
     override func viewWillAppear(_ animated: Bool){
-        
+        super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
         self.tabBarController?.tabBar.shadowImage = UIImage()
         self.tabBarController?.tabBar.backgroundImage = UIImage()
 
     }
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
     }
     override func viewDidLoad() {
-    
+        super.viewDidLoad()
+        
         view.addSubview(recommadnScrollView)
         recommadnScrollView.addSubview(callShowRecommendView)
         recommadnScrollView.addSubview(callShowNewestView)
@@ -43,6 +46,14 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
          
             self.call_show_ShowHeaderSettingwork(vaules: boolVaule)
         }
+        
+        
+        //设置来电秀 block
+        callShowRecommendView.call_show_RightView.call_show_callShowBlockAction { (callshowBtn) in
+                  //展示插页广告
+            self.doStarInterstitial()
+            
+              }
     }
     
     func call_show_ShowHeaderSettingwork( vaules : Bool) -> Void {

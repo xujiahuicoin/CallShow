@@ -11,7 +11,7 @@ import NVActivityIndicatorView
 import PKHUD
 import GoogleMobileAds
 class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivityIndicatorViewable,GADInterstitialDelegate,GADBannerViewDelegate,GADUnifiedNativeAdLoaderDelegate, GADVideoControllerDelegate,GADRewardBasedVideoAdDelegate {
-
+    
     
     ///是否显示banner广告 默认显示
     var bannerShow : Bool = true
@@ -23,12 +23,12 @@ class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivi
         
         
         if (CSID_BuyTool().CSID_JudgeIsVipBool()) {
-               ///是VIP了 设置为不显示广告
+            ///是VIP了 设置为不显示广告
             bannerShow = false
             self.bannerView.removeSubviews()
-
-           }
-           
+            
+        }
+        
         
     }
     
@@ -39,7 +39,7 @@ class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivi
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,7 +57,7 @@ class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivi
             self.creatADSaction()
             
         }
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -65,17 +65,17 @@ class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivi
         
     }
     
-//    创建左侧title
+    //    创建左侧title
     func createLeftTitle(title : String) {
         
         self.navigationItem.title = ""
         
         let titleLabel = UILabel(Xframe: .zero, text: title, font: FontBold(font: 22), textColor: CSID_MainTextColor,alignment: .left, line: 1)
-
+        
         let leftItem = UIBarButtonItem.init(customView: titleLabel)
         self.navigationItem.leftBarButtonItem = leftItem
     }
-
+    
     //  创建右侧图片按钮
     func CSID_createRightButtonItem(image : UIImage, target : Any?, action : Selector?) {
         
@@ -124,11 +124,11 @@ class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivi
     ///去登录
     func yxs_goToLoginVC(){
         
-//        self.navigationController?.pushViewController(CSID_LoginViewController(), animated: true)
+        //        self.navigationController?.pushViewController(CSID_LoginViewController(), animated: true)
     }
     
     //返回
-   @objc func goLeftVC(){
+    @objc func goLeftVC(){
         CSID_hideHUD()
         self.navigationController?.popViewController(animated: true)
     }
@@ -137,7 +137,7 @@ class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivi
     ///购买成功通知
     @objc func paySeccessAction(){
         //去除广告
-         self.bannerView.removeSubviews()
+        self.bannerView.removeSubviews()
         
         self.interstitial = nil
     }
@@ -148,57 +148,58 @@ class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivi
     func creatADSaction(){
         if(bannerShow){
             
-        //bannar广告
-         self.bannerView = GADBannerView(adSize: kGADAdSizeBanner)
-         self.addBannerViewToView(self.bannerView)
-        self.bannerView.adUnitID = BannerADID
-        self.bannerView.rootViewController = self
-         //加载广告
-         self.bannerView.load(GADRequest())
-         //广告事件
-         self.bannerView.delegate = self
-         
+            //bannar广告
+            self.bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+            self.addBannerViewToView(self.bannerView)
+            self.bannerView.adUnitID = BannerADID
+            self.bannerView.rootViewController = self
+            //加载广告
+            self.bannerView.load(GADRequest())
+            //广告事件
+            self.bannerView.delegate = self
+            
         }
-         //插页 广告
-         self.interstitial = GADInterstitial(adUnitID: InteredADID)
-         let request = GADRequest()
-         self.interstitial.load(request)
-         self.interstitial.delegate = self
+        //插页 广告
+        self.interstitial = GADInterstitial(adUnitID: InteredADID)
+        self.interstitial.delegate = self
+        let request = GADRequest()
+        self.interstitial.load(request)
+        
     }
     
     func addBannerViewToView(_ bannerView: GADBannerView) {
         bannerView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(bannerView)
         view.addConstraints(
-          [NSLayoutConstraint(item: bannerView,
-                              attribute: .bottom,
-                              relatedBy: .equal,
-                              toItem: bottomLayoutGuide,
-                              attribute: .top,
-                              multiplier: 1,
-                              constant: 0),
-           NSLayoutConstraint(item: bannerView,
-                              attribute: .centerX,
-                              relatedBy: .equal,
-                              toItem: view,
-                              attribute: .centerX,
-                              multiplier: 1,
-                              constant: 0)
-          ])
-       }
+            [NSLayoutConstraint(item: bannerView,
+                                attribute: .bottom,
+                                relatedBy: .equal,
+                                toItem: bottomLayoutGuide,
+                                attribute: .top,
+                                multiplier: 1,
+                                constant: 0),
+             NSLayoutConstraint(item: bannerView,
+                                attribute: .centerX,
+                                relatedBy: .equal,
+                                toItem: view,
+                                attribute: .centerX,
+                                multiplier: 1,
+                                constant: 0)
+        ])
+    }
     
     ///bannar动画方式展示
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
         self.bannerView.alpha = 0
-      UIView.animate(withDuration: 1, animations: {
-        self.bannerView.alpha = 1
-      })
+        UIView.animate(withDuration: 1, animations: {
+            self.bannerView.alpha = 1
+        })
     }
     
     func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADUnifiedNativeAd) {
         
     }
-    
+
     func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didRewardUserWith reward: GADAdReward) {
         
     }
@@ -208,19 +209,22 @@ class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivi
     }
     
     //插页广告
-    func doStarInterstitial() {
+    @objc func doStarInterstitial() {
         
         if self.interstitial.isReady {
-        self.interstitial.present(fromRootViewController: self)
-      } else {
-        print("Ad wasn't ready")
-          doStarInterstitial()
-      }
+            self.interstitial.present(fromRootViewController: self)
+            
+        } else {
+            
+            print("Ad wasn't ready")
+            self.perform(#selector(doStarInterstitial), with: self, afterDelay: 1)
+            
+        }
     }
     ///插屏广告回调结束
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {
-         self.interstitial = nil
+        self.interstitial = nil
     }
-       
+    
 }
 

@@ -9,12 +9,15 @@
 import UIKit
 typealias  loveblock = ( _ loveButton : UIButton) -> Void
 typealias  eyelookblock = (_ eyeButton : UIButton) ->Void
+typealias setCallShowBlock = (_ callShowButton : UIButton) ->Void
+
 class CSID_CollectRightSubView: UIView {
     
     @IBOutlet weak var call_show_loveButton: UIButton!
     
     var call_show_loveBlock : loveblock?
     var call_show_eyeBlock : eyelookblock?
+    var call_show_callShowBlock : setCallShowBlock?
     
     static func newInstance() -> CSID_CollectRightSubView?{
         
@@ -58,8 +61,18 @@ class CSID_CollectRightSubView: UIView {
            call_show_eyeBlock!(sender)
         }
     }
+    
+    func call_show_callShowBlockAction( callshowblock: @escaping (_ callshowBtn : UIButton) -> Void){
+        
+        call_show_callShowBlock = callshowblock
+    }
     //设置来电秀
     @IBAction func call_show_callPhoneButtonAction(_ sender: UIButton) {
+    
+        if call_show_callShowBlock != nil {
+            call_show_callShowBlock!(sender)
+        }
+    
     }
     
 }

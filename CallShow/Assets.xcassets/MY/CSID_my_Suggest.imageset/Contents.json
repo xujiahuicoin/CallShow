@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "idiom" : "iphone",
-      "filename" : "mySuggest~iphone.png",
+      "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "idiom" : "iphone",
-      "filename" : "mySuggest~iphone@2x.png",
+      "idiom" : "universal",
+      "filename" : "fuwushangpinglun_haoping@2x.png",
       "scale" : "2x"
     },
     {
-      "idiom" : "iphone",
+      "idiom" : "universal",
+      "filename" : "fuwushangpinglun_haoping@3x.png",
       "scale" : "3x"
     }
   ],
