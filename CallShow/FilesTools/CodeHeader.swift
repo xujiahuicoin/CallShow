@@ -233,6 +233,11 @@ func CSID_isLoginIs() -> Bool {
 }
 
 
+//切圆角
+func CallShowRaise (_ RView:UIView,rabF:CGFloat){
+    RView.layer.cornerRadius = rabF
+    RView.layer.masksToBounds = true
+}
 
 
 ///控件边线设置
@@ -265,6 +270,13 @@ func setBorderWithView(bordView:UIView , top:Bool , left:Bool , bottom:Bool , ri
         bordView.layer.addSublayer(rightLayer)
     }
     
+    func ParentController(viewself:UIView) -> UIViewController {
+        var vc:UIResponder = viewself
+        while vc.isKind(of: UIViewController.self) != true {
+            vc = vc.next!
+        }
+        return vc as! UIViewController
+    }
     
    
 }

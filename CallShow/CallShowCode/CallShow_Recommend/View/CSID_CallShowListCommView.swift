@@ -10,13 +10,12 @@ import UIKit
 
 typealias  recommendChangeblock = (_ changBool : Bool) -> Void
 
-class CSID_CallShowListCommView: UIView,UICollectionViewDelegate,UICollectionViewDataSource{
+class CSID_CallShowListCommView: CSID_CallShowBaseView,UICollectionViewDelegate,UICollectionViewDataSource{
 
     var recommendChangeblock:recommendChangeblock?
     
     var listdataArr : NSArray = NSArray.init()
     var currentModel : CSID_CallShowListModel!
-
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -47,8 +46,49 @@ class CSID_CallShowListCommView: UIView,UICollectionViewDelegate,UICollectionVie
                 self.recommendChangeblock!(true)
             }
         }
+        
+        
+        call_show_RightView.call_show_showLookBlockAction { (showButton) in
+//            self.callShowBlock(self.currentModel.imageUrl ?? "")
+            //展示插页广告
+//            self.doStarInterstitial()
+            
+            let imageUrlStr:String = self.currentModel.imageUrl ?? ""
+            weak var weakSelf = self // 弱引用
+            let alertController = UIAlertController()
+            let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+            let specifiedAction = UIAlertAction(title: "指定联系人设置", style: .default) { (action) in
+                let callshow:CSID_CallShowViewController = CSID_CallShowViewController.init()
+                callshow.imageUrlString = imageUrlStr
+                callshow.hidesBottomBarWhenPushed = true
+//                self.navigationController?.pushViewController(callshow)
+               
+                self.ParentController(viewself: self).navigationController?.pushViewController(callshow, animated: true)
+            }
+            let allAction = UIAlertAction(title: "全部人设置", style: .default) { (action) in
+                weak var weakSelf = self // 弱引用
+                let alertController = UIAlertController.init(title: "确定要给全部联系人设置来电秀吗？", message: nil, preferredStyle: .alert)
+                let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+                let sureAction = UIAlertAction(title: "确定", style: .default) { (action) in
+                    CSID_CallShowContact.AllContactSettings(imageStr: imageUrlStr)
+                }
+                alertController.addAction(sureAction)
+                alertController.addAction(cancelAction)
+                self.ParentController(viewself: self).present(alertController, animated: true, completion: nil)
+            }
+            alertController.addAction(specifiedAction)
+            alertController.addAction(allAction)
+            alertController.addAction(cancelAction)
+            self.ParentController(viewself: self).present(alertController, animated: true, completion: nil)
+            
+        }
+        
+        
+        
         call_show_PreviewView.call_show_preViewHiddeneBlock = { () -> Void in
+            
             self.call_show_RightView.isHidden=false
+            self.call_show_PreviewView.isHidden = true
             if self.recommendChangeblock != nil {
                 self.recommendChangeblock!(false)
             }
@@ -88,6 +128,12 @@ class CSID_CallShowListCommView: UIView,UICollectionViewDelegate,UICollectionVie
         }
         CSID_CallShow_RecommlistCollView.reloadData()
     }
+    
+    public func csid_callShow_collectScrollViewCurrentIndex(currentIndex:NSInteger) ->Void{
+    
+        CSID_CallShow_RecommlistCollView.contentOffset=CGPoint(x: 0, y: self.height * CGFloat(currentIndex))
+    }
+    
     lazy var CSID_CallShow_RecommlistCollView : UICollectionView = {
         
         var layout = UICollectionViewFlowLayout()

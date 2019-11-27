@@ -41,14 +41,6 @@ class CSID_ShowPreviewSubView: UIView {
          if self.call_show_preViewHiddeneBlock != nil {
             self.call_show_preViewHiddeneBlock!()
          }
-        self.isHidden = true
+        
     }
-      
-   
-    
-    
-    
-    
- 
-    
 }

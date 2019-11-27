@@ -28,7 +28,7 @@ class CSID_CallShowSectionHeaderDetailViewController: CSID_BaseViewController,UI
     func call_showFiledSectionDetailListNetwork(){
            
         CSID_HUDShow()
-        CSID_RequestManager.request(.post, url:callShowFieldDetailList, params:["groupId":self.siteSectionHeaderModel.groupId ?? String.self,"page":"1",
+        CSID_RequestManager.request(.post, url:callShowFieldDetailList, params:["groupId":self.siteSectionHeaderModel.groupId!,"page":"1",
                                                                             "pageSize":defaultPageSize], success: {(resltData) in
 
 
@@ -83,6 +83,16 @@ class CSID_CallShowSectionHeaderDetailViewController: CSID_BaseViewController,UI
         cell_View.call_showTitleL.text = model.upCount
         
         return cell_View
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let detailVC = CSID_CallShowSiteDetailVC.init()
+        detailVC.detailCurrentIndex = indexPath.row
+        detailVC.callShowDetailArrays = self.callShowSiteSectionHeaderArrays
+        detailVC.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(detailVC, animated: true)
+        
     }
 
 }

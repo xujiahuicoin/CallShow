@@ -24,3 +24,4 @@ let callShowFieldList = "http://api.wallpaper.taozantek.com/home/group/list.do"
 let callShowFieldDetailList = "http://api.wallpaper.taozantek.com/home/group/detail.do"
 
 let callShowFieldTopDetailList = "http://api.wallpaper.taozantek.com/home/top/list.do"
+
