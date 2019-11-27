@@ -48,7 +48,9 @@ class CSID_CallShowListCommView: UIView,UICollectionViewDelegate,UICollectionVie
             }
         }
         call_show_PreviewView.call_show_preViewHiddeneBlock = { () -> Void in
+            
             self.call_show_RightView.isHidden=false
+            self.call_show_PreviewView.isHidden = true
             if self.recommendChangeblock != nil {
                 self.recommendChangeblock!(false)
             }
