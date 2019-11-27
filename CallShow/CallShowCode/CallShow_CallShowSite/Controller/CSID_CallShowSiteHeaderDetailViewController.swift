@@ -103,9 +103,6 @@ class CSID_CallShowSiteHeaderDetailViewController: CSID_BaseViewController {
     }
     @objc func btnDidClick()  {
     
-        self.clickCurrentInteger = self.clickCurrentInteger + 1
-        self.call_showSettinTopBottomImageViewwork()
-        
         let lAni = CAKeyframeAnimation.init(keyPath: "transform.rotation.y")
         lAni.duration = 1
         lAni.values = [0, Double.pi];
@@ -116,6 +113,9 @@ class CSID_CallShowSiteHeaderDetailViewController: CSID_BaseViewController {
         lAni.delegate = (self as CAAnimationDelegate);
             
         gBtn.layer.add(lAni, forKey: nil)
+        
+        self.clickCurrentInteger = self.clickCurrentInteger + 1
+        self.call_showSettinTopBottomImageViewwork()
 
     }
     
