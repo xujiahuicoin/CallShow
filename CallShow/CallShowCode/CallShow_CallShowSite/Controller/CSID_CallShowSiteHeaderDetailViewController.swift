@@ -8,10 +8,17 @@
 
 import UIKit
 
-class CSID_CallShowSiteHeaderDetailViewController: CSID_BaseViewController {
+let gBtn = UIButton.init(type: UIButton.ButtonType.custom)
+var gImgV4BottomSide : UIImageView!
+var gImgV4TopSide : UIImageView!
+var lBool4ChangeImgV : Bool = false
+var call_show_PreviewView : CSID_ShowPreviewSubView!
 
-    var call_show_SiteHeaderDetailArray :Array<CSID_CallShowListModel> = []
+class CSID_CallShowSiteHeaderDetailViewController: CSID_BaseViewController {
     
+    var call_show_SiteHeaderDetailArray :Array<CSID_CallShowListModel> = []
+    var clickCurrentInteger : NSInteger = 0
+  
     override func viewWillAppear(_ animated: Bool){
         
         self.navigationController?.navigationBar.isHidden = true
@@ -22,17 +29,14 @@ class CSID_CallShowSiteHeaderDetailViewController: CSID_BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-         
-         view.backgroundColor=UIColor.red
-         view.addSubview(call_show_PreviewView)
+         self.call_showSettingoverturnViewUI()
          view.addSubview(leftnavBackBotton)
          view.addSubview(rightUseBotton)
     
-        /**切换collectionView位置*/
+        /**切换collectionView*/
         call_show_PreviewView.call_show_preViewHiddeneBlock = { () -> Void in
-              
+            self.btnDidClick()
         }
-        
         self.call_showSiteHeaderDetialListNetwork()
 
     }
@@ -65,20 +69,55 @@ class CSID_CallShowSiteHeaderDetailViewController: CSID_BaseViewController {
         
         
     }
-    /**电话遮罩*/
-    lazy var call_show_PreviewView: CSID_ShowPreviewSubView = {
-         () -> CSID_ShowPreviewSubView in
-
-         let call_show_PreviewView = CSID_ShowPreviewSubView.previewInstance()
-         call_show_PreviewView?.frame = CGRect(x:0, y:0, width:CSID_WidthScreen, height:CSID_heightScreen)
-         call_show_PreviewView?.call_showTtileHeightConstriant.constant = CSID_HeightNav_top+3*CSID_Status_H
-    call_show_PreviewView?.call_showMiddleViewWidthConstraint.constant=(CSID_WidthScreen-120)/2
+    
+    func call_showSettingoverturnViewUI()  {
         
+        gImgV4BottomSide = UIImageView(frame: self.view.bounds)
+        gImgV4BottomSide.clipsToBounds = true
+        gImgV4BottomSide.contentMode = .scaleAspectFill
+        
+        gImgV4TopSide = UIImageView(frame: self.view.bounds)
+        gImgV4TopSide.clipsToBounds = true
+        gImgV4TopSide.contentMode = .scaleAspectFill
+        
+        view.addSubview(gBtn)
+        gBtn.backgroundColor = UIColor.clear
+        gBtn.addTarget(self, action: #selector(btnDidClick), for: UIControl.Event.touchUpInside)
+        gBtn.center = view.center
+        gBtn.addSubview(gImgV4BottomSide)
+        gBtn.layer.transform = CATransform3DMakeRotation(CGFloat(Double.pi), 0, 1, 0)
+        gBtn.addSubview(gImgV4TopSide)
+        
+        //按钮大小设置为与图片大小一致
+        gBtn.bounds = gImgV4BottomSide.bounds
+        
+        call_show_PreviewView = CSID_ShowPreviewSubView.previewInstance()
+        call_show_PreviewView.frame = CGRect(x:0, y:0, width:CSID_WidthScreen, height:CSID_heightScreen)
+        call_show_PreviewView?.call_showTtileHeightConstriant.constant = CSID_HeightNav_top+3*CSID_Status_H
+        call_show_PreviewView?.call_showMiddleViewWidthConstraint.constant=(CSID_WidthScreen-120)/2
+            
         call_show_PreviewView?.call_show_refuceBottomHeightConstriant.constant = CSID_HeightTabBom+CSID_DefaultHeight
         call_show_PreviewView?.call_show_acceptBottomHeightConstraint.constant = CSID_HeightTabBom+CSID_DefaultHeight
-           
-         return call_show_PreviewView!
-     }()
+        
+        view.addSubview(call_show_PreviewView)
+    }
+    @objc func btnDidClick()  {
+    
+        let lAni = CAKeyframeAnimation.init(keyPath: "transform.rotation.y")
+        lAni.duration = 1
+        lAni.values = [0, Double.pi];
+            
+        //使得动画结束后，保持动画效果
+        lAni.isRemovedOnCompletion = false
+        lAni.fillMode = CAMediaTimingFillMode.forwards
+        lAni.delegate = (self as CAAnimationDelegate);
+            
+        gBtn.layer.add(lAni, forKey: nil)
+        
+        self.clickCurrentInteger = self.clickCurrentInteger + 1
+        self.call_showSettinTopBottomImageViewwork()
+
+    }
     
     func call_showSiteHeaderDetialListNetwork(){
         
@@ -94,6 +133,8 @@ class CSID_CallShowSiteHeaderDetailViewController: CSID_BaseViewController {
                 
                     self.call_show_SiteHeaderDetailArray = [CSID_CallShowListModel].deserialize(from: listArray) as! Array<CSID_CallShowListModel>
                  }
+
+                self.call_showSettinTopBottomImageViewwork()
                                                                 
             }) { (error) in
 
@@ -102,6 +143,44 @@ class CSID_CallShowSiteHeaderDetailViewController: CSID_BaseViewController {
     
      }
     
-    
+    func call_showSettinTopBottomImageViewwork(){
+        
+        if self.clickCurrentInteger>=self.call_show_SiteHeaderDetailArray.count {
+            self.clickCurrentInteger = 0
+        }
+        if self.call_show_SiteHeaderDetailArray.count>0 {
+            
+            if self.clickCurrentInteger == 0 {
+                
+                let upmodel = self.call_show_SiteHeaderDetailArray[self.clickCurrentInteger]
+                        let downmodel = self.call_show_SiteHeaderDetailArray[self.clickCurrentInteger+1]
+                gImgV4TopSide.kf.setImage(with: URL(string: upmodel.imageUrl ?? ""), placeholder: UIImage(named: "placeholder"))
+                gImgV4BottomSide.kf.setImage(with: URL(string: downmodel.imageUrl ?? ""), placeholder: UIImage(named: "placeholder"))
+                
+            }else{
+                
+                let model = self.call_show_SiteHeaderDetailArray[self.clickCurrentInteger+1]
+                if self.clickCurrentInteger % 2 == 0 {
+                    
+                    gImgV4TopSide.kf.setImage(with: URL(string: model.imageUrl ?? ""), placeholder: UIImage(named: "placeholder"))
+                }else{
+                    gImgV4BottomSide.kf.setImage(with: URL(string: model.imageUrl ?? ""), placeholder: UIImage(named: "placeholder"))
+                }
+            
+            }
+        
+        }
 
+    }
+
+}
+extension UIViewController: CAAnimationDelegate{
+    public func animationDidStart(_ anim: CAAnimation) {
+        
+        let lDur:CFTimeInterval = anim.duration
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + lDur * 0.3) {
+            gBtn.bringSubviewToFront(lBool4ChangeImgV == false ? gImgV4BottomSide : gImgV4TopSide)
+            lBool4ChangeImgV = !lBool4ChangeImgV
+        }
+    }
 }
