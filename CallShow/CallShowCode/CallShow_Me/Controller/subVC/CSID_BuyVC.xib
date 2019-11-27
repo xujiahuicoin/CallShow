@@ -46,7 +46,7 @@
                     <attributedString key="attributedText">
                         <fragment content="立即解锁全能进阶版本，使用专享来电壁纸功能，设置所有来电壁纸，去除所有广告">
                             <attributes>
-                                <font key="NSFont" metaFont="system" size="14"/>
+                                <font key="NSFont" metaFont="menu" size="14"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                             </attributes>
                         </fragment>
@@ -168,7 +168,7 @@
                     </userDefinedRuntimeAttributes>
                 </activityIndicatorView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZf-7f-7Vd">
-                    <rect key="frame" x="20" y="69" width="35" height="35"/>
+                    <rect key="frame" x="20" y="49" width="35" height="35"/>
                     <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="35" id="4oF-3J-ZVA"/>
@@ -199,8 +199,8 @@
                 <view hidden="YES" alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1R3-cH-CaW">
                     <rect key="frame" x="0.0" y="4" width="414" height="898"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osc-Jz-ny1">
-                            <rect key="frame" x="99" y="55" width="35" height="35"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osc-Jz-ny1">
+                            <rect key="frame" x="20" y="40" width="35" height="35"/>
                             <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="35" id="RtA-s4-lVE"/>
@@ -220,7 +220,7 @@
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="osc-Jz-ny1" firstAttribute="leading" secondItem="1R3-cH-CaW" secondAttribute="leading" constant="20" id="1pt-7D-arA"/>
-                        <constraint firstItem="osc-Jz-ny1" firstAttribute="top" secondItem="1R3-cH-CaW" secondAttribute="top" constant="60" id="Zvd-0b-Y5P"/>
+                        <constraint firstItem="osc-Jz-ny1" firstAttribute="top" secondItem="1R3-cH-CaW" secondAttribute="top" constant="40" id="Zvd-0b-Y5P"/>
                     </constraints>
                 </view>
             </subviews>
@@ -255,7 +255,7 @@
                 <constraint firstItem="ve0-pm-tRh" firstAttribute="height" secondItem="o4J-jO-46w" secondAttribute="height" id="fot-Qt-6Lj"/>
                 <constraint firstItem="nvd-aA-BFi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fr2-z6-WHI"/>
                 <constraint firstItem="IH1-hd-WMB" firstAttribute="top" secondItem="B4S-Rh-xvz" secondAttribute="bottom" constant="20" id="h1H-b0-oRQ"/>
-                <constraint firstItem="eZf-7f-7Vd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="hau-MR-AHb"/>
+                <constraint firstItem="eZf-7f-7Vd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="hau-MR-AHb"/>
                 <constraint firstItem="ve0-pm-tRh" firstAttribute="leading" secondItem="sWd-TY-BGS" secondAttribute="trailing" constant="35" id="igb-hA-W4C"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1R3-cH-CaW" secondAttribute="trailing" id="jNb-RX-zJa"/>
                 <constraint firstItem="4vH-Ad-han" firstAttribute="top" secondItem="o4J-jO-46w" secondAttribute="bottom" id="k7V-cb-x1Y"/>
