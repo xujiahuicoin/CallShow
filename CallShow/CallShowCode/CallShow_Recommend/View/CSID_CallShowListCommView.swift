@@ -10,14 +10,12 @@ import UIKit
 
 typealias  recommendChangeblock = (_ changBool : Bool) -> Void
 
-class CSID_CallShowListCommView: UIView,UICollectionViewDelegate,UICollectionViewDataSource{
+class CSID_CallShowListCommView: CSID_CallShowBaseView,UICollectionViewDelegate,UICollectionViewDataSource{
 
     var recommendChangeblock:recommendChangeblock?
     
     var listdataArr : NSArray = NSArray.init()
     var currentModel : CSID_CallShowListModel!
-    
-    var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -52,6 +50,9 @@ class CSID_CallShowListCommView: UIView,UICollectionViewDelegate,UICollectionVie
         
         call_show_RightView.call_show_showLookBlockAction { (showButton) in
 //            self.callShowBlock(self.currentModel.imageUrl ?? "")
+            //展示插页广告
+//            self.doStarInterstitial()
+            
             let imageUrlStr:String = self.currentModel.imageUrl ?? ""
             weak var weakSelf = self // 弱引用
             let alertController = UIAlertController()
@@ -60,10 +61,9 @@ class CSID_CallShowListCommView: UIView,UICollectionViewDelegate,UICollectionVie
                 let callshow:CSID_CallShowViewController = CSID_CallShowViewController.init()
                 callshow.imageUrlString = imageUrlStr
                 callshow.hidesBottomBarWhenPushed = true
-
-//                UIApplication.sharedApplication.keyWindow?.rootViewController?.presentViewController(CSID_CallShowViewController, animated: true, completion: nil)
-
 //                self.navigationController?.pushViewController(callshow)
+               
+                self.ParentController(viewself: self).navigationController?.pushViewController(callshow, animated: true)
             }
             let allAction = UIAlertAction(title: "全部人设置", style: .default) { (action) in
                 weak var weakSelf = self // 弱引用
@@ -74,12 +74,12 @@ class CSID_CallShowListCommView: UIView,UICollectionViewDelegate,UICollectionVie
                 }
                 alertController.addAction(sureAction)
                 alertController.addAction(cancelAction)
-//                weakSelf!.present(alertController, animated: true, completion: nil)
+                self.ParentController(viewself: self).present(alertController, animated: true, completion: nil)
             }
             alertController.addAction(specifiedAction)
             alertController.addAction(allAction)
             alertController.addAction(cancelAction)
-//            weakSelf!.present(alertController, animated: true, completion: nil)
+            self.ParentController(viewself: self).present(alertController, animated: true, completion: nil)
             
         }
         

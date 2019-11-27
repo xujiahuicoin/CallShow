@@ -13,6 +13,8 @@
 		042B102C238E5C8E0021339F /* CSID_ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B102B238E5C8E0021339F /* CSID_ContactTableViewCell.swift */; };
 		042B102F238E5C950021339F /* CSID_CallShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042B102D238E5C950021339F /* CSID_CallShowViewController.xib */; };
 		042B1030238E5C950021339F /* CSID_CallShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B102E238E5C950021339F /* CSID_CallShowViewController.swift */; };
+		042B1032238E67590021339F /* CSID_AAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B1031238E67590021339F /* CSID_AAViewController.swift */; };
+		042B1034238E68D50021339F /* CSID_CallShowBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B1033238E68D50021339F /* CSID_CallShowBaseView.swift */; };
 		042D4167238BAEFB0034DE84 /* FRFExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D4115238BAEFA0034DE84 /* FRFExtension.swift */; };
 		042D4168238BAEFB0034DE84 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D4116238BAEFA0034DE84 /* UIImageExt.swift */; };
 		042D416E238BAEFB0034DE84 /* CSID_Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D4123238BAEFA0034DE84 /* CSID_Error.swift */; };
@@ -122,6 +124,8 @@
 		042B102B238E5C8E0021339F /* CSID_ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSID_ContactTableViewCell.swift; sourceTree = "<group>"; };
 		042B102D238E5C950021339F /* CSID_CallShowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSID_CallShowViewController.xib; sourceTree = "<group>"; };
 		042B102E238E5C950021339F /* CSID_CallShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSID_CallShowViewController.swift; sourceTree = "<group>"; };
+		042B1031238E67590021339F /* CSID_AAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_AAViewController.swift; sourceTree = "<group>"; };
+		042B1033238E68D50021339F /* CSID_CallShowBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_CallShowBaseView.swift; sourceTree = "<group>"; };
 		042D4115238BAEFA0034DE84 /* FRFExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRFExtension.swift; sourceTree = "<group>"; };
 		042D4116238BAEFA0034DE84 /* UIImageExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
 		042D4123238BAEFA0034DE84 /* CSID_Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSID_Error.swift; sourceTree = "<group>"; };
@@ -273,6 +277,7 @@
 			children = (
 				042B102E238E5C950021339F /* CSID_CallShowViewController.swift */,
 				042B102D238E5C950021339F /* CSID_CallShowViewController.xib */,
+				042B1031238E67590021339F /* CSID_AAViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				042B102B238E5C8E0021339F /* CSID_ContactTableViewCell.swift */,
+				042B1033238E68D50021339F /* CSID_CallShowBaseView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -648,8 +654,8 @@
 		04B0BB64238BAB8800DBFF12 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				04C7C905238CCDCD00E72693 /* CSID_CallShowListCommView.swift */,
 				04C7C907238CD22200E72693 /* CSID_CallShowRecommCellCollectionViewCell.swift */,
+				04C7C905238CCDCD00E72693 /* CSID_CallShowListCommView.swift */,
 				04C7C909238D077500E72693 /* CSID_CollectRightSubView.swift */,
 				04C7C90B238D078F00E72693 /* CSID_CollectRightSubView.xib */,
 				04C7C90D238D294900E72693 /* CSID_ShowPreviewSubView.swift */,
@@ -917,6 +923,7 @@
 				049034D2238CDEA100C91F08 /* CSID_CallShowMe.swift in Sources */,
 				042D4189238BAEFB0034DE84 /* CSID_NoDataView.swift in Sources */,
 				04C7C902238CBAFE00E72693 /* CallShowPortHeaderFile.swift in Sources */,
+				042B1034238E68D50021339F /* CSID_CallShowBaseView.swift in Sources */,
 				04DF5854237271B20079669B /* func_Expantion.swift in Sources */,
 				042D4172238BAEFB0034DE84 /* ThumbView.swift in Sources */,
 				042D41A0238BAF490034DE84 /* CSID_CallShowSiteVC.swift in Sources */,
@@ -962,6 +969,7 @@
 				042D4195238BAEFB0034DE84 /* BFRefreshNoDataView.swift in Sources */,
 				04C7C922238E0CB300E72693 /* CSID_CallShowSiteHeaderDetailViewController.swift in Sources */,
 				042D4167238BAEFB0034DE84 /* FRFExtension.swift in Sources */,
+				042B1032238E67590021339F /* CSID_AAViewController.swift in Sources */,
 				042D419B238BAEFB0034DE84 /* ViewDataObject.swift in Sources */,
 				042D4194238BAEFB0034DE84 /* BFRefreshHeader.swift in Sources */,
 				042D418F238BAEFB0034DE84 /* BaseViewExtension.swift in Sources */,
