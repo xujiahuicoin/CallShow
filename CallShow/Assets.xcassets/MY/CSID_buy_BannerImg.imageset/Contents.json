@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "iphone",
-      "filename" : "topBannerImg~iphone.png",
       "scale" : "1x"
     },
     {
       "idiom" : "iphone",
-      "filename" : "topBannerImg~iphone@2x.png",
+      "filename" : "12@1x.png",
       "scale" : "2x"
     },
     {
