@@ -81,6 +81,12 @@
 		04C7C90C238D078F00E72693 /* CSID_CollectRightSubView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C7C90B238D078F00E72693 /* CSID_CollectRightSubView.xib */; };
 		04C7C90E238D294900E72693 /* CSID_ShowPreviewSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7C90D238D294900E72693 /* CSID_ShowPreviewSubView.swift */; };
 		04C7C910238D295500E72693 /* CSID_ShowPreviewSubView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C7C90F238D295500E72693 /* CSID_ShowPreviewSubView.xib */; };
+		04C7C920238E0CAA00E72693 /* CSID_CallShowSiteDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7C91F238E0CAA00E72693 /* CSID_CallShowSiteDetailVC.swift */; };
+		04C7C922238E0CB300E72693 /* CSID_CallShowSiteHeaderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7C921238E0CB300E72693 /* CSID_CallShowSiteHeaderDetailViewController.swift */; };
+		04C7C925238E0CC700E72693 /* CSID_CallShow_SiteCollectViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7C923238E0CC700E72693 /* CSID_CallShow_SiteCollectViewCell.swift */; };
+		04C7C926238E0CC700E72693 /* CSID_CallShowSiteDetailCollectViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7C924238E0CC700E72693 /* CSID_CallShowSiteDetailCollectViewCell.swift */; };
+		04C7C928238E0DE700E72693 /* CSID_CallShowSectionHeaderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7C927238E0DE700E72693 /* CSID_CallShowSectionHeaderDetailViewController.swift */; };
+		04C7C92A238E16A600E72693 /* CSID_SiteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7C929238E16A600E72693 /* CSID_SiteModel.swift */; };
 		04DF583823714ED00079669B /* EnumFileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF583723714ED00079669B /* EnumFileHeader.swift */; };
 		04DF5854237271B20079669B /* func_Expantion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF5853237271B20079669B /* func_Expantion.swift */; };
 		4F30EFB98176F64FA26EEA28 /* Pods_CallShow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F52B52DED5FE0F3B8F6A635 /* Pods_CallShow.framework */; };
@@ -186,6 +192,12 @@
 		04C7C90B238D078F00E72693 /* CSID_CollectRightSubView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CSID_CollectRightSubView.xib; sourceTree = "<group>"; };
 		04C7C90D238D294900E72693 /* CSID_ShowPreviewSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_ShowPreviewSubView.swift; sourceTree = "<group>"; };
 		04C7C90F238D295500E72693 /* CSID_ShowPreviewSubView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CSID_ShowPreviewSubView.xib; sourceTree = "<group>"; };
+		04C7C91F238E0CAA00E72693 /* CSID_CallShowSiteDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSID_CallShowSiteDetailVC.swift; sourceTree = "<group>"; };
+		04C7C921238E0CB300E72693 /* CSID_CallShowSiteHeaderDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSID_CallShowSiteHeaderDetailViewController.swift; sourceTree = "<group>"; };
+		04C7C923238E0CC700E72693 /* CSID_CallShow_SiteCollectViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSID_CallShow_SiteCollectViewCell.swift; sourceTree = "<group>"; };
+		04C7C924238E0CC700E72693 /* CSID_CallShowSiteDetailCollectViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSID_CallShowSiteDetailCollectViewCell.swift; sourceTree = "<group>"; };
+		04C7C927238E0DE700E72693 /* CSID_CallShowSectionHeaderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_CallShowSectionHeaderDetailViewController.swift; sourceTree = "<group>"; };
+		04C7C929238E16A600E72693 /* CSID_SiteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_SiteModel.swift; sourceTree = "<group>"; };
 		04DF583723714ED00079669B /* EnumFileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumFileHeader.swift; sourceTree = "<group>"; };
 		04DF5853237271B20079669B /* func_Expantion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = func_Expantion.swift; sourceTree = "<group>"; };
 		5A7E1DCF7E9F8317DC87C391 /* Pods-ChangeCoin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChangeCoin.debug.xcconfig"; path = "Target Support Files/Pods-ChangeCoin/Pods-ChangeCoin.debug.xcconfig"; sourceTree = "<group>"; };
@@ -525,6 +537,9 @@
 			isa = PBXGroup;
 			children = (
 				042D419F238BAF490034DE84 /* CSID_CallShowSiteVC.swift */,
+				04C7C91F238E0CAA00E72693 /* CSID_CallShowSiteDetailVC.swift */,
+				04C7C921238E0CB300E72693 /* CSID_CallShowSiteHeaderDetailViewController.swift */,
+				04C7C927238E0DE700E72693 /* CSID_CallShowSectionHeaderDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -532,6 +547,7 @@
 		04B0BB59238BAB8700DBFF12 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04C7C929238E16A600E72693 /* CSID_SiteModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -539,6 +555,8 @@
 		04B0BB5A238BAB8700DBFF12 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04C7C923238E0CC700E72693 /* CSID_CallShow_SiteCollectViewCell.swift */,
+				04C7C924238E0CC700E72693 /* CSID_CallShowSiteDetailCollectViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -732,13 +750,10 @@
 				049034D1238CDEA100C91F08 /* yinsi.html in Resources */,
 				049034D6238CDEA100C91F08 /* CSID_BuyVC.xib in Resources */,
 				043516AF235DAD8A00764962 /* Assets.xcassets in Resources */,
-
 				04C7C910238D295500E72693 /* CSID_ShowPreviewSubView.xib in Resources */,
-
 				049034D3238CDEA100C91F08 /* CSID_CallShowMe.xib in Resources */,
 				049034DA238CDEA100C91F08 /* server.html in Resources */,
 				049034D8238CDEA100C91F08 /* CSID_FeedbackVC.xib in Resources */,
-
 				042D4198238BAEFB0034DE84 /* RefreshTableView.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -830,6 +845,7 @@
 				042D417C238BAEFB0034DE84 /* CSID_NilDataTableViewCell.m in Sources */,
 				042D418C238BAEFB0034DE84 /* MFPageTitleView.swift in Sources */,
 				042D4192238BAEFB0034DE84 /* CSID_BaseBannerView.swift in Sources */,
+				04C7C925238E0CC700E72693 /* CSID_CallShow_SiteCollectViewCell.swift in Sources */,
 				042D4184238BAEFB0034DE84 /* UIButton+Extentions.swift in Sources */,
 				042D417A238BAEFB0034DE84 /* CSID_BaseCollectionViewCell.swift in Sources */,
 				042D4196238BAEFB0034DE84 /* BFRefreshLoadingView.swift in Sources */,
@@ -846,6 +862,7 @@
 				042D419E238BAEFB0034DE84 /* ViewEventObject.swift in Sources */,
 				043911E52355620700636064 /* CodeHeader.swift in Sources */,
 				042D4186238BAEFB0034DE84 /* UITextField+Extentions.swift in Sources */,
+				04C7C928238E0DE700E72693 /* CSID_CallShowSectionHeaderDetailViewController.swift in Sources */,
 				042D416F238BAEFB0034DE84 /* CSID_RequestManager.swift in Sources */,
 				042D41A4238BAF670034DE84 /* CSID_CallShowrecommend.swift in Sources */,
 				04C7C904238CC95400E72693 /* CSID_CallShowListModel.swift in Sources */,
@@ -857,6 +874,7 @@
 				042D4173238BAEFB0034DE84 /* TrackLayer.swift in Sources */,
 				042D419D238BAEFB0034DE84 /* CSID_ViewObject.swift in Sources */,
 				042D4195238BAEFB0034DE84 /* BFRefreshNoDataView.swift in Sources */,
+				04C7C922238E0CB300E72693 /* CSID_CallShowSiteHeaderDetailViewController.swift in Sources */,
 				042D4167238BAEFB0034DE84 /* FRFExtension.swift in Sources */,
 				042D419B238BAEFB0034DE84 /* ViewDataObject.swift in Sources */,
 				042D4194238BAEFB0034DE84 /* BFRefreshHeader.swift in Sources */,
@@ -864,16 +882,16 @@
 				0494ADDD235475EE00DEE0B2 /* AppDelegate.swift in Sources */,
 				042D4197238BAEFB0034DE84 /* BFRefreshRequestErrorView.swift in Sources */,
 				042D4171238BAEFB0034DE84 /* BalloonView.swift in Sources */,
-
 				04C7C90E238D294900E72693 /* CSID_ShowPreviewSubView.swift in Sources */,
-
 				049034D4238CDEA100C91F08 /* CSID_WkWebViC.swift in Sources */,
-
+				04C7C92A238E16A600E72693 /* CSID_SiteModel.swift in Sources */,
 				042D4179238BAEFB0034DE84 /* CSID_BaseCollectionView.swift in Sources */,
+				04C7C926238E0CC700E72693 /* CSID_CallShowSiteDetailCollectViewCell.swift in Sources */,
 				042D418D238BAEFB0034DE84 /* MFPageTitleViewConfig.swift in Sources */,
 				042D419A238BAEFB0034DE84 /* UIScrollView-BFRefresh.swift in Sources */,
 				049034F3238CF85F00C91F08 /* CSID_BuyTool.swift in Sources */,
 				042D4176238BAEFB0034DE84 /* CSID_BaseNavigationController.swift in Sources */,
+				04C7C920238E0CAA00E72693 /* CSID_CallShowSiteDetailVC.swift in Sources */,
 				042D4178238BAEFB0034DE84 /* NirKxMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

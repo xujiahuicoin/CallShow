@@ -82,14 +82,11 @@ class CSID_CallShowListCommView: UIView,UICollectionViewDelegate,UICollectionVie
     
     public func csid_CallShow_recommCollectViewRefresh(needArray:NSArray) -> Void {
         
-        if needArray.count>0 {
-            
-            listdataArr=needArray[0] as! NSArray
-            if listdataArr.count>0 {
-                self.currentModel = (listdataArr[0] as! CSID_CallShowListModel)
-            }
-            CSID_CallShow_RecommlistCollView.reloadData()
+        listdataArr=needArray
+        if listdataArr.count>0 {
+          self.currentModel = (listdataArr[0] as! CSID_CallShowListModel)
         }
+        CSID_CallShow_RecommlistCollView.reloadData()
     }
     lazy var CSID_CallShow_RecommlistCollView : UICollectionView = {
         
