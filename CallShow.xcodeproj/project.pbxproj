@@ -588,8 +588,8 @@
 			children = (
 				042D419F238BAF490034DE84 /* CSID_CallShowSiteVC.swift */,
 				04C7C91F238E0CAA00E72693 /* CSID_CallShowSiteDetailVC.swift */,
-				04C7C921238E0CB300E72693 /* CSID_CallShowSiteHeaderDetailViewController.swift */,
 				04C7C927238E0DE700E72693 /* CSID_CallShowSectionHeaderDetailViewController.swift */,
+				04C7C921238E0CB300E72693 /* CSID_CallShowSiteHeaderDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

@@ -17,7 +17,7 @@ class CSID_CallShow_SiteCollectViewCell: UICollectionViewCell {
     }
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor=UIColor.red
+        self.backgroundColor=CSID_backGrayColor
         addImageView()
     }
     func addImageView() {
@@ -25,6 +25,7 @@ class CSID_CallShow_SiteCollectViewCell: UICollectionViewCell {
         csid_callshow_SiteImageView = UIImageView(frame: contentView.bounds)
         csid_callshow_SiteImageView.clipsToBounds = true
         csid_callshow_SiteImageView.contentMode = .scaleAspectFill
+        AddRadius(csid_callshow_SiteImageView, rabF: 4)
         contentView.addSubview(csid_callshow_SiteImageView)
     }
 }

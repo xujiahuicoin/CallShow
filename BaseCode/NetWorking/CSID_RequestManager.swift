@@ -28,10 +28,11 @@ class CSID_RequestManager {
         
         var commonDict = ["productId":"d0f140e5-1d1f-4171-a8e7-8a854d450a0b","channel":"appstore","osType":"ios","token":"ddmh%402018","udid":"com.CallShow.www","version":"1.0","vestId":"be5d3132-ff21-4add-a95c-50f3104abc4b"]as[String:Any]
         
-        for(key,value)in params!{
-            commonDict[key]=value
+        if params != nil{
+            for(key,value)in params!{
+                commonDict[key]=value
+             }
         }
-        
         let method = type == .get ? HTTPMethod.get : HTTPMethod.post
         
         Alamofire.request(url, method: method, parameters: commonDict).responseJSON(completionHandler: { (response) in

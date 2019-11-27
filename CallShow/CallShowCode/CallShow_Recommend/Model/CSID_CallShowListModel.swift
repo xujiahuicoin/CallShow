@@ -17,5 +17,7 @@ class CSID_CallShowListModel: CSID_BaseModel {
     var smallImageId : String?
     var imageUrlSmall : String?
     var haveUp : Bool?
+    //后期添加
+    var upCount : String?
     
 }

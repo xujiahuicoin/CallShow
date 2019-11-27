@@ -20,6 +20,7 @@ class CSID_CallShowViewController:CSID_BaseViewController,UITableViewDataSource,
         
         self.title = "选择联系人"
         self.view.backgroundColor = RGB(248, g: 248, b: 248)
+        self.bannerShow = false
         // 在右侧添加一个按钮
         let barButtonItem = UIBarButtonItem(title: "完成", style: UIBarButtonItem.Style.plain, target: self, action: #selector(selectedOver))
         barButtonItem.tintColor = .black
@@ -27,6 +28,7 @@ class CSID_CallShowViewController:CSID_BaseViewController,UITableViewDataSource,
         
         self.dataDic = CSID_CallShowContact.GetContactInformation()
         self.setUpTabView()
+        self.configData()
         self.view.addSubview(self.xiaView)
         self.xiaView.snp.makeConstraints { (make) in
             make.bottom.left.right.equalTo(self.view)
@@ -61,6 +63,9 @@ class CSID_CallShowViewController:CSID_BaseViewController,UITableViewDataSource,
             make.left.right.top.bottom.equalTo(self.view)
         })
 
+    }
+    
+    func configData(){
         //测试数据
         let testArray = self.dataDic["name"]
         if testArray != nil {
@@ -76,10 +81,10 @@ class CSID_CallShowViewController:CSID_BaseViewController,UITableViewDataSource,
     
     //MARK: tabView数据源及代理相关
     func numberOfSections(in tableView: UITableView) -> Int {
-        return keysArray!.count
+        return keysArray?.count ?? 0
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return objectsArray![section].count
+        return objectsArray?[section].count ?? 0
     }
     
     //MARK: 这是Setion标题 以及右侧索引数组设置
