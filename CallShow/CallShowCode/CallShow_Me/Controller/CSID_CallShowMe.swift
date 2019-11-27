@@ -83,7 +83,7 @@ class CSID_CallShowMe: CSID_BaseViewController {
     
     ///购买APp
     @IBAction func CSID_Pri_MyBuyApp_Acion(){
-        self.navigationController?.pushViewController(CSID_BuyVC())
+        self.navigationController?.pushViewController(CSID_iamgeViewController())
     }
     
     //删除缓存
@@ -108,9 +108,9 @@ class CSID_CallShowMe: CSID_BaseViewController {
             }
         }
         CSID_hideHUD()
-       let cacheSize = getCacheSize()
+//       let cacheSize = getCacheSize()
         
-        CSID_showSuccessWithText(text: "已清理\(cacheSize)缓存", view: self.view)
+        CSID_showSuccessWithText(text: "清理缓存成功", view: self.view)
     }
     //获取缓存大小
     func getCacheSize() -> String {

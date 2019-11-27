@@ -264,7 +264,7 @@
     </objects>
     <resources>
         <image name="CSID_my_Like" width="28" height="28"/>
-        <image name="CSID_my_Suggest" width="28" height="28"/>
+        <image name="CSID_my_Suggest" width="28" height="33"/>
         <image name="CSID_my_VIP" width="375" height="69.5"/>
         <image name="CSID_my_clean" width="28" height="28"/>
         <image name="CSID_my_share" width="28" height="28"/>

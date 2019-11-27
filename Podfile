@@ -33,5 +33,6 @@ pod 'SCLAlertView'
 
 #google 广告
 pod 'Google-Mobile-Ads-SDK'
-
+#读取相册
+pod "BSImagePicker", "~> 2.8"
 end

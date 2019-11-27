@@ -15,6 +15,7 @@ class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivi
     
     ///是否显示banner广告 默认显示
     var bannerShow : Bool = true
+    
     var bannerView: GADBannerView!
     var interstitial: GADInterstitial!
     

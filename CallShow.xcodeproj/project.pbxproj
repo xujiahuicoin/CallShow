@@ -61,6 +61,8 @@
 		043516AF235DAD8A00764962 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042D4274235DAA5E0075B700 /* Assets.xcassets */; };
 		043911E52355620700636064 /* CodeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043911AE2355620700636064 /* CodeHeader.swift */; };
 		043911EB2355688100636064 /* AppDelegate+JPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043911E82355688100636064 /* AppDelegate+JPush.swift */; };
+		048110F1238E622200806457 /* CSID_iamgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048110EF238E622200806457 /* CSID_iamgeViewController.swift */; };
+		048110F2238E622200806457 /* CSID_iamgeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048110F0238E622200806457 /* CSID_iamgeViewController.xib */; };
 		049034D1238CDEA100C91F08 /* yinsi.html in Resources */ = {isa = PBXBuildFile; fileRef = 049034C5238CDEA100C91F08 /* yinsi.html */; };
 		049034D2238CDEA100C91F08 /* CSID_CallShowMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049034C7238CDEA100C91F08 /* CSID_CallShowMe.swift */; };
 		049034D3238CDEA100C91F08 /* CSID_CallShowMe.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049034C8238CDEA100C91F08 /* CSID_CallShowMe.xib */; };
@@ -168,6 +170,8 @@
 		043911AE2355620700636064 /* CodeHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeHeader.swift; sourceTree = "<group>"; };
 		043911E82355688100636064 /* AppDelegate+JPush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+JPush.swift"; sourceTree = "<group>"; };
 		0439120F235572C100636064 /* CallShow-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CallShow-Bridging-Header.h"; sourceTree = "<group>"; };
+		048110EF238E622200806457 /* CSID_iamgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_iamgeViewController.swift; sourceTree = "<group>"; };
+		048110F0238E622200806457 /* CSID_iamgeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CSID_iamgeViewController.xib; sourceTree = "<group>"; };
 		049034C5238CDEA100C91F08 /* yinsi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = yinsi.html; sourceTree = "<group>"; };
 		049034C7238CDEA100C91F08 /* CSID_CallShowMe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSID_CallShowMe.swift; sourceTree = "<group>"; };
 		049034C8238CDEA100C91F08 /* CSID_CallShowMe.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSID_CallShowMe.xib; sourceTree = "<group>"; };
@@ -468,6 +472,8 @@
 				049034CE238CDEA100C91F08 /* CSID_FeedbackVC.xib */,
 				049034CB238CDEA100C91F08 /* CSID_MyHelpsVC.swift */,
 				049034CA238CDEA100C91F08 /* CSID_WkWebViC.swift */,
+				048110EF238E622200806457 /* CSID_iamgeViewController.swift */,
+				048110F0238E622200806457 /* CSID_iamgeViewController.xib */,
 			);
 			path = subVC;
 			sourceTree = "<group>";
@@ -745,6 +751,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048110F2238E622200806457 /* CSID_iamgeViewController.xib in Resources */,
 				04C7C90C238D078F00E72693 /* CSID_CollectRightSubView.xib in Resources */,
 				042D417B238BAEFB0034DE84 /* CSID_NilDataTableViewCell.xib in Resources */,
 				049034D1238CDEA100C91F08 /* yinsi.html in Resources */,
@@ -882,6 +889,7 @@
 				0494ADDD235475EE00DEE0B2 /* AppDelegate.swift in Sources */,
 				042D4197238BAEFB0034DE84 /* BFRefreshRequestErrorView.swift in Sources */,
 				042D4171238BAEFB0034DE84 /* BalloonView.swift in Sources */,
+				048110F1238E622200806457 /* CSID_iamgeViewController.swift in Sources */,
 				04C7C90E238D294900E72693 /* CSID_ShowPreviewSubView.swift in Sources */,
 				049034D4238CDEA100C91F08 /* CSID_WkWebViC.swift in Sources */,
 				04C7C92A238E16A600E72693 /* CSID_SiteModel.swift in Sources */,
