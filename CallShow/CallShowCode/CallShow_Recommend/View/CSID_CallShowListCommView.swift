@@ -16,7 +16,8 @@ class CSID_CallShowListCommView: UIView,UICollectionViewDelegate,UICollectionVie
     
     var listdataArr : NSArray = NSArray.init()
     var currentModel : CSID_CallShowListModel!
-
+    
+    var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -47,6 +48,12 @@ class CSID_CallShowListCommView: UIView,UICollectionViewDelegate,UICollectionVie
                 self.recommendChangeblock!(true)
             }
         }
+        
+        
+        call_show_RightView.call_show_showLookBlockAction { (showButton) in
+            self.callShowBlock(self.currentModel.imageUrl ?? "")
+        }
+        
         call_show_PreviewView.call_show_preViewHiddeneBlock = { () -> Void in
             self.call_show_RightView.isHidden=false
             if self.recommendChangeblock != nil {

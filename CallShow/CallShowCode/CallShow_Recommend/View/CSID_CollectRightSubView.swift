@@ -15,6 +15,7 @@ class CSID_CollectRightSubView: UIView {
     
     var call_show_loveBlock : loveblock?
     var call_show_eyeBlock : eyelookblock?
+    var call_show_showBlock : eyelookblock?
     
     static func newInstance() -> CSID_CollectRightSubView?{
         
@@ -60,6 +61,14 @@ class CSID_CollectRightSubView: UIView {
     }
     //设置来电秀
     @IBAction func call_show_callPhoneButtonAction(_ sender: UIButton) {
+        if call_show_showBlock != nil {
+            call_show_showBlock!(sender)
+        }
+    }
+    
+    func call_show_showLookBlockAction( showlookblock: @escaping (_ eyeButton: UIButton) -> Void) {
+        
+         call_show_showBlock = showlookblock
     }
     
 }

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042B101F238E3F090021339F /* UILocalizedIndexedCollation+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B1019238E3F090021339F /* UILocalizedIndexedCollation+Sort.swift */; };
+		042B1029238E5C840021339F /* CSID_CallShowContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B1027238E5C840021339F /* CSID_CallShowContact.swift */; };
+		042B102A238E5C840021339F /* CSID_ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B1028238E5C840021339F /* CSID_ContactModel.swift */; };
+		042B102C238E5C8E0021339F /* CSID_ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B102B238E5C8E0021339F /* CSID_ContactTableViewCell.swift */; };
+		042B102F238E5C950021339F /* CSID_CallShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042B102D238E5C950021339F /* CSID_CallShowViewController.xib */; };
+		042B1030238E5C950021339F /* CSID_CallShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B102E238E5C950021339F /* CSID_CallShowViewController.swift */; };
 		042D4167238BAEFB0034DE84 /* FRFExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D4115238BAEFA0034DE84 /* FRFExtension.swift */; };
 		042D4168238BAEFB0034DE84 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D4116238BAEFA0034DE84 /* UIImageExt.swift */; };
 		042D416E238BAEFB0034DE84 /* CSID_Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D4123238BAEFA0034DE84 /* CSID_Error.swift */; };
@@ -110,6 +116,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		042B1019238E3F090021339F /* UILocalizedIndexedCollation+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILocalizedIndexedCollation+Sort.swift"; sourceTree = "<group>"; };
+		042B1027238E5C840021339F /* CSID_CallShowContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSID_CallShowContact.swift; sourceTree = "<group>"; };
+		042B1028238E5C840021339F /* CSID_ContactModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSID_ContactModel.swift; sourceTree = "<group>"; };
+		042B102B238E5C8E0021339F /* CSID_ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSID_ContactTableViewCell.swift; sourceTree = "<group>"; };
+		042B102D238E5C950021339F /* CSID_CallShowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSID_CallShowViewController.xib; sourceTree = "<group>"; };
+		042B102E238E5C950021339F /* CSID_CallShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSID_CallShowViewController.swift; sourceTree = "<group>"; };
 		042D4115238BAEFA0034DE84 /* FRFExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRFExtension.swift; sourceTree = "<group>"; };
 		042D4116238BAEFA0034DE84 /* UIImageExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
 		042D4123238BAEFA0034DE84 /* CSID_Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSID_Error.swift; sourceTree = "<group>"; };
@@ -236,12 +248,50 @@
 		04089A402361B9A700452304 /* CallShowCode */ = {
 			isa = PBXGroup;
 			children = (
+				042B1015238E3E4B0021339F /* CallShow_Contact */,
 				049034DB238CE1D500C91F08 /* In-appbuy */,
 				04B0BB60238BAB8800DBFF12 /* CallShow_Recommend */,
 				04B0BB56238BAB8700DBFF12 /* CallShow_CallShowSite */,
 				049034C4238CDEA100C91F08 /* CallShow_Me */,
 			);
 			path = CallShowCode;
+			sourceTree = "<group>";
+		};
+		042B1015238E3E4B0021339F /* CallShow_Contact */ = {
+			isa = PBXGroup;
+			children = (
+				042B1024238E52C10021339F /* Model */,
+				042B1023238E52BF0021339F /* View */,
+				042B1022238E52BC0021339F /* Controller */,
+				042B1019238E3F090021339F /* UILocalizedIndexedCollation+Sort.swift */,
+			);
+			path = CallShow_Contact;
+			sourceTree = "<group>";
+		};
+		042B1022238E52BC0021339F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				042B102E238E5C950021339F /* CSID_CallShowViewController.swift */,
+				042B102D238E5C950021339F /* CSID_CallShowViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		042B1023238E52BF0021339F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				042B102B238E5C8E0021339F /* CSID_ContactTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		042B1024238E52C10021339F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				042B1027238E5C840021339F /* CSID_CallShowContact.swift */,
+				042B1028238E5C840021339F /* CSID_ContactModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		042D4113238BAEFA0034DE84 /* BaseCode */ = {
@@ -751,6 +801,7 @@
 				049034D6238CDEA100C91F08 /* CSID_BuyVC.xib in Resources */,
 				043516AF235DAD8A00764962 /* Assets.xcassets in Resources */,
 				04C7C910238D295500E72693 /* CSID_ShowPreviewSubView.xib in Resources */,
+				042B102F238E5C950021339F /* CSID_CallShowViewController.xib in Resources */,
 				049034D3238CDEA100C91F08 /* CSID_CallShowMe.xib in Resources */,
 				049034DA238CDEA100C91F08 /* server.html in Resources */,
 				049034D8238CDEA100C91F08 /* CSID_FeedbackVC.xib in Resources */,
@@ -781,11 +832,42 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CallShow/Pods-CallShow-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CallShow/Pods-CallShow-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ESPullToRefresh/ESPullToRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/Segmentio/Segmentio.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ViewAnimator/ViewAnimator.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CallShow/Pods-CallShow-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESPullToRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Segmentio.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViewAnimator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -840,6 +922,7 @@
 				042D41A0238BAF490034DE84 /* CSID_CallShowSiteVC.swift in Sources */,
 				04DF583823714ED00079669B /* EnumFileHeader.swift in Sources */,
 				049034D5238CDEA100C91F08 /* CSID_MyHelpsVC.swift in Sources */,
+				042B102C238E5C8E0021339F /* CSID_ContactTableViewCell.swift in Sources */,
 				042D4177238BAEFB0034DE84 /* CSID_BaseTabBarController.swift in Sources */,
 				049034D7238CDEA100C91F08 /* CSID_BuyVC.swift in Sources */,
 				042D417C238BAEFB0034DE84 /* CSID_NilDataTableViewCell.m in Sources */,
@@ -850,6 +933,7 @@
 				042D417A238BAEFB0034DE84 /* CSID_BaseCollectionViewCell.swift in Sources */,
 				042D4196238BAEFB0034DE84 /* BFRefreshLoadingView.swift in Sources */,
 				04C7C906238CCDCD00E72693 /* CSID_CallShowListCommView.swift in Sources */,
+				042B1030238E5C950021339F /* CSID_CallShowViewController.swift in Sources */,
 				042D4193238BAEFB0034DE84 /* myButton.m in Sources */,
 				042D4175238BAEFB0034DE84 /* CSID_BaseViewController.swift in Sources */,
 				042D4182238BAEFB0034DE84 /* UIImageView+Extensions.swift in Sources */,
@@ -868,8 +952,10 @@
 				04C7C904238CC95400E72693 /* CSID_CallShowListModel.swift in Sources */,
 				042D4188238BAEFB0034DE84 /* CSID_ProgressHUD.swift in Sources */,
 				04C7C90A238D077500E72693 /* CSID_CollectRightSubView.swift in Sources */,
+				042B101F238E3F090021339F /* UILocalizedIndexedCollation+Sort.swift in Sources */,
 				043911EB2355688100636064 /* AppDelegate+JPush.swift in Sources */,
 				042D417E238BAEFB0034DE84 /* CSID_BaseTableViewCell.swift in Sources */,
+				042B1029238E5C840021339F /* CSID_CallShowContact.swift in Sources */,
 				042D419C238BAEFB0034DE84 /* CSID_BaseModel.swift in Sources */,
 				042D4173238BAEFB0034DE84 /* TrackLayer.swift in Sources */,
 				042D419D238BAEFB0034DE84 /* CSID_ViewObject.swift in Sources */,
@@ -886,6 +972,7 @@
 				049034D4238CDEA100C91F08 /* CSID_WkWebViC.swift in Sources */,
 				04C7C92A238E16A600E72693 /* CSID_SiteModel.swift in Sources */,
 				042D4179238BAEFB0034DE84 /* CSID_BaseCollectionView.swift in Sources */,
+				042B102A238E5C840021339F /* CSID_ContactModel.swift in Sources */,
 				04C7C926238E0CC700E72693 /* CSID_CallShowSiteDetailCollectViewCell.swift in Sources */,
 				042D418D238BAEFB0034DE84 /* MFPageTitleViewConfig.swift in Sources */,
 				042D419A238BAEFB0034DE84 /* UIScrollView-BFRefresh.swift in Sources */,
@@ -1049,7 +1136,7 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 23943WAA55;
+				DEVELOPMENT_TEAM = 826HY395L6;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

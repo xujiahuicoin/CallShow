@@ -232,6 +232,11 @@ func CSID_isLoginIs() -> Bool {
 }
 
 
+//切圆角
+func CallShowRaise (_ RView:UIView,rabF:CGFloat){
+    RView.layer.cornerRadius = rabF
+    RView.layer.masksToBounds = true
+}
 
 
 ///控件边线设置

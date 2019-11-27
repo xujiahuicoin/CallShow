@@ -22,11 +22,12 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
 
     }
     override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
     }
     override func viewDidLoad() {
-    
         self.call_showRecommandListNetwork()
         self.call_showNewestListNetwork()
+        
         
         view.addSubview(recommadnScrollView)
         recommadnScrollView.addSubview(callShowRecommendView)
@@ -46,6 +47,35 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
          
             self.call_show_ShowHeaderSettingwork(vaules: boolVaule)
         }
+        
+        callShowRecommendView.callShowBlock  = {imageUrlStr in
+                weak var weakSelf = self // 弱引用
+                let alertController = UIAlertController()
+                let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+                let specifiedAction = UIAlertAction(title: "指定联系人设置", style: .default) { (action) in
+                    let callshow:CSID_CallShowViewController = CSID_CallShowViewController.init()
+                    callshow.imageUrlString = imageUrlStr
+                    callshow.hidesBottomBarWhenPushed = true
+                    self.navigationController?.pushViewController(callshow)
+                }
+                let allAction = UIAlertAction(title: "全部人设置", style: .default) { (action) in
+                    weak var weakSelf = self // 弱引用
+                    let alertController = UIAlertController.init(title: "确定要给全部联系人设置来电秀吗？", message: nil, preferredStyle: .alert)
+                    let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+                    let sureAction = UIAlertAction(title: "确定", style: .default) { (action) in
+                        CSID_CallShowContact.AllContactSettings(imageStr: imageUrlStr)
+                    }
+                    alertController.addAction(sureAction)
+                    alertController.addAction(cancelAction)
+                    weakSelf!.present(alertController, animated: true, completion: nil)
+                }
+                alertController.addAction(specifiedAction)
+                alertController.addAction(allAction)
+                alertController.addAction(cancelAction)
+                weakSelf!.present(alertController, animated: true, completion: nil)
+        }
+            
+        
     }
     
     func call_show_ShowHeaderSettingwork( vaules : Bool) -> Void {

@@ -46,6 +46,8 @@
 	<string>“来电秀”访问相册以添加图片到您的相册</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>“来电秀”访问相册以选择图片用来改变用户信息</string>
+	<key>NSContactsUsageDescription</key>
+	<string>“来电秀”需要访问您的通讯录</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
