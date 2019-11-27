@@ -79,9 +79,8 @@ class CSID_CallShowSiteVC: CSID_BaseViewController,UICollectionViewDelegate,UICo
     func call_show_SiteCollectionViewSettingHeaderWork(){
         
         CSID_CallShow_SiteCollView.contentInset = UIEdgeInsets(top: 160, left: 0, bottom: 0, right: 0)
-        let headerImg = UIImageView(image: UIImage(named: "pt_header_bg"))
+        let headerImg = UIImageView(image: UIImage(named: "CSID_buy_BannerImg"))
         headerImg.frame = CGRect(x: 0, y: -150, width: CSID_WidthScreen-20, height:150)
-        headerImg.backgroundColor=UIColor.green
         headerImg.isUserInteractionEnabled=true
         AddRadius(headerImg, rabF: 5)
         
@@ -103,38 +102,52 @@ class CSID_CallShowSiteVC: CSID_BaseViewController,UICollectionViewDelegate,UICo
     /**组头*/
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
 
-        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "SiteCollViewHeaderViewID", for: indexPath) as UICollectionReusableView
-        headerView.backgroundColor=UIColor.yellow
+        var headerView:UICollectionReusableView!
+        let siteModel = callShowSiteSectionArrays[indexPath.section]
         
-        let call_showLine : UIView = UIView.init(frame: CGRect.init(x:0, y:20, width:2, height:headerView.height-40))
-        call_showLine.backgroundColor=CSID_MainColor
-        headerView.addSubview(call_showLine)
-        
-        let call_showTitleL :UILabel = UILabel.init(frame: CGRect.init(x:10, y: 0, width: 100, height: headerView.height))
-        call_showTitleL.text = "标题一"
-        call_showTitleL.textColor = CSID_MainTextColor
-        call_showTitleL.font = UIFont.font(size:CSID_FontNum_Second)
-        
-        headerView.addSubview(call_showTitleL)
-        
-        let arrowImgV = UIImageView(image: UIImage(named: "pt_header_bg"))
-        arrowImgV.frame = CGRect(x:headerView.width-30, y: 10, width: 30, height:30)
-        arrowImgV.backgroundColor=UIColor.green
-        headerView.addSubview(arrowImgV)
-        
-        let sectionHeaderViewTapGesture = UITapGestureRecognizer(target: self, action: #selector(sectionHeaderclickTapAction))
-        headerView.addGestureRecognizer(sectionHeaderViewTapGesture)
-        
+        if kind == UICollectionView.elementKindSectionHeader{
+            
+          headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "SiteCollViewHeaderViewID", for: indexPath) as UICollectionReusableView
+          headerView.backgroundColor=UIColor.white
+            
+            if headerView.subviews.count>0 {
+                headerView.removeSubviews()
+            }
+          
+          let call_showLine : UIView = UIView.init(frame: CGRect.init(x:0, y:20, width:2, height:headerView.height-40))
+          call_showLine.backgroundColor=CSID_MainColor
+          headerView.addSubview(call_showLine)
+          
+          let call_showTitleL :UILabel = UILabel.init(frame: CGRect.init(x:10, y: 0, width: 100, height: headerView.height))
+          call_showTitleL.text = siteModel.groupName
+          call_showTitleL.textColor = CSID_MainTextColor
+          call_showTitleL.font = UIFont.font(size:CSID_FontNum_Second)
+          
+          headerView.addSubview(call_showTitleL)
+          
+          let arrowImgV = UIImageView(image: UIImage(named: "arrow_more"))
+          arrowImgV.frame = CGRect(x:headerView.width-30, y: 15, width: 20, height:20)
+          headerView.addSubview(arrowImgV)
+          
+          let sectionHeadaerTapGesture = UITapGestureRecognizer(target: self, action: #selector(sectionHeaderclickviewTapAction(_ :)))
+            
+           headerView.addGestureRecognizer(sectionHeadaerTapGesture)
+           sectionHeadaerTapGesture.view!.tag = indexPath.section
+            
+            
+        }
         return headerView
     }
-    /**组详情*/
-    @objc func sectionHeaderclickTapAction(){
+     /**组详情*/
+    @objc func sectionHeaderclickviewTapAction(_ sender:UITapGestureRecognizer){
         
+
         let sectionDetailVC = CSID_CallShowSectionHeaderDetailViewController.init()
+        sectionDetailVC.siteSectionHeaderModel = self.callShowSiteSectionArrays[sender.view!.tag]
         sectionDetailVC.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(sectionDetailVC, animated: true)
         
-    }
+     }
     /**collectionView 代理数据源方法*/
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         
@@ -142,11 +155,20 @@ class CSID_CallShowSiteVC: CSID_BaseViewController,UICollectionViewDelegate,UICo
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 12
+        let siteModel = callShowSiteSectionArrays[section]
+        return siteModel.imageList!.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        let siteModel = callShowSiteSectionArrays[indexPath.section]
+        
         let cell_View:CSID_CallShow_SiteCollectViewCell = collectionView.dequeueReusableCell(withReuseIdentifier:"SiteCell", for: indexPath) as! CSID_CallShow_SiteCollectViewCell
+        
+        let contentDic : NSDictionary = siteModel.imageList?[indexPath.row] as! NSDictionary
+        let contentModel: CSID_CallShowListModel = CSID_CallShowListModel.deserialize(from: contentDic)!
+        
+         cell_View.csid_callshow_SiteImageView.kf.setImage(with: URL(string: contentModel.imageUrl ?? ""), placeholder: UIImage(named: "placeholder"))
+                  
         
         return cell_View
     }

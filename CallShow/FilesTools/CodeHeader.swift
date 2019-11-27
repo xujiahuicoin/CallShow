@@ -128,6 +128,7 @@ let CSID_MainTextColor : UIColor = RGB(18,g: 19, b: 19)
 /// 次级字体颜色
 let CSID_SecondTextColor : UIColor    = RGB(123,g: 124, b: 125)
 
+let CSID_backGrayColor : UIColor    = RGB(233,g: 234, b: 235)
 
 /// 按钮颜色 浅蓝色
 let CSID_ButtonColor_Blue: UIColor    = RGB(37,g: 94, b: 234)
