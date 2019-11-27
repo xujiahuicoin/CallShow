@@ -46,6 +46,9 @@ class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivi
         
         self.view.backgroundColor = UIColor.CSID_color(lightColor: CSID_BackgroundColor_dark, darkColor: CSID_BackgroundColor_dark)
         
+        //创建广告
+        self.creatADSaction()
+        
         //设置导航栏的字体
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : CSID_MainTextColor, NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)]
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
@@ -53,10 +56,7 @@ class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivi
             
             //添加购买成功通知
             NotificationCenter.default.addObserver(self, selector: #selector(self.paySeccessAction), name: NSNotification.Name(rawValue:paySuccess), object: nil)
-            
-            //创建广告
-            self.creatADSaction()
-            
+ 
         }
         
         // Do any additional setup after loading the view.

@@ -58,7 +58,6 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
         
         
         //设置来电秀 block
-       
         callShowRecommendView.callShowBlock = {imageUrlStr in
             //展示插页广告
             self.doStarInterstitial()
