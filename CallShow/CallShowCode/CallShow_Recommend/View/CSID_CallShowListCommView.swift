@@ -88,6 +88,12 @@ class CSID_CallShowListCommView: UIView,UICollectionViewDelegate,UICollectionVie
         }
         CSID_CallShow_RecommlistCollView.reloadData()
     }
+    
+    public func csid_callShow_collectScrollViewCurrentIndex(currentIndex:NSInteger) ->Void{
+    
+        CSID_CallShow_RecommlistCollView.contentOffset=CGPoint(x: 0, y: self.height * CGFloat(currentIndex))
+    }
+    
     lazy var CSID_CallShow_RecommlistCollView : UICollectionView = {
         
         var layout = UICollectionViewFlowLayout()

@@ -175,7 +175,10 @@ class CSID_CallShowSiteVC: CSID_BaseViewController,UICollectionViewDelegate,UICo
     /**点击事件*/
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+      let siteModel = callShowSiteSectionArrays[indexPath.section]
       let detailVC = CSID_CallShowSiteDetailVC.init()
+      detailVC.detailCurrentIndex = indexPath.row
+      detailVC.detailGroupIdString = siteModel.groupId
       detailVC.hidesBottomBarWhenPushed = true
       self.navigationController?.pushViewController(detailVC, animated: true)
         
