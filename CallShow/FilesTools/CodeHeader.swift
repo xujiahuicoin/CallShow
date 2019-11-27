@@ -116,9 +116,9 @@ var ABCRandomColor: UIColor {
         return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
     }
 }
-
+   
 /// 主色
-let CSID_MainColor : UIColor          = RGB(255,g: 125, b: 0)
+let CSID_MainColor : UIColor          = RGB(237,g: 182, b: 35)
 /// 背景色
 let CSID_BackgroundColor_dark :UIColor = RGB(255,g: 255, b: 255)
 /// 分割线颜色
