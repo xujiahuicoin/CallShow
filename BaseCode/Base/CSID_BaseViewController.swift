@@ -219,7 +219,6 @@ class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivi
             
             print("Ad wasn't ready")
             self.perform(#selector(doStarInterstitial), with: self, afterDelay: 1)
-            
         }
     }
     ///插屏广告回调结束

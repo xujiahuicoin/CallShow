@@ -65,8 +65,37 @@ class CSID_CallShowSiteHeaderDetailViewController: CSID_BaseViewController {
     }()
     /**----使用电话---*/
     @objc func rightUseButtonViewAction(sender:UIButton) -> Void {
-           
-        
+        var model:CSID_CallShowListModel?
+        if clickCurrentInteger == 0{
+            model = call_show_SiteHeaderDetailArray[clickCurrentInteger]
+        }else{
+            model = call_show_SiteHeaderDetailArray[clickCurrentInteger+1]
+        }
+        //展示插页广告
+        self.doStarInterstitial()
+        let imageUrlStr:String = model?.imageUrl ?? ""
+        let alertController = UIAlertController()
+        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+        let specifiedAction = UIAlertAction(title: "指定联系人设置", style: .default) { (action) in
+            let callshow:CSID_CallShowViewController = CSID_CallShowViewController.init()
+                callshow.imageUrlString = imageUrlStr
+            callshow.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(callshow)
+        }
+        let allAction = UIAlertAction(title: "全部人设置", style: .default) { (action) in
+            let alertController = UIAlertController.init(title: "确定要给全部联系人设置来电秀吗？", message: nil, preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+            let sureAction = UIAlertAction(title: "确定", style: .default) { (action) in
+                CSID_CallShowContact.AllContactSettings(imageStr: imageUrlStr)
+            }
+            alertController.addAction(sureAction)
+            alertController.addAction(cancelAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
+        alertController.addAction(specifiedAction)
+        alertController.addAction(allAction)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
         
     }
     

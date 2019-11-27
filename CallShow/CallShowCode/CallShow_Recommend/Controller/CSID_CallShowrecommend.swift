@@ -58,11 +58,24 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
         
         
         //设置来电秀 block
-        callShowRecommendView.call_show_RightView.call_show_callShowBlockAction { (callshowBtn) in
-                  //展示插页广告
+       
+        callShowRecommendView.callShowBlock = {imageUrlStr in
+            //展示插页广告
             self.doStarInterstitial()
-            
-              }
+        }
+        
+        callShowNewestView.callShowBlock = {imageUrlStr in
+            //展示插页广告
+            self.doStarInterstitial()
+        }
+        
+        
+       
+//        callShowRecommendView.call_show_RightView.call_show_callShowBlockAction { (callshowBtn) in
+//                  //展示插页广告
+//            self.doStarInterstitial()
+//            
+//              }
     }
     
     func call_show_ShowHeaderSettingwork( vaules : Bool) -> Void {

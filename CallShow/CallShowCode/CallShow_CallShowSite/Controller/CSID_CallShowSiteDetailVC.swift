@@ -35,6 +35,12 @@ class CSID_CallShowSiteDetailVC: CSID_BaseViewController{
          self.callShowFiledDetailView.csid_callShow_collectScrollViewCurrentIndex(currentIndex:self.detailCurrentIndex!)
             
         }
+        
+        callShowFiledDetailView.callShowBlock = {imageUrlStr in
+            //展示插页广告
+            self.doStarInterstitial()
+        }
+        
     }
     /**detialCollectionView*/
     lazy var callShowFiledDetailView : CSID_CallShowListCommView = {
