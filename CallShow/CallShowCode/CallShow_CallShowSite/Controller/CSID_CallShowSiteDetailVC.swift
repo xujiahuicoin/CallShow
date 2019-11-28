@@ -12,8 +12,11 @@ class CSID_CallShowSiteDetailVC: CSID_BaseViewController{
 
      var callShowDetailArrays: Array<CSID_CallShowListModel> = []
      var detailGroupIdString: String?
-     var detailCurrentIndex :NSInteger?
+    ///点击的事第几个
+     var detailCurrentIndex :NSInteger = 0
     
+    ///是不是点赞进来的--默认不是
+    var callShow_IsLike : Bool = false
     
      override func viewWillAppear(_ animated: Bool){
          
@@ -27,12 +30,13 @@ class CSID_CallShowSiteDetailVC: CSID_BaseViewController{
         
         view.addSubview(callShowFiledDetailView)
         view.addSubview(navBackBotton)
+        
         if callShowDetailArrays.count<=0{
             self.call_showFiledDetailListNetwork()
         }else{
             
             self.callShowFiledDetailView.csid_CallShow_recommCollectViewRefresh(needArray: self.callShowDetailArrays as NSArray)
-         self.callShowFiledDetailView.csid_callShow_collectScrollViewCurrentIndex(currentIndex:self.detailCurrentIndex!)
+         self.callShowFiledDetailView.csid_callShow_collectScrollViewCurrentIndex(currentIndex:self.detailCurrentIndex)
             
         }
         
@@ -54,6 +58,7 @@ class CSID_CallShowSiteDetailVC: CSID_BaseViewController{
     lazy var navBackBotton : UIButton = {
         
             let navBackBotton : UIButton = UIButton.init(frame: CGRect.init(x:0, y:CSID_Status_H, width:CSID_HeightNav, height:CSID_HeightNav))
+        
             navBackBotton.setImage(UIImage.init(named: "fanhuibai_img1"), for:.normal)
             navBackBotton.addTarget(self, action: #selector(backButtonViewAction), for: .touchUpInside)
         
@@ -79,7 +84,7 @@ class CSID_CallShowSiteDetailVC: CSID_BaseViewController{
                         self.callShowDetailArrays = [CSID_CallShowListModel].deserialize(from: listArray) as! Array<CSID_CallShowListModel>
                        }
                     self.callShowFiledDetailView.csid_CallShow_recommCollectViewRefresh(needArray: self.callShowDetailArrays as NSArray)
-                    self.callShowFiledDetailView.csid_callShow_collectScrollViewCurrentIndex(currentIndex:self.detailCurrentIndex!)
+                    self.callShowFiledDetailView.csid_callShow_collectScrollViewCurrentIndex(currentIndex:self.detailCurrentIndex)
           
                    }) { (error) in
 
