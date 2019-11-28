@@ -66,6 +66,10 @@ class CSID_CallShowSiteHeaderDetailViewController: CSID_BaseViewController {
     /**----使用电话---*/
     @objc func rightUseButtonViewAction(sender:UIButton) -> Void {
         var model:CSID_CallShowListModel?
+        if call_show_SiteHeaderDetailArray.count == 0{
+            self.CSID_showErrorWithText(text: "请稍后再试", view: self.view)
+            return
+        }
         if clickCurrentInteger == 0{
             model = call_show_SiteHeaderDetailArray[clickCurrentInteger]
         }else{
