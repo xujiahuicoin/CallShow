@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import PKHUD
 typealias  recommendChangeblock = (_ changBool : Bool) -> Void
 
 class CSID_CallShowListCommView: CSID_CallShowBaseView,UICollectionViewDelegate,UICollectionViewDataSource{
@@ -54,12 +54,16 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
                 
                  self.callShowBlock("")
                 
-                let imageUrlStr:String = self.currentModel.imageUrl 
+                let imageUrlStr:String = self.currentModel.imageUrl
                 let alertController = UIAlertController()
                 let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
                 let specifiedAction = UIAlertAction(title: "指定联系人设置", style: .default) { (action) in
                     let callshow:CSID_CallShowViewController = CSID_CallShowViewController.init()
-                    callshow.imageUrlString = imageUrlStr
+                    //定义URL对象
+                    let url = URL(string: imageUrlStr )
+                    //从网络获取数据流
+                    let data = try! Data(contentsOf: url!)
+                    callshow.imageData = data
                     callshow.hidesBottomBarWhenPushed = true
                     self.ParentController(viewself: self).navigationController?.pushViewController(callshow, animated: true)
                 }
@@ -67,7 +71,12 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
                     let alertController = UIAlertController.init(title: "确定要给全部联系人设置来电秀吗？", message: nil, preferredStyle: .alert)
                     let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
                     let sureAction = UIAlertAction(title: "确定", style: .default) { (action) in
-                        CSID_CallShowContact.AllContactSettings(imageStr: imageUrlStr)
+                        //定义URL对象
+                        let url = URL(string: imageUrlStr )
+                        //从网络获取数据流
+                        let data = try! Data(contentsOf: url!)
+                        CSID_CallShowContact.AllContactSettings(imageData: data)
+                        HUD.flash(.labeledSuccess(title: nil, subtitle: "来电秀设置成功"), onView: self, delay: 1.0, completion: nil)
                     }
                     alertController.addAction(sureAction)
                     alertController.addAction(cancelAction)
@@ -78,8 +87,10 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
                 alertController.addAction(cancelAction)
                 self.ParentController(viewself: self).present(alertController, animated: true, completion: nil)
             }else if tooltag == 3{/**打开相册*/
-                self.callShowBlock("")
                 
+                let photo = CSID_LocalPhotoViewController.init()
+                photo.hidesBottomBarWhenPushed = true
+                self.ParentController(viewself: self).navigationController?.pushViewController(photo, animated: true)
                 
             }
             

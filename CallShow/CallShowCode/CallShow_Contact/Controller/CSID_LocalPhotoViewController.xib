@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CSID_LocalPhotoViewController" customModule="CallShow" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroudImg" destination="pug-BN-STX" id="JBn-t7-1ub"/>
+                <outlet property="rightView" destination="vnD-Pb-62r" id="D1j-J8-jtF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="call_show_localbg" translatesAutoresizingMaskIntoConstraints="NO" id="pug-BN-STX">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vnD-Pb-62r">
+                    <rect key="frame" x="334" y="348" width="80" height="200"/>
+                    <subviews>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3m-NR-d3Y">
+                            <rect key="frame" x="0.0" y="0.0" width="80" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="38r-tY-ajK"/>
+                                <constraint firstAttribute="width" constant="80" id="49J-pR-3gc"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" image="call_show_eyelook">
+                                <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected" image="call_show_love"/>
+                            <connections>
+                                <action selector="clickYuLanButton:" destination="-1" eventType="touchUpInside" id="cib-Ts-FKl"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxh-In-0Sg">
+                            <rect key="frame" x="0.0" y="60" width="80" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="Xu5-cX-fdb"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" image="call_show_callPhone">
+                                <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected" image="call_show_love"/>
+                            <connections>
+                                <action selector="clickSetButton:" destination="-1" eventType="touchUpInside" id="Fkg-Bc-cRK"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfL-El-KtI">
+                            <rect key="frame" x="0.0" y="140" width="80" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="WHU-y8-fVu"/>
+                            </constraints>
+                            <state key="normal" image="call_show_takePhoto"/>
+                            <connections>
+                                <action selector="clickLocalPhotoButton:" destination="-1" eventType="touchUpInside" id="l5U-x4-Brh"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="Q25-Cd-AqF"/>
+                        <constraint firstItem="lxh-In-0Sg" firstAttribute="top" secondItem="a3m-NR-d3Y" secondAttribute="bottom" id="QnI-O9-cV1"/>
+                        <constraint firstAttribute="trailing" secondItem="dfL-El-KtI" secondAttribute="trailing" id="TK9-eu-RDn"/>
+                        <constraint firstAttribute="bottom" secondItem="dfL-El-KtI" secondAttribute="bottom" id="Xii-wD-aEw"/>
+                        <constraint firstAttribute="width" constant="80" id="YeX-QW-dIg"/>
+                        <constraint firstItem="lxh-In-0Sg" firstAttribute="leading" secondItem="vnD-Pb-62r" secondAttribute="leading" id="baK-pz-P7V"/>
+                        <constraint firstAttribute="trailing" secondItem="a3m-NR-d3Y" secondAttribute="trailing" id="eUP-Uy-8Oh"/>
+                        <constraint firstItem="dfL-El-KtI" firstAttribute="leading" secondItem="vnD-Pb-62r" secondAttribute="leading" id="fvM-uK-60h"/>
+                        <constraint firstItem="a3m-NR-d3Y" firstAttribute="top" secondItem="vnD-Pb-62r" secondAttribute="top" id="gHK-C5-kYR"/>
+                        <constraint firstAttribute="trailing" secondItem="lxh-In-0Sg" secondAttribute="trailing" id="hcN-hY-Fd2"/>
+                        <constraint firstItem="a3m-NR-d3Y" firstAttribute="leading" secondItem="vnD-Pb-62r" secondAttribute="leading" id="uGQ-LY-YVc"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="pug-BN-STX" secondAttribute="bottom" id="8Yc-Rr-xuC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pug-BN-STX" secondAttribute="trailing" id="BhN-Je-OEG"/>
+                <constraint firstItem="vnD-Pb-62r" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="FHu-0g-Hr6"/>
+                <constraint firstItem="pug-BN-STX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="GuA-Eu-6XR"/>
+                <constraint firstItem="pug-BN-STX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Yxs-B8-hwZ"/>
+                <constraint firstItem="vnD-Pb-62r" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="khU-m4-Qgr"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="89.732142857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="call_show_callPhone" width="45" height="45"/>
+        <image name="call_show_eyelook" width="25" height="15"/>
+        <image name="call_show_localbg" width="1080" height="2337"/>
+        <image name="call_show_love" width="20" height="16"/>
+        <image name="call_show_takePhoto" width="40" height="40"/>
+    </resources>
+</document>
