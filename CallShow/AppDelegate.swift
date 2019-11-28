@@ -24,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //点击空白 键盘收回
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
 //        Bugly.startWithAppId(Tencent_APPID)
+        
+        // 友盟
+        UMConfigure.initWithAppkey("", channel: "App Store")
         return true
     }
     

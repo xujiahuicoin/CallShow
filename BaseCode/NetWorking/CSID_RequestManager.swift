@@ -26,7 +26,12 @@ class CSID_RequestManager {
     //  - failure: 失败回调
     class func request(_ type : CSID_MethodType = .get, url : String, params : [String : Any]?, success : @escaping(_ data : Any) ->(), failure : @escaping (_ error : CSID_Error) ->()){
         
-        var commonDict = ["productId":"d0f140e5-1d1f-4171-a8e7-8a854d450a0b","channel":"appstore","osType":"ios","token":"ddmh%402018","udid":"com.CallShow.www","version":"1.0","vestId":"be5d3132-ff21-4add-a95c-50f3104abc4b"]as[String:Any]
+        let device_UDID  = UIDevice.current.identifierForVendor
+        let device_token = "token\(String(describing: device_UDID))"
+        let device_bunid = "com.CallShow.www\(String(describing: device_UDID))"
+        let device_Version = UIDevice.current.systemVersion
+        
+        var commonDict = ["productId":"d0f140e5-1d1f-4171-a8e7-8a854d450a0b","channel":"appstore","osType":"ios","token":device_token,"udid":device_bunid,"version":device_Version,"vestId":"be5d3132-ff21-4add-a95c-50f3104abc4b"]as[String:Any]
         
         if params != nil{
             for(key,value)in params!{
@@ -51,7 +56,8 @@ class CSID_RequestManager {
                     
                 }else{//提示错误信息
                     
-                  let msgStirng : NSString = responDict["msg"] as! NSString
+                  //let msgStirng : NSString = responDict["msg"] as! NSString
+                    
                     
                 }
             
