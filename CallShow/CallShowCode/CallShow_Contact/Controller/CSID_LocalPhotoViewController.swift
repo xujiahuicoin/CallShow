@@ -13,8 +13,9 @@ class CSID_LocalPhotoViewController: CSID_BaseViewController {
         super.viewDidLoad()
         self.bannerShow = false
         self.isHidesPreview = true
-        let image:UIImage = UIImage.init(named: "call_show_localbg")!
-        self.localPhotoData = image.pngData()
+        self.rightView.isHidden = false
+        self.backgroudImg.image = UIImage.init(data: self.localPhotoData!)
+        
         self.call_show_PreviewView = CSID_ShowPreviewSubView.previewInstance()
         self.call_show_PreviewView?.frame = CGRect(x:0, y:0, width:CSID_WidthScreen, height:CSID_heightScreen)
         self.call_show_PreviewView?.call_showTtileHeightConstriant.constant = CSID_HeightNav_top+3*CSID_Status_H
@@ -30,14 +31,13 @@ class CSID_LocalPhotoViewController: CSID_BaseViewController {
             self.rightView.isHidden=false
             self.call_show_PreviewView?.isHidden = true
         }
-        
-        
         view.addSubview(BackBotton)
         
-        clickLocalPhotoButton(UIButton())
-        
         if !self.CSID_Pub_isVip() {
+            //如果有免费机会
+            if  CSID_BuyTool().CSID_JudgeHaveFreeTime() {
             showAlert(title: "提示", message: "非VIP用户，有一次【指定联系人设置】体验机会")
+            }
         }
     }
     
@@ -90,7 +90,6 @@ class CSID_LocalPhotoViewController: CSID_BaseViewController {
                     
                 }else{
                     //没有   去购买
-                    self.CSID_showErrorWithText(text: "已没有免费次数，请购买VIP")
                     self.CSID_Pub_GoToBuyVIPvc()
                     return
                 }
@@ -130,30 +129,4 @@ class CSID_LocalPhotoViewController: CSID_BaseViewController {
         alertController.addAction(cancelAction)
         self.present(alertController, animated: true, completion: nil)
     }
-    
-    
-    @IBAction func clickLocalPhotoButton(_ sender: Any) {
-        let vc = BSImagePickerViewController()
-        vc.maxNumberOfSelections = 1
-        
-        bs_presentImagePickerController(vc, animated: true,
-                                        select: { (asset: PHAsset) -> Void in
-                                            
-                                            
-                                            // User selected an asset.
-                                            // Do something with it, start upload perhaps?
-        }, deselect: { (asset: PHAsset) -> Void in
-            // User deselected an assets.
-            // Do something, cancel upload?
-        }, cancel: { (assets: [PHAsset]) -> Void in
-            // User cancelled. And this where the assets currently selected.
-        }, finish: { (assets: [PHAsset]) -> Void in
-            // User finished with these assets
-            let selcecImage:UIImage = CSID_ZxhPHAssetToImageTool.PHAssetToImage(asset: assets[0])
-            
-            self.backgroudImg.image = selcecImage
-            self.localPhotoData = selcecImage.pngData()
-        }, completion: nil)
-    }
-    
 }
