@@ -47,6 +47,7 @@ class CSID_CallShowSiteVC: CSID_BaseViewController,UICollectionViewDelegate,UICo
              }) { (error) in
 
                  self.CSID_hideHUD()
+                 self.call_showFiledListNetwork()
              }
      
       }
@@ -66,8 +67,7 @@ class CSID_CallShowSiteVC: CSID_BaseViewController,UICollectionViewDelegate,UICo
         CSID_CallShow_SiteCollView.backgroundColor = UIColor.white
     CSID_CallShow_SiteCollView.register(CSID_CallShow_SiteCollectViewCell.classForCoder(), forCellWithReuseIdentifier:"SiteCell")
         CSID_CallShow_SiteCollView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "SiteCollViewHeaderViewID")
-        
-        CSID_CallShow_SiteCollView.isPagingEnabled = true
+    
         CSID_CallShow_SiteCollView.delegate = self
         CSID_CallShow_SiteCollView.dataSource = self
         CSID_CallShow_SiteCollView.showsVerticalScrollIndicator = false

@@ -18,6 +18,8 @@ class CSID_CallShowListCommView: CSID_CallShowBaseView,UICollectionViewDelegate,
     var currentModel : CSID_CallShowListModel!
 var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
     
+    var zanUserType : NSString = "1"
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
 
@@ -29,7 +31,7 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
             
             if tooltag == 0{/**点赞*/
                 
-                 CSID_RequestManager.request(.post, url:callShowloveurl, params:["upType":"5","relationId":self.currentModel.relationId ?? ""], success: {(resltData) in
+                CSID_RequestManager.request(.post, url:callShowloveurl, params:["upType":self.zanUserType,"relationId":self.currentModel.relationId], success: {(resltData) in
                 
                             NSLog("resltData = \(resltData)")
                             toolsButton.isSelected = !toolsButton.isSelected
@@ -130,6 +132,8 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
     public func csid_callShow_collectScrollViewCurrentIndex(currentIndex:NSInteger) ->Void{
     
         CSID_CallShow_RecommlistCollView.contentOffset=CGPoint(x: 0, y: self.height * CGFloat(currentIndex))
+        
+        self.currentModel = (listdataArr[currentIndex] as! CSID_CallShowListModel)
     }
     
     lazy var CSID_CallShow_RecommlistCollView : UICollectionView = {
@@ -144,7 +148,7 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
         layout.minimumInteritemSpacing = 0
         
         let CSID_CallShow_RecommlistCollView : UICollectionView = UICollectionView.init(frame: CGRect.init(x: 0, y: 0, width: CSID_WidthScreen, height: CSID_heightScreen+CSID_Status_H), collectionViewLayout: layout)
-        CSID_CallShow_RecommlistCollView.backgroundColor = UIColor.white
+        CSID_CallShow_RecommlistCollView.backgroundColor = CSID_MainTextColor
     CSID_CallShow_RecommlistCollView.register(CSID_CallShowRecommCellCollectionViewCell.classForCoder(), forCellWithReuseIdentifier: "RecommCell")
         CSID_CallShow_RecommlistCollView.isPagingEnabled = true
         CSID_CallShow_RecommlistCollView.delegate = self
