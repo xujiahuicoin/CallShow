@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,11 +15,11 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="来电秀" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1D-vy-hbJ">
-                    <rect key="frame" x="0.0" y="0.0" width="358" height="200"/>
+                    <rect key="frame" x="0.0" y="10" width="358" height="200"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="200" id="mVj-hc-d6v"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="33"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -38,14 +38,14 @@
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="call_show_ alarm" translatesAutoresizingMaskIntoConstraints="NO" id="6cp-ee-xjC">
-                    <rect key="frame" x="96" y="327" width="25" height="25"/>
+                    <rect key="frame" x="96" y="347" width="25" height="25"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="25" id="0HD-mD-QWO"/>
                         <constraint firstAttribute="height" constant="25" id="nLS-L2-cZN"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="提醒我" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vlh-nq-kER">
-                    <rect key="frame" x="79" y="360" width="60" height="20"/>
+                    <rect key="frame" x="79" y="380" width="60" height="20"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="60" id="PHO-6T-ofL"/>
                         <constraint firstAttribute="height" constant="20" id="vp5-mV-Vbn"/>
@@ -55,7 +55,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="信息" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqp-so-8XE">
-                    <rect key="frame" x="219" y="360" width="60" height="20"/>
+                    <rect key="frame" x="219" y="380" width="60" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="AWp-r5-kgh"/>
                         <constraint firstAttribute="width" constant="60" id="p4h-8g-f14"/>
@@ -85,7 +85,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lq8-im-RTX">
-                    <rect key="frame" x="139" y="200" width="80" height="408"/>
+                    <rect key="frame" x="139" y="210" width="80" height="398"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="80" id="IXh-lM-ddl"/>
@@ -101,7 +101,7 @@
                     </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="call_show_ message" translatesAutoresizingMaskIntoConstraints="NO" id="e8R-RJ-Pmv">
-                    <rect key="frame" x="237" y="327" width="25" height="25"/>
+                    <rect key="frame" x="237" y="347" width="25" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="Wrm-GG-v9P"/>
                         <constraint firstAttribute="width" constant="25" id="YVJ-kj-2vy"/>
@@ -112,7 +112,7 @@
             <constraints>
                 <constraint firstItem="eFy-e9-1FG" firstAttribute="leading" secondItem="lq8-im-RTX" secondAttribute="trailing" id="1wP-pf-Eyh"/>
                 <constraint firstItem="e8R-RJ-Pmv" firstAttribute="leading" secondItem="lq8-im-RTX" secondAttribute="trailing" constant="18" id="3aA-i2-3GK"/>
-                <constraint firstItem="Z1D-vy-hbJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="40E-Uf-xnM"/>
+                <constraint firstItem="Z1D-vy-hbJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="40E-Uf-xnM"/>
                 <constraint firstItem="lq8-im-RTX" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="4WV-BK-w2D"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Z1D-vy-hbJ" secondAttribute="trailing" id="9AE-X5-cfG"/>
                 <constraint firstItem="Z1D-vy-hbJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="BaB-sB-kwS"/>
@@ -120,13 +120,13 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ZWx-uT-dO9" secondAttribute="bottom" id="Elf-K3-vuQ"/>
                 <constraint firstItem="W8w-Tj-quZ" firstAttribute="leading" secondItem="lq8-im-RTX" secondAttribute="trailing" id="Elm-R6-IvG"/>
                 <constraint firstItem="lq8-im-RTX" firstAttribute="leading" secondItem="6cp-ee-xjC" secondAttribute="trailing" constant="18" id="Hos-ac-N1w"/>
-                <constraint firstItem="W8w-Tj-quZ" firstAttribute="top" secondItem="eqp-so-8XE" secondAttribute="bottom" constant="60" id="KvD-S6-dSD"/>
+                <constraint firstItem="W8w-Tj-quZ" firstAttribute="top" secondItem="eqp-so-8XE" secondAttribute="bottom" constant="40" id="KvD-S6-dSD"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ZWx-uT-dO9" secondAttribute="trailing" id="M33-sV-auf"/>
                 <constraint firstItem="Vlh-nq-kER" firstAttribute="top" secondItem="6cp-ee-xjC" secondAttribute="bottom" constant="8" id="PSb-sU-0pj"/>
                 <constraint firstItem="lq8-im-RTX" firstAttribute="leading" secondItem="LNl-Gp-vvC" secondAttribute="trailing" id="Qqu-AI-x8v"/>
                 <constraint firstItem="LNl-Gp-vvC" firstAttribute="top" secondItem="yPk-y5-IoS" secondAttribute="bottom" constant="8" id="Rzh-Md-10s"/>
                 <constraint firstItem="ZWx-uT-dO9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="SuG-GM-QHk"/>
-                <constraint firstItem="yPk-y5-IoS" firstAttribute="top" secondItem="Vlh-nq-kER" secondAttribute="bottom" constant="60" id="TBg-av-vlb"/>
+                <constraint firstItem="yPk-y5-IoS" firstAttribute="top" secondItem="Vlh-nq-kER" secondAttribute="bottom" constant="40" id="TBg-av-vlb"/>
                 <constraint firstItem="lq8-im-RTX" firstAttribute="leading" secondItem="Vlh-nq-kER" secondAttribute="trailing" id="U7K-hE-gqA"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="eFy-e9-1FG" secondAttribute="bottom" constant="80" id="Uav-2K-z3M"/>
                 <constraint firstItem="eqp-so-8XE" firstAttribute="top" secondItem="e8R-RJ-Pmv" secondAttribute="bottom" constant="8" id="VN4-Sw-M2U"/>
@@ -149,9 +149,9 @@
         </view>
     </objects>
     <resources>
-        <image name="call_show_ accept" width="30" height="30"/>
+        <image name="call_show_ accept" width="40" height="40"/>
         <image name="call_show_ alarm" width="20" height="20"/>
-        <image name="call_show_ message" width="21.5" height="20"/>
-        <image name="call_show_ refuse" width="20" height="20"/>
+        <image name="call_show_ message" width="20" height="20"/>
+        <image name="call_show_ refuse" width="40" height="40"/>
     </resources>
 </document>
