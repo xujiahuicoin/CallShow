@@ -56,9 +56,9 @@ class CSID_RequestManager {
                     
                 }else{//提示错误信息
                     
-                  //let msgStirng : NSString = responDict["msg"] as! NSString
-                    
-                    
+                   let msgStirng : NSString = responDict["msg"] as! NSString
+                    CSID_ProgressHUD.showError(message: msgStirng as String)
+
                 }
             
             }else {

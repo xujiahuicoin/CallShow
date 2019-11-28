@@ -28,7 +28,7 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
             
             if tooltag == 0{/**点赞*/
                 
-                 CSID_RequestManager.request(.post, url:callShowloveurl, params:["upType":"1","relationId":self.currentModel.relationId ?? ""], success: {(resltData) in
+                 CSID_RequestManager.request(.post, url:callShowloveurl, params:["upType":"5","relationId":self.currentModel.relationId ?? ""], success: {(resltData) in
                 
                             NSLog("resltData = \(resltData)")
                             toolsButton.isSelected = !toolsButton.isSelected
