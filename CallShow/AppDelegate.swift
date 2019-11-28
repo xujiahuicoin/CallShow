@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        
         self.call_showCommonParamsReuestNetwork()
         
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
@@ -28,6 +29,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // 友盟
         UMConfigure.initWithAppkey("", channel: "App Store")
+        
+        //免费次数
+        CSID_getFreeTime()
+        
         return true
     }
     /**--请求公共参数--*/
@@ -46,5 +51,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
     
      }
+    
+    
+    ///获取/设置 Vip 免费次数
+    func CSID_getFreeTime(){
+        
+        
+        
+    }
     
 }

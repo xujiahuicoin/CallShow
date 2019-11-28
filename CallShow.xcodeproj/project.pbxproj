@@ -68,6 +68,7 @@
 		043516AF235DAD8A00764962 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042D4274235DAA5E0075B700 /* Assets.xcassets */; };
 		043911E52355620700636064 /* CodeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043911AE2355620700636064 /* CodeHeader.swift */; };
 		043911EB2355688100636064 /* AppDelegate+JPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043911E82355688100636064 /* AppDelegate+JPush.swift */; };
+		044628F3238FB1670007EEA1 /* KeychainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 044628F2238FB1670007EEA1 /* KeychainManager.m */; };
 		048110F1238E622200806457 /* CSID_iamgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048110EF238E622200806457 /* CSID_iamgeViewController.swift */; };
 		048110F2238E622200806457 /* CSID_iamgeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048110F0238E622200806457 /* CSID_iamgeViewController.xib */; };
 		048B6F92238F79CD00B6BD75 /* CSID_LocalPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B6F90238F79CD00B6BD75 /* CSID_LocalPhotoViewController.swift */; };
@@ -189,6 +190,8 @@
 		043911AE2355620700636064 /* CodeHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeHeader.swift; sourceTree = "<group>"; };
 		043911E82355688100636064 /* AppDelegate+JPush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+JPush.swift"; sourceTree = "<group>"; };
 		0439120F235572C100636064 /* CallShow-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CallShow-Bridging-Header.h"; sourceTree = "<group>"; };
+		044628F1238FB1670007EEA1 /* KeychainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeychainManager.h; sourceTree = "<group>"; };
+		044628F2238FB1670007EEA1 /* KeychainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeychainManager.m; sourceTree = "<group>"; };
 		048110EF238E622200806457 /* CSID_iamgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_iamgeViewController.swift; sourceTree = "<group>"; };
 		048110F0238E622200806457 /* CSID_iamgeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CSID_iamgeViewController.xib; sourceTree = "<group>"; };
 		048B6F90238F79CD00B6BD75 /* CSID_LocalPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_LocalPhotoViewController.swift; sourceTree = "<group>"; };
@@ -705,6 +708,8 @@
 				043911AE2355620700636064 /* CodeHeader.swift */,
 				04DF583723714ED00079669B /* EnumFileHeader.swift */,
 				04DF5853237271B20079669B /* func_Expantion.swift */,
+				044628F1238FB1670007EEA1 /* KeychainManager.h */,
+				044628F2238FB1670007EEA1 /* KeychainManager.m */,
 			);
 			path = FilesTools;
 			sourceTree = "<group>";
@@ -962,6 +967,7 @@
 				042D417F238BAEFB0034DE84 /* CSID_PageResultView.swift in Sources */,
 				042D4170238BAEFB0034DE84 /* BalloonPickerView.swift in Sources */,
 				042D4190238BAEFB0034DE84 /* CSID_AlertView.swift in Sources */,
+				044628F3238FB1670007EEA1 /* KeychainManager.m in Sources */,
 				042D416E238BAEFB0034DE84 /* CSID_Error.swift in Sources */,
 				042D417D238BAEFB0034DE84 /* CSID_BaseTableView.swift in Sources */,
 				049034D2238CDEA100C91F08 /* CSID_CallShowMe.swift in Sources */,

@@ -13,6 +13,13 @@ import StoreKit
 class CSID_BuyTool: NSObject,SKPaymentTransactionObserver,SKProductsRequestDelegate {
 
     let vipKeyStr = "vipKeyString"
+    let freeTImeStr = "freeTImeStr"
+    
+    ///判断还有没有免费试用次数，根据UUID
+    func CSID_JudgeHaveFreeTime()->Bool{
+        
+    }
+    
     ///判断是不是VIP
     func CSID_JudgeIsVipBool() -> Bool{
         

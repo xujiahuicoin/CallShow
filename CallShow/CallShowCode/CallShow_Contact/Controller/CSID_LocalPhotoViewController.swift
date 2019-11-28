@@ -72,6 +72,11 @@ class CSID_LocalPhotoViewController: CSID_BaseViewController {
         let alertController = UIAlertController()
         let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
         let specifiedAction = UIAlertAction(title: "指定联系人设置", style: .default) { (action) in
+            
+            ///提示 非VIP用户有一次试用机会
+            
+            ///没有机会了去购买VIP
+            
             let callshow:CSID_CallShowViewController = CSID_CallShowViewController.init()
 
             callshow.imageData = self.localPhotoData
