@@ -38,12 +38,21 @@ class CSID_CallShowViewController:CSID_BaseViewController,UITableViewDataSource,
     
     @objc func selectedOver() {
         if self.selectedIndexs.count >= 1{
+            CSID_HUDShow()
             CSID_CallShowContact.specifyContactSettings(imageStr: self.imageUrlString ?? "", nameArr: self.selectedIndexs as! Array<String>)
+            self.CSID_hideHUD()
+            self.CSID_showSuccessWithText(text: "来电秀设置成功", view: self.view)
             
-            self.navigationController?.popViewController(animated: false)
-            /// 来电秀设置成功
+            
+            DispatchQueue.main.asyncAfter(deadline: .now()+1, execute:
+            {
+                self.navigationController?.popViewController(animated: false)
+            })
+            
+            CSID_hideHUD()
         }else{
             print("请选择联系人")
+            self.CSID_showErrorWithText(text: "请选择联系人", view: self.view)
         }
     }
     

@@ -24,6 +24,8 @@ class CSID_iamgeViewController: CSID_BaseViewController {
         
         bs_presentImagePickerController(vc, animated: true,
                                         select: { (asset: PHAsset) -> Void in
+                                            
+                                            
                                             // User selected an asset.
                                             // Do something with it, start upload perhaps?
         }, deselect: { (asset: PHAsset) -> Void in
