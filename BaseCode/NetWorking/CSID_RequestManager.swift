@@ -30,8 +30,9 @@ class CSID_RequestManager {
         let device_token = "token\(String(describing: device_UDID))"
         let device_bunid = "com.CallShow.www\(String(describing: device_UDID))"
         let device_Version = UIDevice.current.systemVersion
-        
+        /**版本和UDID*/
         var commonDict = ["productId":"d0f140e5-1d1f-4171-a8e7-8a854d450a0b","channel":"appstore","osType":"ios","token":device_token,"udid":device_bunid,"version":device_Version,"vestId":"be5d3132-ff21-4add-a95c-50f3104abc4b"]as[String:Any]
+        
         
         if params != nil{
             for(key,value)in params!{
@@ -40,6 +41,9 @@ class CSID_RequestManager {
         }
         let method = type == .get ? HTTPMethod.get : HTTPMethod.post
         
+        if method == .get{
+             commonDict.removeAll()
+        }
         Alamofire.request(url, method: method, parameters: commonDict).responseJSON(completionHandler: { (response) in
             
             if let json = response.result.value {

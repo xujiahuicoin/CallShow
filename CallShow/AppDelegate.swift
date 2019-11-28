@@ -14,6 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        self.call_showCommonParamsReuestNetwork()
+        
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
         self.window?.backgroundColor = UIColor.white
         self.window?.rootViewController = CSID_BaseTabBarController.init()
@@ -23,11 +25,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         //点击空白 键盘收回
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
-//        Bugly.startWithAppId(Tencent_APPID)
         
         // 友盟
         UMConfigure.initWithAppkey("", channel: "App Store")
         return true
     }
+    /**--请求公共参数--*/
+    func call_showCommonParamsReuestNetwork(){
+        
+    CSID_RequestManager.request(.get, url:callShowCommonParamsRequestUrl, params:nil, success: {(resltData) in
+
+               let responDict : NSDictionary = resltData as! NSDictionary
+        
+                NSLog("resltData = \(responDict)")
+          
+    
+            }) { (error) in
+                
+                
+            }
+    
+     }
     
 }
