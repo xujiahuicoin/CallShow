@@ -24,64 +24,62 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
         addSubview(call_show_RightView)
         addSubview(call_show_PreviewView)
         
-        call_show_RightView.call_show_loveBlockAction { (loveButton) in
-        
-            CSID_RequestManager.request(.post, url:callShowloveurl, params:["upType":"1","relationId":self.currentModel.relationId ?? ""], success: {(resltData) in
-        
-                    NSLog("resltData = \(resltData)")
-                    loveButton.isSelected = !loveButton.isSelected
-                self.currentModel.haveUp = !(self.currentModel.haveUp ?? false)
-        
-                }) { (error) in
+        call_show_RightView.call_show_rightToolsClickFinishBlockAction { (toolsButton, tooltag) in
+            
+            if tooltag == 0{/**点赞*/
+                
+                 CSID_RequestManager.request(.post, url:callShowloveurl, params:["upType":"1","relationId":self.currentModel.relationId ?? ""], success: {(resltData) in
+                
+                            NSLog("resltData = \(resltData)")
+                            toolsButton.isSelected = !toolsButton.isSelected
+                        self.currentModel.haveUp = !(self.currentModel.haveUp ?? false)
+                
+                        }) { (error) in
 
-            }
-        }
-        
-        call_show_RightView.call_show_eyeLookBlockAction { (eyeButton) in
-            
-            self.call_show_PreviewView.isHidden=false
-            self.call_show_RightView.isHidden=true
-            
-            if self.recommendChangeblock != nil {
-                self.recommendChangeblock!(true)
-            }
-        }
-        
-        
-        call_show_RightView.call_show_showLookBlockAction { (showButton) in
-
-            //展示插页广告
-//            self.doStarInterstitial()
-            
-            let imageUrlStr:String = self.currentModel.imageUrl ?? ""
-            let alertController = UIAlertController()
-            let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
-            let specifiedAction = UIAlertAction(title: "指定联系人设置", style: .default) { (action) in
-                let callshow:CSID_CallShowViewController = CSID_CallShowViewController.init()
-                callshow.imageUrlString = imageUrlStr
-                callshow.hidesBottomBarWhenPushed = true
-                self.ParentController(viewself: self).navigationController?.pushViewController(callshow, animated: true)
-            }
-            let allAction = UIAlertAction(title: "全部人设置", style: .default) { (action) in
-                let alertController = UIAlertController.init(title: "确定要给全部联系人设置来电秀吗？", message: nil, preferredStyle: .alert)
+                    }
+            }else if tooltag == 1{/**预览*/
+                
+                    self.call_show_PreviewView.isHidden=false
+                    self.call_show_RightView.isHidden=true
+                    if self.recommendChangeblock != nil {
+                        self.recommendChangeblock!(true)
+                    }
+                
+            }else if tooltag == 2{/**设置来电秀*/
+                
+                let imageUrlStr:String = self.currentModel.imageUrl ?? ""
+                let alertController = UIAlertController()
                 let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
-                let sureAction = UIAlertAction(title: "确定", style: .default) { (action) in
-                    CSID_CallShowContact.AllContactSettings(imageStr: imageUrlStr)
+                let specifiedAction = UIAlertAction(title: "指定联系人设置", style: .default) { (action) in
+                    let callshow:CSID_CallShowViewController = CSID_CallShowViewController.init()
+                    callshow.imageUrlString = imageUrlStr
+                    callshow.hidesBottomBarWhenPushed = true
+                    self.ParentController(viewself: self).navigationController?.pushViewController(callshow, animated: true)
                 }
-                alertController.addAction(sureAction)
+                let allAction = UIAlertAction(title: "全部人设置", style: .default) { (action) in
+                    let alertController = UIAlertController.init(title: "确定要给全部联系人设置来电秀吗？", message: nil, preferredStyle: .alert)
+                    let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+                    let sureAction = UIAlertAction(title: "确定", style: .default) { (action) in
+                        CSID_CallShowContact.AllContactSettings(imageStr: imageUrlStr)
+                    }
+                    alertController.addAction(sureAction)
+                    alertController.addAction(cancelAction)
+                    self.ParentController(viewself: self).present(alertController, animated: true, completion: nil)
+                }
+                alertController.addAction(specifiedAction)
+                alertController.addAction(allAction)
                 alertController.addAction(cancelAction)
                 self.ParentController(viewself: self).present(alertController, animated: true, completion: nil)
+                self.callShowBlock("")
+                
+            }else if tooltag == 3{/**打开相册*/
+                
+                
+                
             }
-            alertController.addAction(specifiedAction)
-            alertController.addAction(allAction)
-            alertController.addAction(cancelAction)
-            self.ParentController(viewself: self).present(alertController, animated: true, completion: nil)
-            self.callShowBlock("")
             
         }
-        
-        
-        
+
         call_show_PreviewView.call_show_preViewHiddeneBlock = { () -> Void in
             
             self.call_show_RightView.isHidden=false
@@ -97,7 +95,7 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
         () -> CSID_CollectRightSubView in
         
         let call_show_RightView = CSID_CollectRightSubView.newInstance()
-        call_show_RightView?.frame = CGRect(x:CSID_WidthScreen-80, y:(CSID_heightScreen-200)/2, width:80, height:200)
+        call_show_RightView?.frame = CGRect(x:CSID_WidthScreen-80, y:(CSID_heightScreen-270)/2, width:80, height:270)
         
         return call_show_RightView!
     }()
@@ -175,9 +173,11 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView){
         
         let currentPage = Int(scrollView.contentOffset.y/CSID_heightScreen)
-        currentModel = (listdataArr[currentPage] as! CSID_CallShowListModel)
-        
-        call_show_RightView.call_show_loveButton.isSelected = currentModel.haveUp ?? false
+        if listdataArr.count>0 {
+            currentModel = (listdataArr[currentPage] as! CSID_CallShowListModel)
+            call_show_RightView.call_show_loveButton.isSelected = currentModel.haveUp ?? false
+        }
+
     }
         
     required init?(coder: NSCoder) {

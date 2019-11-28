@@ -7,18 +7,15 @@
 //
 
 import UIKit
-typealias  loveblock = ( _ loveButton : UIButton) -> Void
-typealias  eyelookblock = (_ eyeButton : UIButton) ->Void
-typealias setCallShowBlock = (_ callShowButton : UIButton) ->Void
+
+typealias csid_rightToolsClickBlock = (_ toolsButton : UIButton , _ toolsTag:NSInteger) ->Void
 
 class CSID_CollectRightSubView: UIView {
     
     @IBOutlet weak var call_show_loveButton: UIButton!
-    
-    var call_show_loveBlock : loveblock?
-    var call_show_eyeBlock : eyelookblock?
-    var call_show_showBlock : eyelookblock?
-    var call_show_callShowBlock : setCallShowBlock?
+    @IBOutlet weak var call_show_TakePhotoButton: UIButton!
+  
+    var csid_show_rightToolsClickBlock : csid_rightToolsClickBlock?
     
     static func newInstance() -> CSID_CollectRightSubView?{
         
@@ -28,61 +25,49 @@ class CSID_CollectRightSubView: UIView {
         }
         return nil
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         load_init()
     }
-
     func load_init(){
         
     }
-    
-    func call_show_loveBlockAction ( loveblock: @escaping (_ loveButton: UIButton) -> Void ) {
-
-        call_show_loveBlock = loveblock
-     }
-    //喜欢
+    /**喜欢*/
     @IBAction func call_show_loveButtonAction(_ sender: UIButton) {
         
-        if call_show_loveBlock != nil{
-           call_show_loveBlock!(sender)
-        }
+        if csid_show_rightToolsClickBlock != nil {
+               csid_show_rightToolsClickBlock!(sender,0)
+         }
 
     }
-    func call_show_eyeLookBlockAction( eyelookblock: @escaping (_ eyeButton: UIButton) -> Void) {
-        
-         call_show_eyeBlock = eyelookblock
-    }
-    
-    //预览
+    /**预览*/
     @IBAction func call_show_eyeLookButtonAction(_ sender: UIButton) {
         
-        if call_show_eyeBlock != nil {
-           call_show_eyeBlock!(sender)
-        }
+        if csid_show_rightToolsClickBlock != nil {
+               csid_show_rightToolsClickBlock!(sender,1)
+         }
     }
     
-    func call_show_callShowBlockAction( callshowblock: @escaping (_ callshowBtn : UIButton) -> Void){
-        
-        call_show_callShowBlock = callshowblock
-    }
-    //设置来电秀
+    /**设置来电秀*/
     @IBAction func call_show_callPhoneButtonAction(_ sender: UIButton) {
 
-        if call_show_showBlock != nil {
-            call_show_showBlock!(sender)
+         if csid_show_rightToolsClickBlock != nil {
+                csid_show_rightToolsClickBlock!(sender,2)
+          }
+    }
+    /**打开相机*/
+    @IBAction func call_show_takePhotoButtonAction(_ sender: UIButton) {
+        
+        if csid_show_rightToolsClickBlock != nil {
+            csid_show_rightToolsClickBlock!(sender,3)
         }
+        
     }
     
-    func call_show_showLookBlockAction( showlookblock: @escaping (_ eyeButton: UIButton) -> Void) {
+    func call_show_rightToolsClickFinishBlockAction( csid_rightToolsClickBlock :  @escaping (_ toolsButton: UIButton , _ toolTag: NSInteger) -> Void){
         
-         call_show_showBlock = showlookblock
-    
-//        if call_show_callShowBlock != nil {
-//            call_show_callShowBlock!(eyeButton)
-//        }
-
+        csid_show_rightToolsClickBlock = csid_rightToolsClickBlock
     }
     
 }

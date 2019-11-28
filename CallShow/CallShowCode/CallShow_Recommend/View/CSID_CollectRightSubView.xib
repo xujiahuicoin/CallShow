@@ -11,7 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="CSID_CollectRightSubView" customModule="CallShow" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="80" height="200"/>
+            <rect key="frame" x="0.0" y="0.0" width="80" height="270"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofr-FT-QVo">
@@ -29,7 +29,7 @@
                         <action selector="call_show_loveButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="ViW-HW-X1y"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIV-14-Xas">
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIV-14-Xas">
                     <rect key="frame" x="0.0" y="120" width="80" height="80"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="80" id="SB0-Ex-e39"/>
@@ -43,7 +43,7 @@
                         <action selector="call_show_callPhoneButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="8m5-T5-Xzo"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSk-1f-X4Y">
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSk-1f-X4Y">
                     <rect key="frame" x="0.0" y="60" width="80" height="60"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="80" id="ti6-Wj-Pia"/>
@@ -58,10 +58,23 @@
                         <action selector="call_show_eyeLookButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="evk-RW-0OK"/>
                     </connections>
                 </button>
+                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6go-Xr-yDb">
+                    <rect key="frame" x="0.0" y="200" width="80" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="5Hv-oZ-fg9"/>
+                    </constraints>
+                    <state key="normal" image="call_show_takePhoto"/>
+                    <connections>
+                        <action selector="call_show_takePhotoButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="9uR-S2-cDn"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="WIV-14-Xas" secondAttribute="trailing" id="291-Tx-EJP"/>
+                <constraint firstItem="6go-Xr-yDb" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="46T-6H-mXs"/>
+                <constraint firstItem="6go-Xr-yDb" firstAttribute="top" secondItem="WIV-14-Xas" secondAttribute="bottom" id="6lX-6m-vnD"/>
+                <constraint firstItem="6go-Xr-yDb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Dbp-Ar-DYR"/>
                 <constraint firstItem="WIV-14-Xas" firstAttribute="top" secondItem="SSk-1f-X4Y" secondAttribute="bottom" id="FXi-r6-iFr"/>
                 <constraint firstItem="SSk-1f-X4Y" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="XdH-It-2jC"/>
                 <constraint firstItem="ofr-FT-QVo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="nvs-hO-BH9"/>
@@ -71,16 +84,23 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                    <real key="value" value="1"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="call_show_TakePhotoButton" destination="6go-Xr-yDb" id="cjJ-jt-sdF"/>
                 <outlet property="call_show_loveButton" destination="ofr-FT-QVo" id="BtX-lH-pSP"/>
             </connections>
-            <point key="canvasLocation" x="389.85507246376812" y="-112.5"/>
+            <point key="canvasLocation" x="389.85507246376812" y="-88.392857142857139"/>
         </view>
     </objects>
     <resources>
-        <image name="call_show_callPhone" width="60" height="60"/>
-        <image name="call_show_eyelook" width="30" height="30"/>
-        <image name="call_show_love" width="25" height="25"/>
-        <image name="call_show_nolove" width="25" height="25"/>
+        <image name="call_show_callPhone" width="45" height="45"/>
+        <image name="call_show_eyelook" width="25" height="15"/>
+        <image name="call_show_love" width="20" height="16"/>
+        <image name="call_show_nolove" width="20" height="16"/>
+        <image name="call_show_takePhoto" width="40" height="40"/>
     </resources>
 </document>

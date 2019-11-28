@@ -68,13 +68,7 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
             self.doStarInterstitial()
         }
         
-        
-       
-//        callShowRecommendView.call_show_RightView.call_show_callShowBlockAction { (callshowBtn) in
-//                  //展示插页广告
-//            self.doStarInterstitial()
-//            
-//              }
+    
     }
     
     func call_show_ShowHeaderSettingwork( vaules : Bool) -> Void {
@@ -148,6 +142,7 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
         let recommadnScrollView = UIScrollView(frame:CGRect(x: 0, y: -CSID_Status_H, width: CSID_WidthScreen, height: CSID_heightScreen+CSID_Status_H))
         recommadnScrollView.delegate = self
         recommadnScrollView.isPagingEnabled=true
+        recommadnScrollView.bounces=false
         recommadnScrollView.showsHorizontalScrollIndicator=false
         recommadnScrollView.showsVerticalScrollIndicator=false
         recommadnScrollView.contentSize=CGSize(width:CSID_WidthScreen*2, height: CSID_heightScreen-CSID_Status_H)
