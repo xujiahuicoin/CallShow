@@ -1196,7 +1196,7 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 23943WAA55;
+				DEVELOPMENT_TEAM = Q825492B4V;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1211,7 +1211,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.CallShows.www;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kids.uu;
 				PRODUCT_NAME = CallShow;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CallShow/CallShow-Bridging-Header.h";
@@ -1230,7 +1230,7 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5THF8E8SHG;
+				DEVELOPMENT_TEAM = Q825492B4V;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1245,7 +1245,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.CallShow.www;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kids.uu;
 				PRODUCT_NAME = CallShow;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CallShow/CallShow-Bridging-Header.h";

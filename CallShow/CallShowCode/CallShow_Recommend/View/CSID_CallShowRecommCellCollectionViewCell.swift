@@ -17,7 +17,7 @@ class CSID_CallShowRecommCellCollectionViewCell: UICollectionViewCell {
     }
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor=UIColor.white
+        self.backgroundColor = CSID_MainTextColor
         addImageView()
     }
     func addImageView() {

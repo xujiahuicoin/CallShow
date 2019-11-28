@@ -168,12 +168,14 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
     lazy var callShowRecommendView : CSID_CallShowListCommView = {
            
         let callShowRecommendView = CSID_CallShowListCommView(frame:.init(x: 0, y: 0, width: CSID_WidthScreen, height: recommadnScrollView.height))
+           callShowRecommendView.zanUserType = "5"
            return callShowRecommendView
     }()
        
       lazy var callShowNewestView : CSID_CallShowListCommView = {
                 
            let callShowNewestView = CSID_CallShowListCommView(frame:.init(x:CSID_WidthScreen, y: 0, width: CSID_WidthScreen, height: recommadnScrollView.height))
+           callShowNewestView.zanUserType = "5"
            return callShowNewestView
     }()
     
@@ -200,6 +202,7 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
             }) { (error) in
 
                 self.CSID_hideHUD()
+                self.call_showRecommandListNetwork()
             }
     
      }
@@ -224,6 +227,8 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
                 }) { (error) in
                     
                     self.CSID_hideHUD()
+                    self.call_showNewestListNetwork()
+                    
                 }
 
          }
