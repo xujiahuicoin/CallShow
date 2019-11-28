@@ -26,7 +26,6 @@ class CSID_CallShowViewController:CSID_BaseViewController,UITableViewDataSource,
         barButtonItem.tintColor = .black
         self.navigationItem.rightBarButtonItem = barButtonItem
         
-        self.dataDic = CSID_CallShowContact.GetContactInformation()
         self.setUpTabView()
         self.configData()
         self.view.addSubview(self.xiaView)
@@ -34,7 +33,19 @@ class CSID_CallShowViewController:CSID_BaseViewController,UITableViewDataSource,
             make.bottom.left.right.equalTo(self.view)
             make.height.equalTo(50)
         }
+         NotificationCenter.default.addObserver(self, selector: #selector(shouquan), name: NSNotification.Name(rawValue: "shouquanNotificationCenter"), object: nil)
     }
+    
+    
+    @objc func shouquan(nofi : Notification){
+        self.configData()
+        
+    }
+    
+    deinit{
+            NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "shouquanNotificationCenter"), object: nil)
+        }
+    
     
     @objc func selectedOver() {
         if self.selectedIndexs.count >= 1{
@@ -75,16 +86,19 @@ class CSID_CallShowViewController:CSID_BaseViewController,UITableViewDataSource,
     }
     
     func configData(){
-        //测试数据
-        let testArray = self.dataDic["name"]
-        if testArray != nil {
-            //基于 UILocalizedIndexedCollation 调用其方法
-            UILocalizedIndexedCollation.getCurrentKeysAndObjectsData(needSortArray: testArray as! NSArray) { (dataArray,titleArray) in
-                self.objectsArray = dataArray
-                self.keysArray    = titleArray
-                self.tabView?.reloadData()
+        DispatchQueue.main.async(execute: {
+            self.dataDic = CSID_CallShowContact.GetContactInformation()
+            //测试数据
+            let testArray = self.dataDic["name"]
+            if testArray != nil {
+                //基于 UILocalizedIndexedCollation 调用其方法
+                UILocalizedIndexedCollation.getCurrentKeysAndObjectsData(needSortArray: testArray as! NSArray) { (dataArray,titleArray) in
+                    self.objectsArray = dataArray
+                    self.keysArray    = titleArray
+                    self.tabView?.reloadData()
+                }
             }
-        }
+        })
         
     }
     
