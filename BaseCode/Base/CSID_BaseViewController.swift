@@ -247,7 +247,7 @@ class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivi
     
     
     ///跳转购买VIP页面
-    func CSID_Pub_GoToBuyVIPvc(){
+   func CSID_Pub_GoToBuyVIPvc(){
         
         self.navigationController?.pushViewController(CSID_BuyVC())
     }
