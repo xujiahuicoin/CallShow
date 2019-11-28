@@ -34,6 +34,7 @@ class CSID_LocalPhotoViewController: CSID_BaseViewController {
         
         view.addSubview(BackBotton)
         
+        clickLocalPhotoButton(UIButton())
     }
     
     

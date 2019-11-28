@@ -52,7 +52,7 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
                 
                  self.callShowBlock("")
                 
-                let imageUrlStr:String = self.currentModel.imageUrl
+                let imageUrlStr:String = self.currentModel.imageUrl.count > 0 ? self.currentModel.imageUrl : self.currentModel.imgUrl
                 let alertController = UIAlertController()
                 let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
                 let specifiedAction = UIAlertAction(title: "指定联系人设置", style: .default) { (action) in
@@ -85,6 +85,8 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
                 alertController.addAction(cancelAction)
                 self.ParentController(viewself: self).present(alertController, animated: true, completion: nil)
             }else if tooltag == 3{/**打开相册*/
+                
+                self.callShowBlock("")
                 
                 let photo = CSID_LocalPhotoViewController.init()
                 photo.hidesBottomBarWhenPushed = true
