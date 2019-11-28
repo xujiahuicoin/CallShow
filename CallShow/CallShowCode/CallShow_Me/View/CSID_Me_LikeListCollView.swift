@@ -17,7 +17,7 @@ class CSID_Me_LikeListCollView: CSID_BaseCollectionView {
             layout.itemSize = CGSize(width:(CSID_WidthScreen-40)/3,height:(CSID_WidthScreen-40)/3*1.5)
             layout.minimumLineSpacing = 10
             layout.minimumInteritemSpacing = 10
-            layout.headerReferenceSize = CGSize(width:CSID_WidthScreen, height:CSID_DefaultHeight)
+//            layout.headerReferenceSize = CGSize(width:CSID_WidthScreen, height:CSID_DefaultHeight)
             
              self.collectionView?.setCollectionViewLayout(layout, animated: false)
         

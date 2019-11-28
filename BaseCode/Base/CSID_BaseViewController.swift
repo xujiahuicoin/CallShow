@@ -224,15 +224,16 @@ class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivi
         //如果不是VIP了 进行插页
         if !(CSID_BuyTool().CSID_JudgeIsVipBool()) {
             
+            if self.interstitial == nil {
+                return
+            }
+            
             if self.interstitial.isReady {
                 
                 self.interstitial.present(fromRootViewController: self)
-                //                return
                 
             } else {
-                
                 print("Ad wasn't ready")
-                //            self.perform(#selector(doStarInterstitial), with: self, afterDelay: 1)
             }
             
         }
@@ -241,7 +242,7 @@ class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivi
     ///插屏广告回调结束
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {
         
-        self.perform(#selector(createAndLoadInterstitial), with: self, afterDelay: 5)
+        self.perform(#selector(createAndLoadInterstitial), with: self, afterDelay: 8)
     }
     
 }
