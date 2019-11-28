@@ -24,6 +24,8 @@ class CSID_CallShowMe: CSID_BaseViewController {
     ///点赞
     @IBAction func CSID_Pri_MyDianzan_Acion(){
         
+        self.navigationController?.pushViewController(CSID_LikeListVC())
+        
     }
     
     ///分享

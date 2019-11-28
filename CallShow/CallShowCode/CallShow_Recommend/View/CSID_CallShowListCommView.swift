@@ -26,7 +26,7 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
         
         call_show_RightView.call_show_loveBlockAction { (loveButton) in
         
-            CSID_RequestManager.request(.post, url:callShowloveurl, params:["upType":"1","relationId":self.currentModel.relationId ?? ""], success: {(resltData) in
+            CSID_RequestManager.request(.post, url:callShowloveurl, params:["upType":"1","relationId":self.currentModel.relationId ], success: {(resltData) in
         
                     NSLog("resltData = \(resltData)")
                     loveButton.isSelected = !loveButton.isSelected
@@ -53,7 +53,10 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
             //展示插页广告
 //            self.doStarInterstitial()
             
-            let imageUrlStr:String = self.currentModel.imageUrl ?? ""
+            
+            
+            let imageUrlStr:String = self.currentModel.imageUrl.count > 0 ? self.currentModel.imageUrl : self.currentModel.imgUrl
+            
             let alertController = UIAlertController()
             let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
             let specifiedAction = UIAlertAction(title: "指定联系人设置", style: .default) { (action) in

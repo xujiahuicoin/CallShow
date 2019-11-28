@@ -105,6 +105,14 @@ class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivi
         stopAnimating()
     }
     
+    func CSID_showErrorWithText(text:String){
+        HUD.flash(.labeledError(title: nil, subtitle: text as String), delay: 2.0, completion: nil)
+       }
+       
+       func CSID_showSuccessWithText(text:String){
+           HUD.flash(.labeledSuccess(title: nil, subtitle: text as String), delay: 1.0, completion: nil)
+       }
+    
     
     func CSID_showErrorWithText(text:String, view:UIView){
         HUD.flash(.labeledError(title: nil, subtitle: text as String), onView: view, delay: 2.0, completion: nil)

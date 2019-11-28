@@ -26,7 +26,7 @@ import SCLAlertView
 ////激励广告
 //let GULIADID = "ca-app-pub-6864430072527422/5514605819"
 
-//测试Key
+//测试Key----------------
 let BaseADAPPID = "ca-app-pub-3940256099942544~1458002511"
 //banner
 let BannerADID = "ca-app-pub-3940256099942544/2934735716"
