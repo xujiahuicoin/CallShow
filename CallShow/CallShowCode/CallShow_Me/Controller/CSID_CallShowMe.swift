@@ -85,7 +85,7 @@ class CSID_CallShowMe: CSID_BaseViewController {
     
     ///购买APp
     @IBAction func CSID_Pri_MyBuyApp_Acion(){
-        self.navigationController?.pushViewController(CSID_iamgeViewController())
+        self.navigationController?.pushViewController(CSID_BuyVC())
     }
     
     //删除缓存

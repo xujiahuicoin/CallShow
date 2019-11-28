@@ -43,7 +43,7 @@ class CSID_Me_LikeListCollView: CSID_BaseCollectionView {
     
        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
           
-        sendViewDelegateEvent(eventObject: ViewEventObject.CSID_viewEventObject(eventType: CSID_AppAction.csid_ClickLikeItemAction.rawValue, params: indexPath.item))
+        sendViewDelegateEvent(eventObject: ViewEventObject.CSID_viewEventObject(eventType: CSID_AppAction.csid_ClickLikeItemAction.rawValue, params: indexPath.row))
        }
     
 

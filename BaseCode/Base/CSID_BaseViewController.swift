@@ -245,5 +245,19 @@ class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivi
         self.perform(#selector(createAndLoadInterstitial), with: self, afterDelay: 8)
     }
     
+    
+    ///跳转购买VIP页面
+   func CSID_Pub_GoToBuyVIPvc(){
+        
+        self.navigationController?.pushViewController(CSID_BuyVC())
+    }
+    
+    ///判断是不是VIP
+    func CSID_Pub_isVip() -> Bool {
+        
+      return CSID_BuyTool().CSID_JudgeIsVipBool()
+    }
+    ///判断
+    
 }
 

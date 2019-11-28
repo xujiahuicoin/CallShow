@@ -12,7 +12,6 @@ import ESPullToRefresh
 import Kingfisher
 import SCLAlertView
 
-
 //-----------------广告ID-------------------
 //-------广告Key---------
 ////正式

@@ -13,6 +13,10 @@ class CSID_CallShowContact: NSObject {
             store.requestAccess(for: .contacts, completionHandler: { (isRight : Bool,error : Error?) in
                 if isRight {
                     print("授权成功")
+                   
+                    
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "shouquanNotificationCenter"), object: self)
+                    
                 } else {
                     print("授权失败")
                 }

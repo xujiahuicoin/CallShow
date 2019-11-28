@@ -8,7 +8,8 @@
 
 import UIKit
 import PKHUD
-import AudioToolbox
+import BSImagePicker
+import Photos
 typealias  recommendChangeblock = (_ changBool : Bool) -> Void
 
 class CSID_CallShowListCommView: CSID_CallShowBaseView,UICollectionViewDelegate,UICollectionViewDataSource{
@@ -55,7 +56,7 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
                 
                  self.callShowBlock("")
                 
-                let imageUrlStr:String = self.currentModel.imageUrl
+                let imageUrlStr:String = self.currentModel.imageUrl.count > 0 ? self.currentModel.imageUrl : self.currentModel.imgUrl
                 let alertController = UIAlertController()
                 let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
                 let specifiedAction = UIAlertAction(title: "指定联系人设置", style: .default) { (action) in
@@ -77,7 +78,6 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
                         //从网络获取数据流
                         let data = try! Data(contentsOf: url!)
                         CSID_CallShowContact.AllContactSettings(imageData: data)
-                        
                         HUD.flash(.labeledSuccess(title: nil, subtitle: "来电秀设置成功"), onView: self, delay: 1.0, completion: nil)
                     }
                     alertController.addAction(sureAction)
@@ -90,10 +90,39 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
                 self.ParentController(viewself: self).present(alertController, animated: true, completion: nil)
             }else if tooltag == 3{/**打开相册*/
                 
-                let photo = CSID_LocalPhotoViewController.init()
-                photo.hidesBottomBarWhenPushed = true
-                self.ParentController(viewself: self).navigationController?.pushViewController(photo, animated: true)
+//                self.callShowBlock("")
+//
+//                let photo = CSID_LocalPhotoViewController.init()
+//                photo.hidesBottomBarWhenPushed = true
+//                self.ParentController(viewself: self).navigationController?.pushViewController(photo, animated: true)
+                
+                
+                let vc = BSImagePickerViewController()
+                vc.maxNumberOfSelections = 1
+                
+                self.ParentController(viewself: self).bs_presentImagePickerController(vc, animated: true,
+                                                select: { (asset: PHAsset) -> Void in
+                                                    
+                                                    
+                                                    // User selected an asset.
+                                                    // Do something with it, start upload perhaps?
+                }, deselect: { (asset: PHAsset) -> Void in
+                    // User deselected an assets.
+                    // Do something, cancel upload?
+                }, cancel: { (assets: [PHAsset]) -> Void in
+                    // User cancelled. And this where the assets currently selected.
+                }, finish: { (assets: [PHAsset]) -> Void in
+                    // User finished with these assets
+                    let selcecImage:UIImage = CSID_ZxhPHAssetToImageTool.PHAssetToImage(asset: assets[0])
+                    
+                    let photo = CSID_LocalPhotoViewController.init()
+                    photo.localPhotoData = selcecImage.pngData()
+                    self.ParentController(viewself: self).navigationController?.pushViewController(photo, animated: true)
+                    
 
+                }, completion: nil)
+                
+                
             }
             
         }

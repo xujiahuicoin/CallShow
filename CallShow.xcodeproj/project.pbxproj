@@ -68,6 +68,7 @@
 		043516AF235DAD8A00764962 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042D4274235DAA5E0075B700 /* Assets.xcassets */; };
 		043911E52355620700636064 /* CodeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043911AE2355620700636064 /* CodeHeader.swift */; };
 		043911EB2355688100636064 /* AppDelegate+JPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043911E82355688100636064 /* AppDelegate+JPush.swift */; };
+		044628F3238FB1670007EEA1 /* KeychainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 044628F2238FB1670007EEA1 /* KeychainManager.m */; };
 		048110F1238E622200806457 /* CSID_iamgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048110EF238E622200806457 /* CSID_iamgeViewController.swift */; };
 		048110F2238E622200806457 /* CSID_iamgeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048110F0238E622200806457 /* CSID_iamgeViewController.xib */; };
 		048B6F92238F79CD00B6BD75 /* CSID_LocalPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B6F90238F79CD00B6BD75 /* CSID_LocalPhotoViewController.swift */; };
@@ -87,16 +88,6 @@
 		0494ADDD235475EE00DEE0B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494ADDC235475EE00DEE0B2 /* AppDelegate.swift */; };
 		04A130BF238F6499007B18CD /* CSID_LikeListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A130BE238F6499007B18CD /* CSID_LikeListVC.swift */; };
 		04A130C2238F65E0007B18CD /* CSID_Me_LikeListCollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A130C1238F65E0007B18CD /* CSID_Me_LikeListCollView.swift */; };
-		04B9ACAC238FBBA3009711E7 /* call_show_music10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04B9ACA2238FBBA2009711E7 /* call_show_music10.mp3 */; };
-		04B9ACAD238FBBA3009711E7 /* call_show_music2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04B9ACA3238FBBA2009711E7 /* call_show_music2.mp3 */; };
-		04B9ACAE238FBBA3009711E7 /* call_show_music7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04B9ACA4238FBBA2009711E7 /* call_show_music7.mp3 */; };
-		04B9ACAF238FBBA3009711E7 /* call_show_music1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04B9ACA5238FBBA2009711E7 /* call_show_music1.mp3 */; };
-		04B9ACB0238FBBA3009711E7 /* call_show_music3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04B9ACA6238FBBA3009711E7 /* call_show_music3.mp3 */; };
-		04B9ACB1238FBBA3009711E7 /* call_show_music8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04B9ACA7238FBBA3009711E7 /* call_show_music8.mp3 */; };
-		04B9ACB2238FBBA3009711E7 /* call_show_music5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04B9ACA8238FBBA3009711E7 /* call_show_music5.mp3 */; };
-		04B9ACB3238FBBA3009711E7 /* call_show_music9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04B9ACA9238FBBA3009711E7 /* call_show_music9.mp3 */; };
-		04B9ACB4238FBBA3009711E7 /* call_show_music4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04B9ACAA238FBBA3009711E7 /* call_show_music4.mp3 */; };
-		04B9ACB5238FBBA3009711E7 /* call_show_music6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04B9ACAB238FBBA3009711E7 /* call_show_music6.mp3 */; };
 		04C7C902238CBAFE00E72693 /* CallShowPortHeaderFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7C901238CBAFE00E72693 /* CallShowPortHeaderFile.swift */; };
 		04C7C904238CC95400E72693 /* CSID_CallShowListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7C903238CC95400E72693 /* CSID_CallShowListModel.swift */; };
 		04C7C906238CCDCD00E72693 /* CSID_CallShowListCommView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7C905238CCDCD00E72693 /* CSID_CallShowListCommView.swift */; };
@@ -199,6 +190,8 @@
 		043911AE2355620700636064 /* CodeHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeHeader.swift; sourceTree = "<group>"; };
 		043911E82355688100636064 /* AppDelegate+JPush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+JPush.swift"; sourceTree = "<group>"; };
 		0439120F235572C100636064 /* CallShow-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CallShow-Bridging-Header.h"; sourceTree = "<group>"; };
+		044628F1238FB1670007EEA1 /* KeychainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeychainManager.h; sourceTree = "<group>"; };
+		044628F2238FB1670007EEA1 /* KeychainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeychainManager.m; sourceTree = "<group>"; };
 		048110EF238E622200806457 /* CSID_iamgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_iamgeViewController.swift; sourceTree = "<group>"; };
 		048110F0238E622200806457 /* CSID_iamgeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CSID_iamgeViewController.xib; sourceTree = "<group>"; };
 		048B6F90238F79CD00B6BD75 /* CSID_LocalPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_LocalPhotoViewController.swift; sourceTree = "<group>"; };
@@ -222,16 +215,6 @@
 		0494ADFA235475F300DEE0B2 /* CallShowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallShowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A130BE238F6499007B18CD /* CSID_LikeListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_LikeListVC.swift; sourceTree = "<group>"; };
 		04A130C1238F65E0007B18CD /* CSID_Me_LikeListCollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_Me_LikeListCollView.swift; sourceTree = "<group>"; };
-		04B9ACA2238FBBA2009711E7 /* call_show_music10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call_show_music10.mp3; sourceTree = "<group>"; };
-		04B9ACA3238FBBA2009711E7 /* call_show_music2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call_show_music2.mp3; sourceTree = "<group>"; };
-		04B9ACA4238FBBA2009711E7 /* call_show_music7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call_show_music7.mp3; sourceTree = "<group>"; };
-		04B9ACA5238FBBA2009711E7 /* call_show_music1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call_show_music1.mp3; sourceTree = "<group>"; };
-		04B9ACA6238FBBA3009711E7 /* call_show_music3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call_show_music3.mp3; sourceTree = "<group>"; };
-		04B9ACA7238FBBA3009711E7 /* call_show_music8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call_show_music8.mp3; sourceTree = "<group>"; };
-		04B9ACA8238FBBA3009711E7 /* call_show_music5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call_show_music5.mp3; sourceTree = "<group>"; };
-		04B9ACA9238FBBA3009711E7 /* call_show_music9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call_show_music9.mp3; sourceTree = "<group>"; };
-		04B9ACAA238FBBA3009711E7 /* call_show_music4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call_show_music4.mp3; sourceTree = "<group>"; };
-		04B9ACAB238FBBA3009711E7 /* call_show_music6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call_show_music6.mp3; sourceTree = "<group>"; };
 		04C7C901238CBAFE00E72693 /* CallShowPortHeaderFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallShowPortHeaderFile.swift; sourceTree = "<group>"; };
 		04C7C903238CC95400E72693 /* CSID_CallShowListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_CallShowListModel.swift; sourceTree = "<group>"; };
 		04C7C905238CCDCD00E72693 /* CSID_CallShowListCommView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_CallShowListCommView.swift; sourceTree = "<group>"; };
@@ -378,9 +361,9 @@
 		042D412A238BAEFA0034DE84 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				04DF582D23712E590079669B /* FilesTools */,
 				042D412B238BAEFA0034DE84 /* UIColorDarkMode.swift */,
 				042D412C238BAEFA0034DE84 /* CSID_BaseViewController.swift */,
+				04DF582D23712E590079669B /* Files */,
 				042D412D238BAEFA0034DE84 /* CSID_BaseNavigationController.swift */,
 				042D412E238BAEFA0034DE84 /* CSID_BaseTabBarController.swift */,
 			);
@@ -674,7 +657,6 @@
 		04B0BB60238BAB8800DBFF12 /* CallShow_Recommend */ = {
 			isa = PBXGroup;
 			children = (
-				04B9AC8D238FB9EB009711E7 /* Call_Show_MusicFile */,
 				04B0BB61238BAB8800DBFF12 /* Logic */,
 				04B0BB62238BAB8800DBFF12 /* Controller */,
 				04B0BB63238BAB8800DBFF12 /* Model */,
@@ -709,8 +691,8 @@
 		04B0BB64238BAB8800DBFF12 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				04C7C905238CCDCD00E72693 /* CSID_CallShowListCommView.swift */,
 				04C7C907238CD22200E72693 /* CSID_CallShowRecommCellCollectionViewCell.swift */,
+				04C7C905238CCDCD00E72693 /* CSID_CallShowListCommView.swift */,
 				04C7C909238D077500E72693 /* CSID_CollectRightSubView.swift */,
 				04C7C90B238D078F00E72693 /* CSID_CollectRightSubView.xib */,
 				04C7C90D238D294900E72693 /* CSID_ShowPreviewSubView.swift */,
@@ -719,32 +701,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		04B9AC8D238FB9EB009711E7 /* Call_Show_MusicFile */ = {
-			isa = PBXGroup;
-			children = (
-				04B9ACA5238FBBA2009711E7 /* call_show_music1.mp3 */,
-				04B9ACA3238FBBA2009711E7 /* call_show_music2.mp3 */,
-				04B9ACA6238FBBA3009711E7 /* call_show_music3.mp3 */,
-				04B9ACAA238FBBA3009711E7 /* call_show_music4.mp3 */,
-				04B9ACA8238FBBA3009711E7 /* call_show_music5.mp3 */,
-				04B9ACAB238FBBA3009711E7 /* call_show_music6.mp3 */,
-				04B9ACA4238FBBA2009711E7 /* call_show_music7.mp3 */,
-				04B9ACA7238FBBA3009711E7 /* call_show_music8.mp3 */,
-				04B9ACA9238FBBA3009711E7 /* call_show_music9.mp3 */,
-				04B9ACA2238FBBA2009711E7 /* call_show_music10.mp3 */,
-			);
-			path = Call_Show_MusicFile;
-			sourceTree = "<group>";
-		};
-		04DF582D23712E590079669B /* FilesTools */ = {
+		04DF582D23712E590079669B /* Files */ = {
 			isa = PBXGroup;
 			children = (
 				04C7C901238CBAFE00E72693 /* CallShowPortHeaderFile.swift */,
 				043911AE2355620700636064 /* CodeHeader.swift */,
 				04DF583723714ED00079669B /* EnumFileHeader.swift */,
 				04DF5853237271B20079669B /* func_Expantion.swift */,
+				044628F1238FB1670007EEA1 /* KeychainManager.h */,
+				044628F2238FB1670007EEA1 /* KeychainManager.m */,
 			);
-			path = FilesTools;
+			path = Files;
 			sourceTree = "<group>";
 		};
 		31E5291EABFD13E956531D32 /* Pods */ = {
@@ -873,27 +840,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04B9ACB5238FBBA3009711E7 /* call_show_music6.mp3 in Resources */,
-				04B9ACAD238FBBA3009711E7 /* call_show_music2.mp3 in Resources */,
-				04B9ACB1238FBBA3009711E7 /* call_show_music8.mp3 in Resources */,
 				048110F2238E622200806457 /* CSID_iamgeViewController.xib in Resources */,
 				04C7C90C238D078F00E72693 /* CSID_CollectRightSubView.xib in Resources */,
 				048B6F93238F79CD00B6BD75 /* CSID_LocalPhotoViewController.xib in Resources */,
 				042D417B238BAEFB0034DE84 /* CSID_NilDataTableViewCell.xib in Resources */,
-				04B9ACAE238FBBA3009711E7 /* call_show_music7.mp3 in Resources */,
 				049034D1238CDEA100C91F08 /* yinsi.html in Resources */,
-				04B9ACB4238FBBA3009711E7 /* call_show_music4.mp3 in Resources */,
 				049034D6238CDEA100C91F08 /* CSID_BuyVC.xib in Resources */,
-				04B9ACAC238FBBA3009711E7 /* call_show_music10.mp3 in Resources */,
 				043516AF235DAD8A00764962 /* Assets.xcassets in Resources */,
 				04C7C910238D295500E72693 /* CSID_ShowPreviewSubView.xib in Resources */,
 				042B102F238E5C950021339F /* CSID_CallShowViewController.xib in Resources */,
 				049034D3238CDEA100C91F08 /* CSID_CallShowMe.xib in Resources */,
-				04B9ACAF238FBBA3009711E7 /* call_show_music1.mp3 in Resources */,
-				04B9ACB2238FBBA3009711E7 /* call_show_music5.mp3 in Resources */,
 				049034DA238CDEA100C91F08 /* server.html in Resources */,
-				04B9ACB0238FBBA3009711E7 /* call_show_music3.mp3 in Resources */,
-				04B9ACB3238FBBA3009711E7 /* call_show_music9.mp3 in Resources */,
 				049034D8238CDEA100C91F08 /* CSID_FeedbackVC.xib in Resources */,
 				042D4198238BAEFB0034DE84 /* RefreshTableView.bundle in Resources */,
 			);
@@ -1010,6 +967,7 @@
 				042D417F238BAEFB0034DE84 /* CSID_PageResultView.swift in Sources */,
 				042D4170238BAEFB0034DE84 /* BalloonPickerView.swift in Sources */,
 				042D4190238BAEFB0034DE84 /* CSID_AlertView.swift in Sources */,
+				044628F3238FB1670007EEA1 /* KeychainManager.m in Sources */,
 				042D416E238BAEFB0034DE84 /* CSID_Error.swift in Sources */,
 				042D417D238BAEFB0034DE84 /* CSID_BaseTableView.swift in Sources */,
 				049034D2238CDEA100C91F08 /* CSID_CallShowMe.swift in Sources */,
@@ -1236,9 +1194,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q825492B4V;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 4933V6P963;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1253,9 +1211,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kids.uu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sorty.book;
 				PRODUCT_NAME = CallShow;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = dev_st;
 				SWIFT_OBJC_BRIDGING_HEADER = "CallShow/CallShow-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1271,8 +1229,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q825492B4V;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

@@ -74,7 +74,7 @@ class CSID_LikeListVC: CSID_BaseViewController {
             
             let detailVC = CSID_CallShowSiteDetailVC.init()
             detailVC.callShow_IsLike = true
-            detailVC.detailCurrentIndex = index as? NSInteger ?? 0
+            detailVC.detailCurrentIndex = index as! NSInteger
             detailVC.callShowDetailArrays = call_show_LikeListArray
             detailVC.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(detailVC, animated: true)
