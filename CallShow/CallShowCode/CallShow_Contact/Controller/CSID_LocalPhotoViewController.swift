@@ -13,8 +13,9 @@ class CSID_LocalPhotoViewController: CSID_BaseViewController {
         super.viewDidLoad()
         self.bannerShow = false
         self.isHidesPreview = true
-        let image:UIImage = UIImage.init(named: "call_show_localbg")!
-        self.localPhotoData = image.pngData()
+        self.rightView.isHidden = false
+        self.backgroudImg.image = UIImage.init(data: self.localPhotoData!)
+        
         self.call_show_PreviewView = CSID_ShowPreviewSubView.previewInstance()
         self.call_show_PreviewView?.frame = CGRect(x:0, y:0, width:CSID_WidthScreen, height:CSID_heightScreen)
         self.call_show_PreviewView?.call_showTtileHeightConstriant.constant = CSID_HeightNav_top+3*CSID_Status_H
@@ -30,11 +31,7 @@ class CSID_LocalPhotoViewController: CSID_BaseViewController {
             self.rightView.isHidden=false
             self.call_show_PreviewView?.isHidden = true
         }
-        
-        
         view.addSubview(BackBotton)
-        
-        clickLocalPhotoButton(UIButton())
     }
     
     
@@ -100,30 +97,4 @@ class CSID_LocalPhotoViewController: CSID_BaseViewController {
         alertController.addAction(cancelAction)
         self.present(alertController, animated: true, completion: nil)
     }
-    
-    
-    @IBAction func clickLocalPhotoButton(_ sender: Any) {
-        let vc = BSImagePickerViewController()
-        vc.maxNumberOfSelections = 1
-        
-        bs_presentImagePickerController(vc, animated: true,
-                                        select: { (asset: PHAsset) -> Void in
-                                            
-                                            
-                                            // User selected an asset.
-                                            // Do something with it, start upload perhaps?
-        }, deselect: { (asset: PHAsset) -> Void in
-            // User deselected an assets.
-            // Do something, cancel upload?
-        }, cancel: { (assets: [PHAsset]) -> Void in
-            // User cancelled. And this where the assets currently selected.
-        }, finish: { (assets: [PHAsset]) -> Void in
-            // User finished with these assets
-            let selcecImage:UIImage = CSID_ZxhPHAssetToImageTool.PHAssetToImage(asset: assets[0])
-            
-            self.backgroudImg.image = selcecImage
-            self.localPhotoData = selcecImage.pngData()
-        }, completion: nil)
-    }
-    
 }

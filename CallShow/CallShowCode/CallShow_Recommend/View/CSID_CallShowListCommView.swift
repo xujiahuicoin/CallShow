@@ -8,6 +8,8 @@
 
 import UIKit
 import PKHUD
+import BSImagePicker
+import Photos
 typealias  recommendChangeblock = (_ changBool : Bool) -> Void
 
 class CSID_CallShowListCommView: CSID_CallShowBaseView,UICollectionViewDelegate,UICollectionViewDataSource{
@@ -88,11 +90,38 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
                 self.ParentController(viewself: self).present(alertController, animated: true, completion: nil)
             }else if tooltag == 3{/**打开相册*/
                 
-                self.callShowBlock("")
+//                self.callShowBlock("")
+//
+//                let photo = CSID_LocalPhotoViewController.init()
+//                photo.hidesBottomBarWhenPushed = true
+//                self.ParentController(viewself: self).navigationController?.pushViewController(photo, animated: true)
                 
-                let photo = CSID_LocalPhotoViewController.init()
-                photo.hidesBottomBarWhenPushed = true
-                self.ParentController(viewself: self).navigationController?.pushViewController(photo, animated: true)
+                
+                let vc = BSImagePickerViewController()
+                vc.maxNumberOfSelections = 1
+                
+                self.ParentController(viewself: self).bs_presentImagePickerController(vc, animated: true,
+                                                select: { (asset: PHAsset) -> Void in
+                                                    
+                                                    
+                                                    // User selected an asset.
+                                                    // Do something with it, start upload perhaps?
+                }, deselect: { (asset: PHAsset) -> Void in
+                    // User deselected an assets.
+                    // Do something, cancel upload?
+                }, cancel: { (assets: [PHAsset]) -> Void in
+                    // User cancelled. And this where the assets currently selected.
+                }, finish: { (assets: [PHAsset]) -> Void in
+                    // User finished with these assets
+                    let selcecImage:UIImage = CSID_ZxhPHAssetToImageTool.PHAssetToImage(asset: assets[0])
+                    
+                    let photo = CSID_LocalPhotoViewController.init()
+                    photo.localPhotoData = selcecImage.pngData()
+                    self.ParentController(viewself: self).navigationController?.pushViewController(photo, animated: true)
+                    
+
+                }, completion: nil)
+                
                 
             }
             
