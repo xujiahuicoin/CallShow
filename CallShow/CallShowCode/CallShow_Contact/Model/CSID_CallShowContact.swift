@@ -222,6 +222,7 @@ class CSID_CallShowContact: NSObject {
                 }
             })
         } catch {
+            stopAnimating()
             print(error)
         }
     }
