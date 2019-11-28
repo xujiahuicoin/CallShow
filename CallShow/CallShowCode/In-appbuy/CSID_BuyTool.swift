@@ -11,14 +11,48 @@ let paySuccess = "paySuccess"
 import UIKit
 import StoreKit
 class CSID_BuyTool: NSObject,SKPaymentTransactionObserver,SKProductsRequestDelegate {
-
+    
     let vipKeyStr = "vipKeyString"
-    let freeTImeStr = "freeTImeStr"
+    ///免费试用次数——Key
+    let getFreeTime_key = "getFreeTime"
     
     ///判断还有没有免费试用次数，根据UUID
-//    func CSID_JudgeHaveFreeTime()->Bool{
-//
-//    }
+    func CSID_JudgeHaveFreeTime()->Bool{
+        
+        let freetime : Bool = UserDefaults.standard.object(forKey: getFreeTime_key) as! Bool
+        
+        if freetime {
+            return true
+        }else{
+            return false
+        }
+        
+    }
+    
+    //    设置免费次数
+    func CSID_Pub_setFreeTime0(){
+        
+        let manager = KeychainManager.default()
+         manager.save(getFreeTime_key, data: "yes")
+        //已有数据 设置次数为
+        UserDefaults.standard.set(false, forKey: getFreeTime_key)
+        
+    }
+    ///查看有么有免费次数
+    func CSID_Pub_GetFreeTimeSet(){
+        let manager = KeychainManager.default()
+        
+        let data:String = manager.load(getFreeTime_key) as? String ?? ""
+        
+        if data.count < 1 {
+            //还没有数据 设置次数为true
+            UserDefaults.standard.set(true, forKey: getFreeTime_key)
+            
+        }else {
+            //已有数据 设置次数为0
+            UserDefaults.standard.set(false, forKey: getFreeTime_key)
+        }
+    }
     
     ///判断是不是VIP
     func CSID_JudgeIsVipBool() -> Bool{
@@ -36,7 +70,7 @@ class CSID_BuyTool: NSObject,SKPaymentTransactionObserver,SKProductsRequestDeleg
     func CSID_SetVipUser(){
         UserDefaults.standard.set(true, forKey: vipKeyStr)
     }
-  //--------------购买----------------------
+    //--------------购买----------------------
     ///开始购买产品 根据产品ID
     func applePayWithProductId(ProductId: String){
         
@@ -54,14 +88,14 @@ class CSID_BuyTool: NSObject,SKPaymentTransactionObserver,SKProductsRequestDeleg
             
             
         }else{
-
+            
             //不支持购买
             CSID_ProgressHUD.showError(message: "购买失败，请重试")
         }
         
     }
-
-
+    
+    
     // 1.接收到产品的返回信息,然后用返回的商品信息进行发起购买请求
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
         //判断服务器是否有产品
@@ -94,11 +128,11 @@ class CSID_BuyTool: NSObject,SKPaymentTransactionObserver,SKProductsRequestDeleg
     
     //---------------恢复购买---------------------
     ///恢复购买
-      func restorePurchase(){
+    func restorePurchase(){
         
-          //回调已经购买过的商品
-                 SKPaymentQueue.default().restoreCompletedTransactions()
-      }
+        //回调已经购买过的商品
+        SKPaymentQueue.default().restoreCompletedTransactions()
+    }
     ///获取已经购买过的内购项目
     func paymentQueueRestoreCompletedTransactionsFinished(_ queue: SKPaymentQueue) {
         
@@ -114,9 +148,9 @@ class CSID_BuyTool: NSObject,SKPaymentTransactionObserver,SKProductsRequestDeleg
                 let productID = transaction.payment.productIdentifier
                 print("可以恢复购买的商品ID\(productID)")
                 
-//                if transaction.transactionState == SKPaymentTransactionStateRestored{
-//
-//                }
+                //                if transaction.transactionState == SKPaymentTransactionStateRestored{
+                //
+                //                }
                 
             }
             
@@ -137,31 +171,31 @@ class CSID_BuyTool: NSObject,SKPaymentTransactionObserver,SKProductsRequestDeleg
             switch tran.transactionState {
             case .purchasing:
                 do {
-                
-                print("商品添加进列表")
-            }
+                    
+                    print("商品添加进列表")
+                }
                 
             case .purchased:
                 do {
                     //购买成功-第一次购买和恢复已购项目都会回调这个
-                
+                    
                     addUserCount()
                     SKPaymentQueue.default().finishTransaction(tran)
                 }
             case .restored:
                 do{
-                     //购买已经购买过的商品的商品会回调这个
+                    //购买已经购买过的商品的商品会回调这个
                     addUserCount()
                     SKPaymentQueue.default().finishTransaction(tran)
                 }
             case .failed:
                 do{
-
+                    
                     //购买失败
                     SKPaymentQueue.default().finishTransaction(tran)
                 }
             default:
-
+                
                 SKPaymentQueue.default().finishTransaction(tran)
             }
         }
@@ -175,6 +209,6 @@ class CSID_BuyTool: NSObject,SKPaymentTransactionObserver,SKProductsRequestDeleg
         self.CSID_SetVipUser()
         CSID_ProgressHUD.showSuccess(message: "购买成功")
         //发送购买成功通知
-         NotificationCenter.default.post(name: NSNotification.Name(paySuccess), object: nil)
+        NotificationCenter.default.post(name: NSNotification.Name(paySuccess), object: nil)
     }
 }

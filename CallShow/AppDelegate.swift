@@ -54,9 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     ///获取/设置 Vip 免费次数
     func CSID_getFreeTime(){
-        
-        
-        
+        CSID_BuyTool().CSID_Pub_GetFreeTimeSet()
     }
     
 }

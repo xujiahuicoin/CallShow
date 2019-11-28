@@ -363,7 +363,7 @@
 			children = (
 				042D412B238BAEFA0034DE84 /* UIColorDarkMode.swift */,
 				042D412C238BAEFA0034DE84 /* CSID_BaseViewController.swift */,
-				04DF582D23712E590079669B /* FilesTools */,
+				04DF582D23712E590079669B /* Files */,
 				042D412D238BAEFA0034DE84 /* CSID_BaseNavigationController.swift */,
 				042D412E238BAEFA0034DE84 /* CSID_BaseTabBarController.swift */,
 			);
@@ -701,7 +701,7 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		04DF582D23712E590079669B /* FilesTools */ = {
+		04DF582D23712E590079669B /* Files */ = {
 			isa = PBXGroup;
 			children = (
 				04C7C901238CBAFE00E72693 /* CallShowPortHeaderFile.swift */,
@@ -711,7 +711,7 @@
 				044628F1238FB1670007EEA1 /* KeychainManager.h */,
 				044628F2238FB1670007EEA1 /* KeychainManager.m */,
 			);
-			path = FilesTools;
+			path = Files;
 			sourceTree = "<group>";
 		};
 		31E5291EABFD13E956531D32 /* Pods */ = {
@@ -1194,9 +1194,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q825492B4V;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 4933V6P963;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1211,9 +1211,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kids.uu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sorty.book;
 				PRODUCT_NAME = CallShow;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = dev_st;
 				SWIFT_OBJC_BRIDGING_HEADER = "CallShow/CallShow-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1229,8 +1229,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q825492B4V;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
