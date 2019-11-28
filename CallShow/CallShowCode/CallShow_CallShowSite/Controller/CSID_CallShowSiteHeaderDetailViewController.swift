@@ -73,6 +73,7 @@ class CSID_CallShowSiteHeaderDetailViewController: CSID_BaseViewController {
         }
         //展示插页广告
         self.doStarInterstitial()
+        
         let imageUrlStr:String = model?.imageUrl ?? ""
         let alertController = UIAlertController()
         let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)

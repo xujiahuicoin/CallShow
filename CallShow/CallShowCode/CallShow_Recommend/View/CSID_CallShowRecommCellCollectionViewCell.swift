@@ -30,6 +30,6 @@ class CSID_CallShowRecommCellCollectionViewCell: UICollectionViewCell {
     
     func configCellWithModel(model:CSID_CallShowListModel){
 
-        csid_callshow_ImageView.kf.setImage(with: URL(string: model.imageUrl ?? ""), placeholder: UIImage(named: "placeholder"))
+        csid_callshow_ImageView.kf.setImage(with: URL(string: model.imageUrl.count > 0 ? model.imageUrl : model.imgUrl ), placeholder: UIImage(named: "placeholder"))
     }
 }

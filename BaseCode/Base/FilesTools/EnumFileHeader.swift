@@ -9,4 +9,7 @@
 import Foundation
 
 //---------------项目枚举---------------------
-
+enum CSID_AppAction : String{
+    ///点赞列表 点击事件
+    case csid_ClickLikeItemAction = "csid_ClickLikeItemAction"
+}

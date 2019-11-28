@@ -17,6 +17,7 @@ class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivi
     var bannerShow : Bool = true
     
     var bannerView: GADBannerView!
+    
     var interstitial: GADInterstitial!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,10 +46,6 @@ class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivi
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.CSID_color(lightColor: CSID_BackgroundColor_dark, darkColor: CSID_BackgroundColor_dark)
-        
-        //创建广告
-        self.creatADSaction()
-        
         //设置导航栏的字体
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : CSID_MainTextColor, NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)]
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
@@ -56,7 +53,9 @@ class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivi
             
             //添加购买成功通知
             NotificationCenter.default.addObserver(self, selector: #selector(self.paySeccessAction), name: NSNotification.Name(rawValue:paySuccess), object: nil)
- 
+            
+            //创建广告
+            self.creatADSaction()
         }
         
         // Do any additional setup after loading the view.
@@ -105,6 +104,14 @@ class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivi
         stopAnimating()
     }
     
+    func CSID_showErrorWithText(text:String){
+        HUD.flash(.labeledError(title: nil, subtitle: text as String), delay: 2.0, completion: nil)
+    }
+    
+    func CSID_showSuccessWithText(text:String){
+        HUD.flash(.labeledSuccess(title: nil, subtitle: text as String), delay: 1.0, completion: nil)
+    }
+    
     
     func CSID_showErrorWithText(text:String, view:UIView){
         HUD.flash(.labeledError(title: nil, subtitle: text as String), onView: view, delay: 2.0, completion: nil)
@@ -139,14 +146,15 @@ class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivi
     @objc func paySeccessAction(){
         //去除广告
         self.bannerView.removeSubviews()
-        
-        self.interstitial = nil
     }
     
     //--------------广告服务----------------------
     
     ///创建广告
     func creatADSaction(){
+        
+        createAndLoadInterstitial()
+        
         if(bannerShow){
             
             //bannar广告
@@ -160,12 +168,13 @@ class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivi
             self.bannerView.delegate = self
             
         }
-        //插页 广告
+    }
+    
+    ///创建插页广告
+    @objc func createAndLoadInterstitial() {
         self.interstitial = GADInterstitial(adUnitID: InteredADID)
         self.interstitial.delegate = self
-        let request = GADRequest()
-        self.interstitial.load(request)
-        
+        self.interstitial.load(GADRequest())
     }
     
     func addBannerViewToView(_ bannerView: GADBannerView) {
@@ -200,7 +209,7 @@ class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivi
     func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADUnifiedNativeAd) {
         
     }
-
+    
     func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didRewardUserWith reward: GADAdReward) {
         
     }
@@ -212,18 +221,28 @@ class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivi
     //插页广告
     @objc func doStarInterstitial() {
         
-        if self.interstitial.isReady {
-            self.interstitial.present(fromRootViewController: self)
+        //如果不是VIP了 进行插页
+        if !(CSID_BuyTool().CSID_JudgeIsVipBool()) {
             
-        } else {
+            if self.interstitial == nil {
+                return
+            }
             
-            print("Ad wasn't ready")
-            self.perform(#selector(doStarInterstitial), with: self, afterDelay: 1)
+            if self.interstitial.isReady {
+                
+                self.interstitial.present(fromRootViewController: self)
+                
+            } else {
+                print("Ad wasn't ready")
+            }
+            
         }
+        
     }
     ///插屏广告回调结束
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {
-        self.interstitial = nil
+        
+        self.perform(#selector(createAndLoadInterstitial), with: self, afterDelay: 8)
     }
     
 }

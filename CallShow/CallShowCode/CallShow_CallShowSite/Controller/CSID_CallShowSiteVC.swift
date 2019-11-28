@@ -17,6 +17,7 @@ class CSID_CallShowSiteVC: CSID_BaseViewController,UICollectionViewDelegate,UICo
         self.tabBarController?.tabBar.backgroundColor = CSID_LineColor
     }
     override func viewDidLoad(){
+        super.viewDidLoad()
         
        view.addSubview(CSID_CallShow_SiteCollView)
        self.call_show_SiteCollectionViewSettingHeaderWork()
@@ -57,7 +58,7 @@ class CSID_CallShowSiteVC: CSID_BaseViewController,UICollectionViewDelegate,UICo
         var layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width:(CSID_WidthScreen-40)/3,height:(CSID_WidthScreen-40)/3*1.5)
         layout.minimumLineSpacing = 10
-        layout.minimumInteritemSpacing = 10
+        layout.minimumInteritemSpacing = 0
         layout.headerReferenceSize = CGSize(width:CSID_WidthScreen, height:CSID_DefaultHeight)
         
         let CSID_CallShow_SiteCollView : UICollectionView = UICollectionView.init(frame: CGRect.init(x: 10, y: 0, width: CSID_WidthScreen-20, height: CSID_heightScreen-CSID_HeightTabBom), collectionViewLayout: layout)
