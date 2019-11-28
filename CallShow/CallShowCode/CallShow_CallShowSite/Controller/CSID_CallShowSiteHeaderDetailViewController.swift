@@ -78,7 +78,11 @@ class CSID_CallShowSiteHeaderDetailViewController: CSID_BaseViewController {
         let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
         let specifiedAction = UIAlertAction(title: "指定联系人设置", style: .default) { (action) in
             let callshow:CSID_CallShowViewController = CSID_CallShowViewController.init()
-                callshow.imageUrlString = imageUrlStr
+            //定义URL对象
+            let url = URL(string: imageUrlStr )
+            //从网络获取数据流
+            let data = try! Data(contentsOf: url!)
+            callshow.imageData = data
             callshow.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(callshow)
         }
@@ -86,7 +90,11 @@ class CSID_CallShowSiteHeaderDetailViewController: CSID_BaseViewController {
             let alertController = UIAlertController.init(title: "确定要给全部联系人设置来电秀吗？", message: nil, preferredStyle: .alert)
             let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
             let sureAction = UIAlertAction(title: "确定", style: .default) { (action) in
-                CSID_CallShowContact.AllContactSettings(imageStr: imageUrlStr)
+                //定义URL对象
+                let url = URL(string: imageUrlStr )
+                //从网络获取数据流
+                let data = try! Data(contentsOf: url!)
+                CSID_CallShowContact.AllContactSettings(imageData: data)
             }
             alertController.addAction(sureAction)
             alertController.addAction(cancelAction)

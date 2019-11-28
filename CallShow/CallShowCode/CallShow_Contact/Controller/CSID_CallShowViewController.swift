@@ -8,7 +8,7 @@ class CSID_CallShowViewController:CSID_BaseViewController,UITableViewDataSource,
     // 头部标题keys
     private var keysArray:[String]?
     var tabView : UITableView?
-    var imageUrlString:String?
+    var imageData:Data?
     @IBOutlet var xiaView: UIView!
     @IBOutlet weak var selectedLab: UILabel!
     @IBOutlet weak var cancelBtn: UIButton!
@@ -39,7 +39,7 @@ class CSID_CallShowViewController:CSID_BaseViewController,UITableViewDataSource,
     @objc func selectedOver() {
         if self.selectedIndexs.count >= 1{
             CSID_HUDShow()
-            CSID_CallShowContact.specifyContactSettings(imageStr: self.imageUrlString ?? "", nameArr: self.selectedIndexs as! Array<String>)
+            CSID_CallShowContact.specifyContactSettings(imageData: imageData!, nameArr: self.selectedIndexs as! Array<String>)
             self.CSID_hideHUD()
             self.CSID_showSuccessWithText(text: "来电秀设置成功", view: self.view)
             

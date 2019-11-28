@@ -104,7 +104,7 @@ class CSID_CallShowContact: NSObject {
         titleLab.textAlignment = .center
         titleLab.font = UIFont.boldSystemFont(ofSize: 23)
         titleLab.textColor = .white
-        titleLab.backgroundColor = CSID_MainColor
+        titleLab.backgroundColor = .red
         CallShowRaise(titleLab, rabF: 25)
         imgView.addSubview(titleLab)
         let img:UIImage = getImageFromView(view: imgView)
@@ -125,11 +125,8 @@ class CSID_CallShowContact: NSObject {
      imageStr 更换的图片
      nameArr 联系人数组
      */
-//    let nameArr:Array<String> = ["HigginsDaniel","BellKate"]
-//    CallShowContact.specifyContactSettings(imageStr: "http://img.cdn.wsljf.xyz/wallpaper/20338b31-eb14-4d9d-980b-484aa34ba710.jpg", nameArr: nameArr)
-    
-    class func specifyContactSettings(imageStr:String,nameArr:Array<String>) {
-        if imageStr == nil || imageStr == ""{
+    class func specifyContactSettings(imageData:Data,nameArr:Array<String>) {
+        if imageData == nil{
             print("图片不能为空")
             return;
         }
@@ -157,11 +154,7 @@ class CSID_CallShowContact: NSObject {
                 for nameString:String in nameArr {
                    //判断是否符合要求
                    if nameString == name{
-                    //定义URL对象
-                    let url = URL(string: imageStr)
-                    //从网络获取数据流
-                    let data = try! Data(contentsOf: url!)
-                    mutableContact.imageData = data
+                    mutableContact.imageData = imageData
                     //修改联系人请求
                     let request = CNSaveRequest()
                     request.update(mutableContact)
@@ -183,8 +176,8 @@ class CSID_CallShowContact: NSObject {
     /* 全部联系人设置
     imgName 更换的图片
      */
-    class func AllContactSettings(imageStr:String) {
-        if imageStr == nil || imageStr == ""{
+    class func AllContactSettings(imageData:Data) {
+        if imageData == nil{
             print("图片不能为空")
             return;
         }
@@ -206,11 +199,7 @@ class CSID_CallShowContact: NSObject {
             try store.enumerateContacts(with: request, usingBlock: {
                 (contact : CNContact, stop : UnsafeMutablePointer<ObjCBool>) -> Void in
                 let mutableContact = contact.mutableCopy() as! CNMutableContact
-                //定义URL对象
-                let url = URL(string: imageStr)
-                //从网络获取数据流
-                let data = try! Data(contentsOf: url!)
-                mutableContact.imageData = data
+                mutableContact.imageData = imageData
                 //修改联系人请求
                 let request = CNSaveRequest()
                 request.update(mutableContact)
