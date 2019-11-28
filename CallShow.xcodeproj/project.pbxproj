@@ -354,6 +354,7 @@
 			children = (
 				042D412B238BAEFA0034DE84 /* UIColorDarkMode.swift */,
 				042D412C238BAEFA0034DE84 /* CSID_BaseViewController.swift */,
+				04DF582D23712E590079669B /* FilesTools */,
 				042D412D238BAEFA0034DE84 /* CSID_BaseNavigationController.swift */,
 				042D412E238BAEFA0034DE84 /* CSID_BaseTabBarController.swift */,
 			);
@@ -574,7 +575,6 @@
 			children = (
 				04089A402361B9A700452304 /* CallShowCode */,
 				042D4113238BAEFA0034DE84 /* BaseCode */,
-				04DF582D23712E590079669B /* FilesTools */,
 				0494ADDC235475EE00DEE0B2 /* AppDelegate.swift */,
 				043911E82355688100636064 /* AppDelegate+JPush.swift */,
 				0439120F235572C100636064 /* CallShow-Bridging-Header.h */,

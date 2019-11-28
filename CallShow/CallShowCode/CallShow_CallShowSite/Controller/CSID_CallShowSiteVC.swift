@@ -17,6 +17,7 @@ class CSID_CallShowSiteVC: CSID_BaseViewController,UICollectionViewDelegate,UICo
         self.tabBarController?.tabBar.backgroundColor = CSID_LineColor
     }
     override func viewDidLoad(){
+        super.viewDidLoad()
         
        view.addSubview(CSID_CallShow_SiteCollView)
        self.call_show_SiteCollectionViewSettingHeaderWork()

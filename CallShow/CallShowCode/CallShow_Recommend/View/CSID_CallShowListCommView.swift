@@ -17,6 +17,7 @@ class CSID_CallShowListCommView: CSID_CallShowBaseView,UICollectionViewDelegate,
     var listdataArr : NSArray = NSArray.init()
     var currentModel : CSID_CallShowListModel!
 var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
 
@@ -39,6 +40,8 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
                     }
             }else if tooltag == 1{/**预览*/
                 
+                self.callShowBlock("")
+                
                     self.call_show_PreviewView.isHidden=false
                     self.call_show_RightView.isHidden=true
                     if self.recommendChangeblock != nil {
@@ -47,7 +50,9 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
                 
             }else if tooltag == 2{/**设置来电秀*/
                 
-                let imageUrlStr:String = self.currentModel.imageUrl ?? ""
+                 self.callShowBlock("")
+                
+                let imageUrlStr:String = self.currentModel.imageUrl 
                 let alertController = UIAlertController()
                 let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
                 let specifiedAction = UIAlertAction(title: "指定联系人设置", style: .default) { (action) in
@@ -70,10 +75,8 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
                 alertController.addAction(allAction)
                 alertController.addAction(cancelAction)
                 self.ParentController(viewself: self).present(alertController, animated: true, completion: nil)
-                self.callShowBlock("")
-                
             }else if tooltag == 3{/**打开相册*/
-                
+                self.callShowBlock("")
                 
                 
             }

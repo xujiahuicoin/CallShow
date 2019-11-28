@@ -11,7 +11,6 @@ import UIKit
 class CSID_LikeListVC: CSID_BaseViewController {
     
     var call_show_LikeListArray : [CSID_CallShowListModel] = []
-    
     var call_show_likeView : CSID_Me_LikeListCollView!
     override func viewDidLoad() {
         super.viewDidLoad()
