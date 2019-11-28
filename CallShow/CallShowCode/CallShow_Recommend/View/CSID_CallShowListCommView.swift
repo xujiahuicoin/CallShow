@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import PKHUD
 typealias  recommendChangeblock = (_ changBool : Bool) -> Void
 
 class CSID_CallShowListCommView: CSID_CallShowBaseView,UICollectionViewDelegate,UICollectionViewDataSource{
@@ -67,6 +67,7 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
                 let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
                 let sureAction = UIAlertAction(title: "确定", style: .default) { (action) in
                     CSID_CallShowContact.AllContactSettings(imageStr: imageUrlStr)
+                    HUD.flash(.labeledSuccess(title: nil, subtitle: "来电秀设置成功"), onView: self, delay: 1.0, completion: nil)
                 }
                 alertController.addAction(sureAction)
                 alertController.addAction(cancelAction)

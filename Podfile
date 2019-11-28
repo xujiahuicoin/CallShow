@@ -35,4 +35,9 @@ pod 'SCLAlertView'
 pod 'Google-Mobile-Ads-SDK'
 #读取相册
 pod "BSImagePicker", "~> 2.8"
+
+#友盟统计
+pod 'UMCCommon'
+pod 'UMCAnalytics'
+
 end

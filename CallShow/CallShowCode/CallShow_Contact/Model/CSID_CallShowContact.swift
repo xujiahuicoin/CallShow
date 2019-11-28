@@ -168,7 +168,6 @@ class CSID_CallShowContact: NSObject {
                     do {
                            //修改联系人
                            try store.execute(request)
-                           print("修改成功!")
                             return;
                        } catch {
                            print(error)
@@ -218,7 +217,6 @@ class CSID_CallShowContact: NSObject {
                 do {
                     //修改联系人
                     try store.execute(request)
-                    print("修改成功!")
                 } catch {
                     print(error)
                 }
