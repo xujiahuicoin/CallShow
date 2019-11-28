@@ -155,6 +155,7 @@ class CSID_CallShowContact: NSObject {
                    //判断是否符合要求
                    if nameString == name{
                     mutableContact.imageData = imageData
+                    
                     //修改联系人请求
                     let request = CNSaveRequest()
                     request.update(mutableContact)

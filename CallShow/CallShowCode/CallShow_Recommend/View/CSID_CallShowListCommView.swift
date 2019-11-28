@@ -8,6 +8,7 @@
 
 import UIKit
 import PKHUD
+import AudioToolbox
 typealias  recommendChangeblock = (_ changBool : Bool) -> Void
 
 class CSID_CallShowListCommView: CSID_CallShowBaseView,UICollectionViewDelegate,UICollectionViewDataSource{
@@ -76,6 +77,7 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
                         //从网络获取数据流
                         let data = try! Data(contentsOf: url!)
                         CSID_CallShowContact.AllContactSettings(imageData: data)
+                        
                         HUD.flash(.labeledSuccess(title: nil, subtitle: "来电秀设置成功"), onView: self, delay: 1.0, completion: nil)
                     }
                     alertController.addAction(sureAction)
@@ -91,7 +93,7 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
                 let photo = CSID_LocalPhotoViewController.init()
                 photo.hidesBottomBarWhenPushed = true
                 self.ParentController(viewself: self).navigationController?.pushViewController(photo, animated: true)
-                
+
             }
             
         }
