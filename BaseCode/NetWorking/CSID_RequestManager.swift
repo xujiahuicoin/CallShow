@@ -45,7 +45,7 @@ class CSID_RequestManager {
              commonDict.removeAll()
         }
         Alamofire.request(url, method: method, parameters: commonDict).responseJSON(completionHandler: { (response) in
-            
+        
             if let json = response.result.value {
         
                 

@@ -13,6 +13,10 @@ class CSID_CallShowContact: NSObject {
             store.requestAccess(for: .contacts, completionHandler: { (isRight : Bool,error : Error?) in
                 if isRight {
                     print("授权成功")
+                   
+                    
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "shouquanNotificationCenter"), object: self)
+                    
                 } else {
                     print("授权失败")
                 }
@@ -155,6 +159,7 @@ class CSID_CallShowContact: NSObject {
                    //判断是否符合要求
                    if nameString == name{
                     mutableContact.imageData = imageData
+                    
                     //修改联系人请求
                     let request = CNSaveRequest()
                     request.update(mutableContact)

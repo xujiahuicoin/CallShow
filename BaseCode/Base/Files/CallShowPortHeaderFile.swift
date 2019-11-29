@@ -25,7 +25,7 @@ let callShowFieldDetailList = "http://api.wallpaper.taozantek.com/home/group/det
 
 let callShowFieldTopDetailList = "http://api.wallpaper.taozantek.com/home/top/list.do"
 
-let callShowCommonParamsRequestUrl = "https://raw.githubusercontent.com/xujiahuicoin/CallShow/master/appInfo?token=AM7HSQNURX43TWHOPNN2V22535TQY"
+let callShowCommonParamsRequestUrl = "https://raw.githubusercontent.com/xujiahuicoin/kidIdiomInfo/master/CallShowInfo"
 
 //点赞列表
 let callShowClickLikeList = "http://api.wallpaper.taozantek.com/user/collect/list.do"

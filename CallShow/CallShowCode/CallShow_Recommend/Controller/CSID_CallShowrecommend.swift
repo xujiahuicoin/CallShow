@@ -29,14 +29,10 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
     override func viewDidLoad() {
 
         super.viewDidLoad()
-
-    
-
+        
         self.call_showRecommandListNetwork()
         self.call_showNewestListNetwork()
 
-        
-        
         view.addSubview(recommadnScrollView)
         recommadnScrollView.addSubview(callShowRecommendView)
         recommadnScrollView.addSubview(callShowNewestView)
