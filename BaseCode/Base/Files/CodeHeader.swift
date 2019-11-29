@@ -37,10 +37,8 @@ let NomalADID = "ca-app-pub-3940256099942544/3986624511"
 let GULIADID = "ca-app-pub-3940256099942544/1712485313"
 
 /////////////////////////////////////////////////////////////////////
+let CSID_goBuyVip = "CSID_goBuyVip"
 let CSID_leftMargin_CP = 20
-///是否测试
-let appTesting = true
-
 let basePrice = "USD"
 let CSID_PullDown = "CSID_PullDown"
 let CSID_PullUp = "CSID_PullUp"

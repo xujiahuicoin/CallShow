@@ -41,8 +41,14 @@ class CSID_CallShowSiteDetailVC: CSID_BaseViewController{
         }
         
         callShowFiledDetailView.callShowBlock = {imageUrlStr in
-            //展示插页广告
-            self.doStarInterstitial()
+            if imageUrlStr == CSID_goBuyVip {
+                
+                self.CSID_Pub_GoToBuyVIPvc()
+                
+            }else{
+                //展示插页广告
+                self.doStarInterstitial()
+            }
         }
         
     }

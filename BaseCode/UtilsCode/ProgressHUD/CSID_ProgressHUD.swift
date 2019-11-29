@@ -29,11 +29,11 @@ class CSID_ProgressHUD: NSObject {
     
     class func showError(message : String) {
         
-        HUD.flash(.label(message), delay: 1.5, completion: nil)
+        HUD.flash(.label(message), delay: 2, completion: nil)
     }
     
     class func show()  {
-        HUD.show(.label("加载中..."))
+        HUD.show(HUDContentType.progress)
     }
     class func hide()  {
         HUD.hide()

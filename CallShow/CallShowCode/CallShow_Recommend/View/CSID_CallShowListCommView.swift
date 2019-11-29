@@ -32,8 +32,8 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
         call_show_RightView.call_show_rightToolsClickFinishBlockAction { (toolsButton, tooltag) in
             
             if tooltag == 0{/**点赞*/
-                
-                CSID_RequestManager.request(.post, url:callShowloveurl, params:["upType":self.zanUserType,"relationId":self.currentModel.relationId], success: {(resltData) in
+               
+                CSID_RequestManager.request(.post, url:callShowloveurl, params:["upType":self.currentModel.upType == 252212 ? self.zanUserType : self.currentModel.upType,"relationId":self.currentModel.relationId.count > 0 ? self.currentModel.relationId : self.currentModel.objectId], success: {(resltData) in
                 
                             NSLog("resltData = \(resltData)")
                             toolsButton.isSelected = !toolsButton.isSelected
@@ -44,7 +44,7 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
                     }
             }else if tooltag == 1{/**预览*/
                 
-                self.callShowBlock("")
+                self.callShowBlock("插页广告")
                 
                     self.call_show_PreviewView.isHidden=false
                     self.call_show_RightView.isHidden=true
@@ -54,7 +54,7 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
                 
             }else if tooltag == 2{/**设置来电秀*/
                 
-                 self.callShowBlock("")
+                 self.callShowBlock("插页广告")
                 
                 let imageUrlStr:String = self.currentModel.imageUrl.count > 0 ? self.currentModel.imageUrl : self.currentModel.imgUrl
                 let alertController = UIAlertController()
@@ -70,6 +70,13 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
                     self.ParentController(viewself: self).navigationController?.pushViewController(callshow, animated: true)
                 }
                 let allAction = UIAlertAction(title: "全部人设置", style: .default) { (action) in
+                    
+                    if !CSID_BuyTool().CSID_JudgeIsVipBool() {
+                        //不是VIP 去购买
+                        self.callShowBlock(CSID_goBuyVip)
+                        return
+                    }
+                    
                     let alertController = UIAlertController.init(title: "确定要给全部联系人设置来电秀吗？", message: nil, preferredStyle: .alert)
                     let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
                     let sureAction = UIAlertAction(title: "确定", style: .default) { (action) in
@@ -89,14 +96,7 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
                 alertController.addAction(cancelAction)
                 self.ParentController(viewself: self).present(alertController, animated: true, completion: nil)
             }else if tooltag == 3{/**打开相册*/
-                
-//                self.callShowBlock("")
-//
-//                let photo = CSID_LocalPhotoViewController.init()
-//                photo.hidesBottomBarWhenPushed = true
-//                self.ParentController(viewself: self).navigationController?.pushViewController(photo, animated: true)
-                
-                
+
                 let vc = BSImagePickerViewController()
                 vc.maxNumberOfSelections = 1
                 

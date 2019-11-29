@@ -55,13 +55,27 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
         
         //设置来电秀 block
         callShowRecommendView.callShowBlock = {imageUrlStr in
-            //展示插页广告
-            self.doStarInterstitial()
+            
+            if imageUrlStr == CSID_goBuyVip {
+                
+                self.CSID_Pub_GoToBuyVIPvc()
+                
+            }else{
+                //展示插页广告
+                self.doStarInterstitial()
+            }
+            
         }
         
         callShowNewestView.callShowBlock = {imageUrlStr in
-            //展示插页广告
-            self.doStarInterstitial()
+            if imageUrlStr == CSID_goBuyVip {
+                
+                self.CSID_Pub_GoToBuyVIPvc()
+                
+            }else{
+                //展示插页广告
+                self.doStarInterstitial()
+            }
         }
         
     

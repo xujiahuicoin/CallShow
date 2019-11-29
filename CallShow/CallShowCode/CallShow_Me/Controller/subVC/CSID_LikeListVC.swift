@@ -12,11 +12,19 @@ class CSID_LikeListVC: CSID_BaseViewController {
     
     var call_show_LikeListArray : [CSID_CallShowListModel] = []
     var call_show_likeView : CSID_Me_LikeListCollView!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        CSID_Pri_GetLikeListData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "点赞列表"
         // Do any additional setup after loading the view.
+        CSID_HUDShow()
         CSID_Pri_setcurrentUI()
         CSID_Pri_GetLikeListData()
     }
@@ -36,7 +44,7 @@ class CSID_LikeListVC: CSID_BaseViewController {
     ///获取数据---
     func CSID_Pri_GetLikeListData(){
         
-        CSID_HUDShow()
+        
         CSID_RequestManager.request(.post, url:callShowClickLikeList, params:nil, success: {(resltData) in
             
             self.CSID_hideHUD()
