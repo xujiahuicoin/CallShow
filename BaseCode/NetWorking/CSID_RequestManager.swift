@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import NVActivityIndicatorView
 
 // 请求方式
 enum CSID_MethodType : String {
@@ -25,6 +26,7 @@ class CSID_RequestManager {
     //   - success: 成功回调
     //  - failure: 失败回调
     class func request(_ type : CSID_MethodType = .get, url : String, params : [String : Any]?, success : @escaping(_ data : Any) ->(), failure : @escaping (_ error : CSID_Error) ->()){
+           
         
         let device_UDID  = UIDevice.current.identifierForVendor
         let device_bunid = "com.CallShow.www\(String(describing: device_UDID))"
@@ -67,6 +69,8 @@ class CSID_RequestManager {
                 }
             
             }else {
+                
+                
                 
                 if let httpResponse = response.response {
                     
