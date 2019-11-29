@@ -7,6 +7,7 @@
 
 import UIKit
 import IQKeyboardManagerSwift
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -14,7 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-//        self.call_showCommonParamsReuestNetwork()
+        /**默认保存---,请求后再保存*/
+    
+        let path = Bundle.main.path(forResource: "Call_Show_CommonMessageList", ofType: "json")
+        let jsonData=NSData(contentsOfFile: path!)
+        let jsonResult = try! JSONSerialization.jsonObject(with: jsonData! as Data,                                                     options: JSONSerialization.ReadingOptions.mutableContainers)
+        let responDict : NSDictionary = jsonResult as! NSDictionary
+        
+        self.call_show_StartSaveCommonParamsWork(responDict: responDict["data"] as! NSDictionary)
+        self.call_showCommonParamsReuestNetwork()
         
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
         self.window?.backgroundColor = UIColor.white
@@ -42,14 +51,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                let responDict : NSDictionary = resltData as! NSDictionary
         
                 NSLog("resltData = \(responDict)")
-          
-    
+                self.call_show_StartSaveCommonParamsWork(responDict: responDict)
+        
             }) { (error) in
                 
                 
             }
     
      }
+    
+    func call_show_StartSaveCommonParamsWork(responDict : NSDictionary) -> Void {
+        
+                   let userDefault = UserDefaults.standard
+                   userDefault.set(responDict, forKey:commonAllResultDic)
+                   userDefault.set(responDict.object(forKey:"commonData"), forKey:commonDataDic)
+           
+                   userDefault.set(responDict.object(forKey:"callshowzanType"), forKey:callshowzanType)
+                   userDefault.set(responDict.object(forKey:"homezanType"), forKey:homezanType)
+                   userDefault.set(responDict.object(forKey:"newestCategoryId"), forKey:savenewestCategoryId)
+                   userDefault.set(responDict.object(forKey:"recommedCategoryId"), forKey:saverecommedCategoryId)
+        
+    }
     
     
     ///获取/设置 Vip 免费次数

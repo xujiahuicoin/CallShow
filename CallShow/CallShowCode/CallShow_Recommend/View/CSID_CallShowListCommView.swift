@@ -24,7 +24,9 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-
+        
+        zanUserType = UserDefaults.standard.string(forKey: callshowzanType)! as NSString
+        
         addSubview(CSID_CallShow_RecommlistCollView)
         addSubview(call_show_RightView)
         addSubview(call_show_PreviewView)
@@ -45,13 +47,13 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
             }else if tooltag == 1{/**预览*/
                 
                 self.callShowBlock("")
-                
+
                     self.call_show_PreviewView.isHidden=false
                     self.call_show_RightView.isHidden=true
                     if self.recommendChangeblock != nil {
                         self.recommendChangeblock!(true)
                     }
-                
+
             }else if tooltag == 2{/**设置来电秀*/
                 
                  self.callShowBlock("")

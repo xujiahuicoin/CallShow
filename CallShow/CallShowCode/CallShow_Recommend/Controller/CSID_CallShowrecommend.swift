@@ -164,14 +164,17 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
     lazy var callShowRecommendView : CSID_CallShowListCommView = {
            
         let callShowRecommendView = CSID_CallShowListCommView(frame:.init(x: 0, y: 0, width: CSID_WidthScreen, height: recommadnScrollView.height))
-           callShowRecommendView.zanUserType = "5"
+        
+        callShowRecommendView.zanUserType = UserDefaults.standard.string(forKey: homezanType)! as NSString
            return callShowRecommendView
     }()
        
       lazy var callShowNewestView : CSID_CallShowListCommView = {
                 
            let callShowNewestView = CSID_CallShowListCommView(frame:.init(x:CSID_WidthScreen, y: 0, width: CSID_WidthScreen, height: recommadnScrollView.height))
-           callShowNewestView.zanUserType = "5"
+    
+        callShowNewestView.zanUserType = UserDefaults.standard.string(forKey: homezanType)! as NSString
+        
            return callShowNewestView
     }()
     
@@ -179,7 +182,10 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
    func call_showRecommandListNetwork(){
         
     CSID_HUDShow()
-    CSID_RequestManager.request(.post, url:callShowRecommList, params:["categoryId":recommedCategoryId,"page":"1",
+    
+    let recommedIdValue = UserDefaults.standard.string(forKey: saverecommedCategoryId)
+    
+    CSID_RequestManager.request(.post, url:callShowRecommList, params:["categoryId":recommedIdValue!,"page":"1",
                                                                         "pageSize":defaultPageSize], success: {(resltData) in
 
 
@@ -205,8 +211,10 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
       
       func call_showNewestListNetwork(){
         
+        let newestIdValue = UserDefaults.standard.string(forKey: savenewestCategoryId)
+        
         CSID_HUDShow()
-        CSID_RequestManager.request(.post, url:callShowRecommList, params:["categoryId":newestCategoryId,"page":"1",
+        CSID_RequestManager.request(.post, url:callShowRecommList, params:["categoryId":newestIdValue!,"page":"1",
                                                                             "pageSize":defaultPageSize], success: {(resltData) in
                     
                     NSLog("resltData = \(resltData)")

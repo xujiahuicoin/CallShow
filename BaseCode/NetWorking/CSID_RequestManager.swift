@@ -27,12 +27,13 @@ class CSID_RequestManager {
     class func request(_ type : CSID_MethodType = .get, url : String, params : [String : Any]?, success : @escaping(_ data : Any) ->(), failure : @escaping (_ error : CSID_Error) ->()){
         
         let device_UDID  = UIDevice.current.identifierForVendor
-        let device_token = "token\(String(describing: device_UDID))"
         let device_bunid = "com.CallShow.www\(String(describing: device_UDID))"
         let device_Version = UIDevice.current.systemVersion
-        /**版本和UDID*/
-        var commonDict = ["productId":"d0f140e5-1d1f-4171-a8e7-8a854d450a0b","channel":"appstore","osType":"ios","token":device_token,"udid":device_bunid,"version":device_Version,"vestId":"be5d3132-ff21-4add-a95c-50f3104abc4b"]as[String:Any]
         
+        /**版本和UDID*/
+        var commonDict = UserDefaults.standard.dictionary(forKey:commonDataDic)!
+        commonDict["version"] = device_Version
+        commonDict["udid"] = device_bunid
         
         if params != nil{
             for(key,value)in params!{
@@ -40,7 +41,7 @@ class CSID_RequestManager {
              }
         }
         let method = type == .get ? HTTPMethod.get : HTTPMethod.post
-        
+
         if method == .get{
              commonDict.removeAll()
         }

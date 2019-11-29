@@ -12,8 +12,16 @@ import Foundation
 */
 ///首页推荐、最新列表
 let defaultPageSize = "20"
-let recommedCategoryId = "30f6fd6e-e5fd-4819-9431-a46ed14fea42"
-let newestCategoryId = "faca64a6-ed1b-4e92-9ef4-b4720a11b6aa"
+
+//====所有的===
+let commonAllResultDic = "commonAllResultDictionary"
+
+let commonDataDic = "commonDataDictionary"
+let callshowzanType = "callshowzanType"
+let homezanType = "homezanType"
+let savenewestCategoryId = "savenewestCategoryId"
+let saverecommedCategoryId = "saverecommedCategoryId"
+
 
 let callShowRecommList = "http://api.wallpaper.taozantek.com/jp/rec/image/list.do"
 
@@ -26,7 +34,6 @@ let callShowFieldDetailList = "http://api.wallpaper.taozantek.com/home/group/det
 let callShowFieldTopDetailList = "http://api.wallpaper.taozantek.com/home/top/list.do"
 
 let callShowCommonParamsRequestUrl = "https://raw.githubusercontent.com/xujiahuicoin/kidIdiomInfo/master/CallShowInfo"
-
 //点赞列表
 let callShowClickLikeList = "http://api.wallpaper.taozantek.com/user/collect/list.do"
 
