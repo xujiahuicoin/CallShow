@@ -81,7 +81,10 @@ class CSID_CallShowListCommView: CSID_CallShowBaseView,UICollectionViewDelegate,
         () -> CSID_CollectRightSubView in
         
         let call_show_RightView = CSID_CollectRightSubView.newInstance()
-        call_show_RightView?.frame = CGRect(x:CSID_WidthScreen-80, y:(CSID_heightScreen-270)/2, width:80, height:270)
+        call_show_RightView?.frame = CGRect(x:CSID_WidthScreen-175, y:(CSID_heightScreen-305)/2, width:175, height:305)
+        AddRadius((call_show_RightView?.call_show_nextMusicView!)!, rabF: 5)
+        AddRadius((call_show_RightView?.call_show_settingMusicButton!)!, rabF: 5)
+               
         
         return call_show_RightView!
     }()
@@ -151,7 +154,7 @@ class CSID_CallShowListCommView: CSID_CallShowBaseView,UICollectionViewDelegate,
               
         let model = listdataArr[indexPath.row] as! CSID_CallShowListModel
         
-        call_show_RightView.call_show_loveButton.isSelected = model.haveUp ?? false
+        call_show_RightView.call_show_loveButton.isSelected = model.haveUp
         
         cell_View.configCellWithModel(model: model)
         
@@ -163,7 +166,7 @@ class CSID_CallShowListCommView: CSID_CallShowBaseView,UICollectionViewDelegate,
         let currentPage = Int(scrollView.contentOffset.y/CSID_heightScreen)
         if listdataArr.count>0 {
             currentModel = (listdataArr[currentPage] as! CSID_CallShowListModel)
-            call_show_RightView.call_show_loveButton.isSelected = currentModel.haveUp ?? false
+            call_show_RightView.call_show_loveButton.isSelected = currentModel.haveUp
         }
 
     }

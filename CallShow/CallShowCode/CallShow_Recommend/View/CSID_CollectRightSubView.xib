@@ -11,14 +11,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="CSID_CollectRightSubView" customModule="CallShow" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="80" height="270"/>
+            <rect key="frame" x="0.0" y="0.0" width="175" height="305"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofr-FT-QVo">
-                    <rect key="frame" x="0.0" y="0.0" width="80" height="60"/>
+                    <rect key="frame" x="95" y="0.0" width="80" height="60"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="60" id="daC-y9-Sr5"/>
-                        <constraint firstAttribute="width" constant="80" id="yJ4-ca-aAp"/>
+                        <constraint firstAttribute="height" constant="60" id="MIl-VD-xIG"/>
+                        <constraint firstAttribute="width" constant="80" id="Zsz-5q-ObI"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <state key="normal" image="call_show_nolove">
@@ -30,9 +30,10 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIV-14-Xas">
-                    <rect key="frame" x="0.0" y="120" width="80" height="80"/>
+                    <rect key="frame" x="95" y="120" width="80" height="60"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="80" id="SB0-Ex-e39"/>
+                        <constraint firstAttribute="height" constant="60" id="Pmx-vv-Ftm"/>
+                        <constraint firstAttribute="width" constant="80" id="Sdd-u6-GA6"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <state key="normal" image="call_show_callPhone">
@@ -44,10 +45,10 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSk-1f-X4Y">
-                    <rect key="frame" x="0.0" y="60" width="80" height="60"/>
+                    <rect key="frame" x="95" y="60" width="80" height="60"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="80" id="ti6-Wj-Pia"/>
-                        <constraint firstAttribute="height" constant="60" id="vh9-Rj-IjQ"/>
+                        <constraint firstAttribute="width" constant="80" id="5wA-cb-dvM"/>
+                        <constraint firstAttribute="height" constant="60" id="eCN-jk-eoR"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <state key="normal" image="call_show_eyelook">
@@ -59,28 +60,95 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6go-Xr-yDb">
-                    <rect key="frame" x="0.0" y="200" width="80" height="60"/>
+                    <rect key="frame" x="95" y="180" width="80" height="60"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="60" id="5Hv-oZ-fg9"/>
+                        <constraint firstAttribute="height" constant="60" id="U7a-Oe-8dv"/>
+                        <constraint firstAttribute="width" constant="80" id="iue-5x-Ghb"/>
                     </constraints>
                     <state key="normal" image="call_show_takePhoto"/>
                     <connections>
                         <action selector="call_show_takePhotoButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="9uR-S2-cDn"/>
                     </connections>
                 </button>
+                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1h-BK-7kW">
+                    <rect key="frame" x="95" y="240" width="80" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="qY7-GG-XAm"/>
+                        <constraint firstAttribute="height" constant="60" id="wWB-dS-tpp"/>
+                    </constraints>
+                    <state key="normal" image="call_show_music"/>
+                    <connections>
+                        <action selector="call_show_musicPopButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="9fl-9t-EYC"/>
+                    </connections>
+                </button>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ef1-8p-DP4">
+                    <rect key="frame" x="10" y="210" width="85" height="30"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmh-JN-Vp5">
+                            <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="Ir6-Xu-tsv"/>
+                                <constraint firstAttribute="width" constant="30" id="cgF-Oo-TZA"/>
+                            </constraints>
+                            <state key="normal" image="call_show_pause"/>
+                            <state key="selected" image="call_show_paly"/>
+                            <connections>
+                                <action selector="call_show_playpasueButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="vSt-HC-qTR"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqG-Yp-BdM">
+                            <rect key="frame" x="30" y="0.0" width="55" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <state key="normal" title="下一首"/>
+                            <connections>
+                                <action selector="call_show_nextMusicButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="fvA-NS-yYc"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.92941176469999998" green="0.71372549019999998" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="Gmh-JN-Vp5" firstAttribute="leading" secondItem="Ef1-8p-DP4" secondAttribute="leading" id="CoM-k4-Qdh"/>
+                        <constraint firstAttribute="bottom" secondItem="Gmh-JN-Vp5" secondAttribute="bottom" id="DEh-vn-w1L"/>
+                        <constraint firstAttribute="bottom" secondItem="bqG-Yp-BdM" secondAttribute="bottom" id="NaT-B1-SYU"/>
+                        <constraint firstAttribute="width" constant="85" id="PSc-Zk-Dja"/>
+                        <constraint firstItem="bqG-Yp-BdM" firstAttribute="leading" secondItem="Gmh-JN-Vp5" secondAttribute="trailing" id="TrQ-CR-rA6"/>
+                        <constraint firstAttribute="height" constant="30" id="XJ0-c9-uSF"/>
+                        <constraint firstItem="Gmh-JN-Vp5" firstAttribute="top" secondItem="Ef1-8p-DP4" secondAttribute="top" id="YFo-eq-Y4m"/>
+                        <constraint firstAttribute="trailing" secondItem="bqG-Yp-BdM" secondAttribute="trailing" id="aSe-pr-oLE"/>
+                        <constraint firstItem="bqG-Yp-BdM" firstAttribute="top" secondItem="Ef1-8p-DP4" secondAttribute="top" id="vRn-x3-8Bk"/>
+                    </constraints>
+                </view>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLs-Mp-aI7">
+                    <rect key="frame" x="10" y="255" width="85" height="30"/>
+                    <color key="backgroundColor" red="0.92941176470588238" green="0.71372549019607845" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="i0M-Cz-hZF"/>
+                        <constraint firstAttribute="width" constant="85" id="mde-xO-hzt"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="设置铃声"/>
+                    <connections>
+                        <action selector="call_show_settingMusicButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="qit-T5-JeF"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="WIV-14-Xas" secondAttribute="trailing" id="291-Tx-EJP"/>
-                <constraint firstItem="6go-Xr-yDb" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="46T-6H-mXs"/>
-                <constraint firstItem="6go-Xr-yDb" firstAttribute="top" secondItem="WIV-14-Xas" secondAttribute="bottom" id="6lX-6m-vnD"/>
-                <constraint firstItem="6go-Xr-yDb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Dbp-Ar-DYR"/>
-                <constraint firstItem="WIV-14-Xas" firstAttribute="top" secondItem="SSk-1f-X4Y" secondAttribute="bottom" id="FXi-r6-iFr"/>
-                <constraint firstItem="SSk-1f-X4Y" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="XdH-It-2jC"/>
-                <constraint firstItem="ofr-FT-QVo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="nvs-hO-BH9"/>
-                <constraint firstItem="SSk-1f-X4Y" firstAttribute="top" secondItem="ofr-FT-QVo" secondAttribute="bottom" id="rLV-b1-TNk"/>
-                <constraint firstItem="WIV-14-Xas" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sGW-hb-a9c"/>
-                <constraint firstItem="ofr-FT-QVo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ypn-D9-H0b"/>
+                <constraint firstItem="q1h-BK-7kW" firstAttribute="leading" secondItem="ZLs-Mp-aI7" secondAttribute="trailing" id="5Iv-P2-UNf"/>
+                <constraint firstItem="WIV-14-Xas" firstAttribute="top" secondItem="SSk-1f-X4Y" secondAttribute="bottom" id="5oI-HP-ZyI"/>
+                <constraint firstItem="6go-Xr-yDb" firstAttribute="top" secondItem="WIV-14-Xas" secondAttribute="bottom" id="8rj-UP-XpX"/>
+                <constraint firstItem="SSk-1f-X4Y" firstAttribute="top" secondItem="ofr-FT-QVo" secondAttribute="bottom" id="B8r-Fn-nEx"/>
+                <constraint firstItem="q1h-BK-7kW" firstAttribute="top" secondItem="6go-Xr-yDb" secondAttribute="bottom" id="E4Y-Sk-ypm"/>
+                <constraint firstItem="WIV-14-Xas" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="LdC-Bf-Zob"/>
+                <constraint firstItem="6go-Xr-yDb" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Wz6-zG-1nt"/>
+                <constraint firstItem="ofr-FT-QVo" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="aEj-RU-FNL"/>
+                <constraint firstItem="ZLs-Mp-aI7" firstAttribute="top" secondItem="Ef1-8p-DP4" secondAttribute="bottom" constant="15" id="afL-RO-qi3"/>
+                <constraint firstItem="SSk-1f-X4Y" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="bJy-ue-h62"/>
+                <constraint firstItem="6go-Xr-yDb" firstAttribute="top" secondItem="WIV-14-Xas" secondAttribute="bottom" id="fxK-Jg-cZa"/>
+                <constraint firstItem="6go-Xr-yDb" firstAttribute="leading" secondItem="Ef1-8p-DP4" secondAttribute="trailing" id="gz5-R9-Ivo"/>
+                <constraint firstItem="ofr-FT-QVo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hOc-Ir-X0D"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ZLs-Mp-aI7" secondAttribute="bottom" constant="20" id="jx8-a6-B8H"/>
+                <constraint firstItem="q1h-BK-7kW" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="tCc-nq-Wtx"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -92,15 +160,23 @@
             <connections>
                 <outlet property="call_show_TakePhotoButton" destination="6go-Xr-yDb" id="cjJ-jt-sdF"/>
                 <outlet property="call_show_loveButton" destination="ofr-FT-QVo" id="BtX-lH-pSP"/>
+                <outlet property="call_show_musicPlayButton" destination="Gmh-JN-Vp5" id="3cY-K0-qq7"/>
+                <outlet property="call_show_musicPopButton" destination="q1h-BK-7kW" id="ZUb-9P-sFn"/>
+                <outlet property="call_show_music_nextButton" destination="bqG-Yp-BdM" id="n7A-bQ-fko"/>
+                <outlet property="call_show_nextMusicView" destination="Ef1-8p-DP4" id="5R1-s4-WHU"/>
+                <outlet property="call_show_settingMusicButton" destination="ZLs-Mp-aI7" id="JaY-TO-PgN"/>
             </connections>
-            <point key="canvasLocation" x="389.85507246376812" y="-88.392857142857139"/>
+            <point key="canvasLocation" x="318.84057971014494" y="-78.013392857142847"/>
         </view>
     </objects>
     <resources>
-        <image name="call_show_callPhone" width="45" height="45"/>
-        <image name="call_show_eyelook" width="25" height="15"/>
-        <image name="call_show_love" width="20" height="16"/>
-        <image name="call_show_nolove" width="20" height="16"/>
-        <image name="call_show_takePhoto" width="40" height="40"/>
+        <image name="call_show_callPhone" width="42" height="42"/>
+        <image name="call_show_eyelook" width="30" height="18"/>
+        <image name="call_show_love" width="24" height="22"/>
+        <image name="call_show_music" width="42" height="42"/>
+        <image name="call_show_nolove" width="24" height="22"/>
+        <image name="call_show_paly" width="20" height="20"/>
+        <image name="call_show_pause" width="20" height="20"/>
+        <image name="call_show_takePhoto" width="42" height="42"/>
     </resources>
 </document>

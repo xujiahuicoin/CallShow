@@ -89,6 +89,16 @@
 		04A130BF238F6499007B18CD /* CSID_LikeListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A130BE238F6499007B18CD /* CSID_LikeListVC.swift */; };
 		04A130C2238F65E0007B18CD /* CSID_Me_LikeListCollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A130C1238F65E0007B18CD /* CSID_Me_LikeListCollView.swift */; };
 		04C4CBE22391044F00509DFF /* Call_Show_CommonMessageList.json in Resources */ = {isa = PBXBuildFile; fileRef = 04C4CBE12391044F00509DFF /* Call_Show_CommonMessageList.json */; };
+		04C4CBEE23911DEA00509DFF /* call_show_music1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04C4CBE423911DEA00509DFF /* call_show_music1.mp3 */; };
+		04C4CBEF23911DEA00509DFF /* call_show_music2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04C4CBE523911DEA00509DFF /* call_show_music2.mp3 */; };
+		04C4CBF023911DEA00509DFF /* call_show_music10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04C4CBE623911DEA00509DFF /* call_show_music10.mp3 */; };
+		04C4CBF123911DEA00509DFF /* call_show_music3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04C4CBE723911DEA00509DFF /* call_show_music3.mp3 */; };
+		04C4CBF223911DEA00509DFF /* call_show_music7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04C4CBE823911DEA00509DFF /* call_show_music7.mp3 */; };
+		04C4CBF323911DEA00509DFF /* call_show_music6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04C4CBE923911DEA00509DFF /* call_show_music6.mp3 */; };
+		04C4CBF423911DEA00509DFF /* call_show_music4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04C4CBEA23911DEA00509DFF /* call_show_music4.mp3 */; };
+		04C4CBF523911DEA00509DFF /* call_show_music5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04C4CBEB23911DEA00509DFF /* call_show_music5.mp3 */; };
+		04C4CBF623911DEA00509DFF /* call_show_music8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04C4CBEC23911DEA00509DFF /* call_show_music8.mp3 */; };
+		04C4CBF723911DEA00509DFF /* call_show_music9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04C4CBED23911DEA00509DFF /* call_show_music9.mp3 */; };
 		04C7C902238CBAFE00E72693 /* CallShowPortHeaderFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7C901238CBAFE00E72693 /* CallShowPortHeaderFile.swift */; };
 		04C7C904238CC95400E72693 /* CSID_CallShowListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7C903238CC95400E72693 /* CSID_CallShowListModel.swift */; };
 		04C7C906238CCDCD00E72693 /* CSID_CallShowListCommView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7C905238CCDCD00E72693 /* CSID_CallShowListCommView.swift */; };
@@ -217,6 +227,16 @@
 		04A130BE238F6499007B18CD /* CSID_LikeListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_LikeListVC.swift; sourceTree = "<group>"; };
 		04A130C1238F65E0007B18CD /* CSID_Me_LikeListCollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_Me_LikeListCollView.swift; sourceTree = "<group>"; };
 		04C4CBE12391044F00509DFF /* Call_Show_CommonMessageList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Call_Show_CommonMessageList.json; sourceTree = "<group>"; };
+		04C4CBE423911DEA00509DFF /* call_show_music1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call_show_music1.mp3; sourceTree = "<group>"; };
+		04C4CBE523911DEA00509DFF /* call_show_music2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call_show_music2.mp3; sourceTree = "<group>"; };
+		04C4CBE623911DEA00509DFF /* call_show_music10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call_show_music10.mp3; sourceTree = "<group>"; };
+		04C4CBE723911DEA00509DFF /* call_show_music3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call_show_music3.mp3; sourceTree = "<group>"; };
+		04C4CBE823911DEA00509DFF /* call_show_music7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call_show_music7.mp3; sourceTree = "<group>"; };
+		04C4CBE923911DEA00509DFF /* call_show_music6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call_show_music6.mp3; sourceTree = "<group>"; };
+		04C4CBEA23911DEA00509DFF /* call_show_music4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call_show_music4.mp3; sourceTree = "<group>"; };
+		04C4CBEB23911DEA00509DFF /* call_show_music5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call_show_music5.mp3; sourceTree = "<group>"; };
+		04C4CBEC23911DEA00509DFF /* call_show_music8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call_show_music8.mp3; sourceTree = "<group>"; };
+		04C4CBED23911DEA00509DFF /* call_show_music9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call_show_music9.mp3; sourceTree = "<group>"; };
 		04C7C901238CBAFE00E72693 /* CallShowPortHeaderFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallShowPortHeaderFile.swift; sourceTree = "<group>"; };
 		04C7C903238CC95400E72693 /* CSID_CallShowListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_CallShowListModel.swift; sourceTree = "<group>"; };
 		04C7C905238CCDCD00E72693 /* CSID_CallShowListCommView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_CallShowListCommView.swift; sourceTree = "<group>"; };
@@ -661,6 +681,7 @@
 		04B0BB60238BAB8800DBFF12 /* CallShow_Recommend */ = {
 			isa = PBXGroup;
 			children = (
+				04C4CBE323911DEA00509DFF /* Call_Show_MusicFile */,
 				04B0BB61238BAB8800DBFF12 /* Logic */,
 				04B0BB62238BAB8800DBFF12 /* Controller */,
 				04B0BB63238BAB8800DBFF12 /* Model */,
@@ -703,6 +724,23 @@
 				04C7C90F238D295500E72693 /* CSID_ShowPreviewSubView.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		04C4CBE323911DEA00509DFF /* Call_Show_MusicFile */ = {
+			isa = PBXGroup;
+			children = (
+				04C4CBE423911DEA00509DFF /* call_show_music1.mp3 */,
+				04C4CBE523911DEA00509DFF /* call_show_music2.mp3 */,
+				04C4CBE623911DEA00509DFF /* call_show_music10.mp3 */,
+				04C4CBE723911DEA00509DFF /* call_show_music3.mp3 */,
+				04C4CBE823911DEA00509DFF /* call_show_music7.mp3 */,
+				04C4CBE923911DEA00509DFF /* call_show_music6.mp3 */,
+				04C4CBEA23911DEA00509DFF /* call_show_music4.mp3 */,
+				04C4CBEB23911DEA00509DFF /* call_show_music5.mp3 */,
+				04C4CBEC23911DEA00509DFF /* call_show_music8.mp3 */,
+				04C4CBED23911DEA00509DFF /* call_show_music9.mp3 */,
+			);
+			path = Call_Show_MusicFile;
 			sourceTree = "<group>";
 		};
 		04DF582D23712E590079669B /* Files */ = {
@@ -843,18 +881,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C4CBF323911DEA00509DFF /* call_show_music6.mp3 in Resources */,
+				04C4CBEF23911DEA00509DFF /* call_show_music2.mp3 in Resources */,
+				04C4CBF223911DEA00509DFF /* call_show_music7.mp3 in Resources */,
+				04C4CBEE23911DEA00509DFF /* call_show_music1.mp3 in Resources */,
 				048110F2238E622200806457 /* CSID_iamgeViewController.xib in Resources */,
+				04C4CBF023911DEA00509DFF /* call_show_music10.mp3 in Resources */,
 				04C7C90C238D078F00E72693 /* CSID_CollectRightSubView.xib in Resources */,
 				048B6F93238F79CD00B6BD75 /* CSID_LocalPhotoViewController.xib in Resources */,
 				042D417B238BAEFB0034DE84 /* CSID_NilDataTableViewCell.xib in Resources */,
 				049034D1238CDEA100C91F08 /* yinsi.html in Resources */,
 				049034D6238CDEA100C91F08 /* CSID_BuyVC.xib in Resources */,
 				043516AF235DAD8A00764962 /* Assets.xcassets in Resources */,
+				04C4CBF623911DEA00509DFF /* call_show_music8.mp3 in Resources */,
+				04C4CBF423911DEA00509DFF /* call_show_music4.mp3 in Resources */,
 				04C7C910238D295500E72693 /* CSID_ShowPreviewSubView.xib in Resources */,
+				04C4CBF723911DEA00509DFF /* call_show_music9.mp3 in Resources */,
 				04C4CBE22391044F00509DFF /* Call_Show_CommonMessageList.json in Resources */,
 				042B102F238E5C950021339F /* CSID_CallShowViewController.xib in Resources */,
 				049034D3238CDEA100C91F08 /* CSID_CallShowMe.xib in Resources */,
+				04C4CBF523911DEA00509DFF /* call_show_music5.mp3 in Resources */,
 				049034DA238CDEA100C91F08 /* server.html in Resources */,
+				04C4CBF123911DEA00509DFF /* call_show_music3.mp3 in Resources */,
 				049034D8238CDEA100C91F08 /* CSID_FeedbackVC.xib in Resources */,
 				042D4198238BAEFB0034DE84 /* RefreshTableView.bundle in Resources */,
 			);

@@ -97,7 +97,6 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
             self.setCallShow(imageUrlStr: imageUrl)
         }
         
-    
     }
     
     // 设置来电秀
@@ -331,6 +330,5 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
 
          }
     
-    
-    
+
 }
