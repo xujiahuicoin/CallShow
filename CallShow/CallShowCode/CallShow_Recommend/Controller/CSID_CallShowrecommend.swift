@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import BSImagePicker
+import Photos
 class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
 
     var callShowsRecommArrays: Array<CSID_CallShowListModel> = []
@@ -78,7 +79,86 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
             }
         }
         
+        // 选取照片
+        callShowRecommendView.hselectedPhotoBlock = { photo in
+            self.localphoto()
+        }
+        
+        callShowNewestView.hselectedPhotoBlock = { photo in
+            self.localphoto()
+        }
+        
+        // 设置来电秀
+        callShowRecommendView.hsetCallBlock = { imageUrl in
+            self.setCallShow(imageUrlStr: imageUrl)
+        }
+        
+        callShowNewestView.hsetCallBlock = { imageUrl in
+            self.setCallShow(imageUrlStr: imageUrl)
+        }
+        
     
+    }
+    
+    // 设置来电秀
+    func setCallShow(imageUrlStr:String){
+        let alertController = UIAlertController()
+        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+        let specifiedAction = UIAlertAction(title: "指定联系人设置", style: .default) { (action) in
+            let callshow:CSID_CallShowViewController = CSID_CallShowViewController.init()
+            //定义URL对象
+            let url = URL(string: imageUrlStr )
+            //从网络获取数据流
+            let data = try! Data(contentsOf: url!)
+            callshow.imageData = data
+            callshow.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(callshow, animated: true)
+        }
+        let allAction = UIAlertAction(title: "全部人设置", style: .default) { (action) in
+            
+            if !CSID_BuyTool().CSID_JudgeIsVipBool() {
+                //不是VIP 去购买
+                self.CSID_Pub_GoToBuyVIPvc()
+                return
+            }
+            
+            let alertController = UIAlertController.init(title: "确定要给全部联系人设置来电秀吗？", message: nil, preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+            let sureAction = UIAlertAction(title: "确定", style: .default) { (action) in
+                //定义URL对象
+                let url = URL(string: imageUrlStr )
+                //从网络获取数据流
+                let data = try! Data(contentsOf: url!)
+                CSID_CallShowContact.AllContactSettings(imageData: data)
+                self.CSID_showSuccessWithText(text: "来电秀设置成功")
+            }
+            alertController.addAction(sureAction)
+            alertController.addAction(cancelAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
+        alertController.addAction(specifiedAction)
+        alertController.addAction(allAction)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    // 本地图片
+    func localphoto(){
+        let vc = BSImagePickerViewController()
+                   vc.maxNumberOfSelections = 1
+                   self.bs_presentImagePickerController(vc, animated: true,
+                                                   select: { (asset: PHAsset) -> Void in
+                   }, deselect: { (asset: PHAsset) -> Void in
+                   }, cancel: { (assets: [PHAsset]) -> Void in
+                   }, finish: { (assets: [PHAsset]) -> Void in
+                       let selcecImage:UIImage = CSID_ZxhPHAssetToImageTool.PHAssetToImage(asset: assets[0])
+                       
+                       let photo = CSID_LocalPhotoViewController.init()
+                       photo.localPhotoData = selcecImage.pngData()
+                       self.navigationController?.pushViewController(photo, animated: true)
+                       
+
+                   }, completion: nil)
     }
     
     func call_show_ShowHeaderSettingwork( vaules : Bool) -> Void {
