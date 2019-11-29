@@ -268,7 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				042B1015238E3E4B0021339F /* CallShow_Contact */,
-				049034DB238CE1D500C91F08 /* In-appbuy */,
+				049034DB238CE1D500C91F08 /* appTool */,
 				04B0BB60238BAB8800DBFF12 /* CallShow_Recommend */,
 				04B0BB56238BAB8700DBFF12 /* CallShow_CallShowSite */,
 				049034C4238CDEA100C91F08 /* CallShow_Me */,
@@ -551,12 +551,14 @@
 			path = subVC;
 			sourceTree = "<group>";
 		};
-		049034DB238CE1D500C91F08 /* In-appbuy */ = {
+		049034DB238CE1D500C91F08 /* appTool */ = {
 			isa = PBXGroup;
 			children = (
 				049034F2238CF85F00C91F08 /* CSID_BuyTool.swift */,
+				044628F1238FB1670007EEA1 /* KeychainManager.h */,
+				044628F2238FB1670007EEA1 /* KeychainManager.m */,
 			);
-			path = "In-appbuy";
+			path = appTool;
 			sourceTree = "<group>";
 		};
 		0494ADD0235475EE00DEE0B2 = {
@@ -708,8 +710,6 @@
 				043911AE2355620700636064 /* CodeHeader.swift */,
 				04DF583723714ED00079669B /* EnumFileHeader.swift */,
 				04DF5853237271B20079669B /* func_Expantion.swift */,
-				044628F1238FB1670007EEA1 /* KeychainManager.h */,
-				044628F2238FB1670007EEA1 /* KeychainManager.m */,
 			);
 			path = Files;
 			sourceTree = "<group>";
