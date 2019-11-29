@@ -88,17 +88,7 @@
 		0494ADDD235475EE00DEE0B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494ADDC235475EE00DEE0B2 /* AppDelegate.swift */; };
 		04A130BF238F6499007B18CD /* CSID_LikeListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A130BE238F6499007B18CD /* CSID_LikeListVC.swift */; };
 		04A130C2238F65E0007B18CD /* CSID_Me_LikeListCollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A130C1238F65E0007B18CD /* CSID_Me_LikeListCollView.swift */; };
-		04B9ACC6238FE4ED009711E7 /* call_show_music1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04B9ACBC238FE4ED009711E7 /* call_show_music1.mp3 */; };
-		04B9ACC7238FE4ED009711E7 /* call_show_music2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04B9ACBD238FE4ED009711E7 /* call_show_music2.mp3 */; };
-		04B9ACC8238FE4ED009711E7 /* call_show_music10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04B9ACBE238FE4ED009711E7 /* call_show_music10.mp3 */; };
-		04B9ACC9238FE4ED009711E7 /* call_show_music3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04B9ACBF238FE4ED009711E7 /* call_show_music3.mp3 */; };
-		04B9ACCA238FE4ED009711E7 /* call_show_music7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04B9ACC0238FE4ED009711E7 /* call_show_music7.mp3 */; };
-		04B9ACCB238FE4ED009711E7 /* call_show_music6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04B9ACC1238FE4ED009711E7 /* call_show_music6.mp3 */; };
-		04B9ACCC238FE4ED009711E7 /* call_show_music4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04B9ACC2238FE4ED009711E7 /* call_show_music4.mp3 */; };
-		04B9ACCD238FE4ED009711E7 /* call_show_music5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04B9ACC3238FE4ED009711E7 /* call_show_music5.mp3 */; };
-		04B9ACCE238FE4ED009711E7 /* call_show_music8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04B9ACC4238FE4ED009711E7 /* call_show_music8.mp3 */; };
-		04B9ACCF238FE4ED009711E7 /* call_show_music9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04B9ACC5238FE4ED009711E7 /* call_show_music9.mp3 */; };
-		04C4CBDE2390F5A700509DFF /* Call_Show_CommonMessageList.json in Resources */ = {isa = PBXBuildFile; fileRef = 04C4CBDD2390F5A700509DFF /* Call_Show_CommonMessageList.json */; };
+		04C4CBE22391044F00509DFF /* Call_Show_CommonMessageList.json in Resources */ = {isa = PBXBuildFile; fileRef = 04C4CBE12391044F00509DFF /* Call_Show_CommonMessageList.json */; };
 		04C7C902238CBAFE00E72693 /* CallShowPortHeaderFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7C901238CBAFE00E72693 /* CallShowPortHeaderFile.swift */; };
 		04C7C904238CC95400E72693 /* CSID_CallShowListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7C903238CC95400E72693 /* CSID_CallShowListModel.swift */; };
 		04C7C906238CCDCD00E72693 /* CSID_CallShowListCommView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7C905238CCDCD00E72693 /* CSID_CallShowListCommView.swift */; };
@@ -226,18 +216,7 @@
 		0494ADFA235475F300DEE0B2 /* CallShowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallShowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A130BE238F6499007B18CD /* CSID_LikeListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_LikeListVC.swift; sourceTree = "<group>"; };
 		04A130C1238F65E0007B18CD /* CSID_Me_LikeListCollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_Me_LikeListCollView.swift; sourceTree = "<group>"; };
-		04B9ACBC238FE4ED009711E7 /* call_show_music1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call_show_music1.mp3; sourceTree = "<group>"; };
-		04B9ACBD238FE4ED009711E7 /* call_show_music2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call_show_music2.mp3; sourceTree = "<group>"; };
-		04B9ACBE238FE4ED009711E7 /* call_show_music10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call_show_music10.mp3; sourceTree = "<group>"; };
-		04B9ACBF238FE4ED009711E7 /* call_show_music3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call_show_music3.mp3; sourceTree = "<group>"; };
-		04B9ACC0238FE4ED009711E7 /* call_show_music7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call_show_music7.mp3; sourceTree = "<group>"; };
-		04B9ACC1238FE4ED009711E7 /* call_show_music6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call_show_music6.mp3; sourceTree = "<group>"; };
-		04B9ACC2238FE4ED009711E7 /* call_show_music4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call_show_music4.mp3; sourceTree = "<group>"; };
-		04B9ACC3238FE4ED009711E7 /* call_show_music5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call_show_music5.mp3; sourceTree = "<group>"; };
-		04B9ACC4238FE4ED009711E7 /* call_show_music8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call_show_music8.mp3; sourceTree = "<group>"; };
-		04B9ACC5238FE4ED009711E7 /* call_show_music9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call_show_music9.mp3; sourceTree = "<group>"; };
-		04C4CBDD2390F5A700509DFF /* Call_Show_CommonMessageList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Call_Show_CommonMessageList.json; sourceTree = "<group>"; };
-		04C4CBDF2390FB9900509DFF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		04C4CBE12391044F00509DFF /* Call_Show_CommonMessageList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Call_Show_CommonMessageList.json; sourceTree = "<group>"; };
 		04C7C901238CBAFE00E72693 /* CallShowPortHeaderFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallShowPortHeaderFile.swift; sourceTree = "<group>"; };
 		04C7C903238CC95400E72693 /* CSID_CallShowListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_CallShowListModel.swift; sourceTree = "<group>"; };
 		04C7C905238CCDCD00E72693 /* CSID_CallShowListCommView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_CallShowListCommView.swift; sourceTree = "<group>"; };
@@ -291,7 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				042B1015238E3E4B0021339F /* CallShow_Contact */,
-				049034DB238CE1D500C91F08 /* In-appbuy */,
+				049034DB238CE1D500C91F08 /* appTool */,
 				04B0BB60238BAB8800DBFF12 /* CallShow_Recommend */,
 				04B0BB56238BAB8700DBFF12 /* CallShow_CallShowSite */,
 				049034C4238CDEA100C91F08 /* CallShow_Me */,
@@ -384,9 +363,9 @@
 		042D412A238BAEFA0034DE84 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				04DF582D23712E590079669B /* Files */,
 				042D412B238BAEFA0034DE84 /* UIColorDarkMode.swift */,
 				042D412C238BAEFA0034DE84 /* CSID_BaseViewController.swift */,
+				04DF582D23712E590079669B /* Files */,
 				042D412D238BAEFA0034DE84 /* CSID_BaseNavigationController.swift */,
 				042D412E238BAEFA0034DE84 /* CSID_BaseTabBarController.swift */,
 			);
@@ -574,12 +553,14 @@
 			path = subVC;
 			sourceTree = "<group>";
 		};
-		049034DB238CE1D500C91F08 /* In-appbuy */ = {
+		049034DB238CE1D500C91F08 /* appTool */ = {
 			isa = PBXGroup;
 			children = (
 				049034F2238CF85F00C91F08 /* CSID_BuyTool.swift */,
+				044628F1238FB1670007EEA1 /* KeychainManager.h */,
+				044628F2238FB1670007EEA1 /* KeychainManager.m */,
 			);
-			path = "In-appbuy";
+			path = appTool;
 			sourceTree = "<group>";
 		};
 		0494ADD0235475EE00DEE0B2 = {
@@ -680,7 +661,6 @@
 		04B0BB60238BAB8800DBFF12 /* CallShow_Recommend */ = {
 			isa = PBXGroup;
 			children = (
-				04B9ACBB238FE4ED009711E7 /* Call_Show_MusicFile */,
 				04B0BB61238BAB8800DBFF12 /* Logic */,
 				04B0BB62238BAB8800DBFF12 /* Controller */,
 				04B0BB63238BAB8800DBFF12 /* Model */,
@@ -725,23 +705,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		04B9ACBB238FE4ED009711E7 /* Call_Show_MusicFile */ = {
-			isa = PBXGroup;
-			children = (
-				04B9ACBC238FE4ED009711E7 /* call_show_music1.mp3 */,
-				04B9ACBD238FE4ED009711E7 /* call_show_music2.mp3 */,
-				04B9ACBE238FE4ED009711E7 /* call_show_music10.mp3 */,
-				04B9ACBF238FE4ED009711E7 /* call_show_music3.mp3 */,
-				04B9ACC0238FE4ED009711E7 /* call_show_music7.mp3 */,
-				04B9ACC1238FE4ED009711E7 /* call_show_music6.mp3 */,
-				04B9ACC2238FE4ED009711E7 /* call_show_music4.mp3 */,
-				04B9ACC3238FE4ED009711E7 /* call_show_music5.mp3 */,
-				04B9ACC4238FE4ED009711E7 /* call_show_music8.mp3 */,
-				04B9ACC5238FE4ED009711E7 /* call_show_music9.mp3 */,
-			);
-			path = Call_Show_MusicFile;
-			sourceTree = "<group>";
-		};
 		04DF582D23712E590079669B /* Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -749,9 +712,7 @@
 				043911AE2355620700636064 /* CodeHeader.swift */,
 				04DF583723714ED00079669B /* EnumFileHeader.swift */,
 				04DF5853237271B20079669B /* func_Expantion.swift */,
-				044628F1238FB1670007EEA1 /* KeychainManager.h */,
-				044628F2238FB1670007EEA1 /* KeychainManager.m */,
-				04C4CBDD2390F5A700509DFF /* Call_Show_CommonMessageList.json */,
+				04C4CBE12391044F00509DFF /* Call_Show_CommonMessageList.json */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -770,7 +731,6 @@
 		A948936A9A85C3F959B800A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				04C4CBDF2390FB9900509DFF /* Foundation.framework */,
 				9F52B52DED5FE0F3B8F6A635 /* Pods_CallShow.framework */,
 			);
 			name = Frameworks;
@@ -883,29 +843,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04B9ACCE238FE4ED009711E7 /* call_show_music8.mp3 in Resources */,
-				04B9ACC8238FE4ED009711E7 /* call_show_music10.mp3 in Resources */,
-				04B9ACCB238FE4ED009711E7 /* call_show_music6.mp3 in Resources */,
-				04B9ACC7238FE4ED009711E7 /* call_show_music2.mp3 in Resources */,
 				048110F2238E622200806457 /* CSID_iamgeViewController.xib in Resources */,
 				04C7C90C238D078F00E72693 /* CSID_CollectRightSubView.xib in Resources */,
 				048B6F93238F79CD00B6BD75 /* CSID_LocalPhotoViewController.xib in Resources */,
 				042D417B238BAEFB0034DE84 /* CSID_NilDataTableViewCell.xib in Resources */,
 				049034D1238CDEA100C91F08 /* yinsi.html in Resources */,
 				049034D6238CDEA100C91F08 /* CSID_BuyVC.xib in Resources */,
-				04B9ACCD238FE4ED009711E7 /* call_show_music5.mp3 in Resources */,
 				043516AF235DAD8A00764962 /* Assets.xcassets in Resources */,
-				04B9ACCC238FE4ED009711E7 /* call_show_music4.mp3 in Resources */,
-				04B9ACC6238FE4ED009711E7 /* call_show_music1.mp3 in Resources */,
 				04C7C910238D295500E72693 /* CSID_ShowPreviewSubView.xib in Resources */,
+				04C4CBE22391044F00509DFF /* Call_Show_CommonMessageList.json in Resources */,
 				042B102F238E5C950021339F /* CSID_CallShowViewController.xib in Resources */,
 				049034D3238CDEA100C91F08 /* CSID_CallShowMe.xib in Resources */,
-				04B9ACC9238FE4ED009711E7 /* call_show_music3.mp3 in Resources */,
-				04B9ACCF238FE4ED009711E7 /* call_show_music9.mp3 in Resources */,
 				049034DA238CDEA100C91F08 /* server.html in Resources */,
-				04B9ACCA238FE4ED009711E7 /* call_show_music7.mp3 in Resources */,
 				049034D8238CDEA100C91F08 /* CSID_FeedbackVC.xib in Resources */,
-				04C4CBDE2390F5A700509DFF /* Call_Show_CommonMessageList.json in Resources */,
 				042D4198238BAEFB0034DE84 /* RefreshTableView.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

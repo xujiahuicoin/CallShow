@@ -8,8 +8,7 @@
 
 import UIKit
 import PKHUD
-import BSImagePicker
-import Photos
+
 typealias  recommendChangeblock = (_ changBool : Bool) -> Void
 
 class CSID_CallShowListCommView: CSID_CallShowBaseView,UICollectionViewDelegate,UICollectionViewDataSource{
@@ -18,14 +17,16 @@ class CSID_CallShowListCommView: CSID_CallShowBaseView,UICollectionViewDelegate,
     
     var listdataArr : NSArray = NSArray.init()
     var currentModel : CSID_CallShowListModel!
-var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
+    var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
     
     var zanUserType : NSString = "1"
     
+    var hselectedPhotoBlock:(_ selcted: String) -> Void = {_ in}
+    var hsetCallBlock:(_ imageUrl: String) -> Void = {_ in}
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        zanUserType = UserDefaults.standard.string(forKey: callshowzanType)! as NSString
+
+        zanUserType=UserDefaults.standard.string(forKey: callshowzanType)! as NSString
         
         addSubview(CSID_CallShow_RecommlistCollView)
         addSubview(call_show_RightView)
@@ -34,97 +35,33 @@ var callShowBlock: (_ imageUrlStr: String) -> Void = {_ in}
         call_show_RightView.call_show_rightToolsClickFinishBlockAction { (toolsButton, tooltag) in
             
             if tooltag == 0{/**点赞*/
-                
-                CSID_RequestManager.request(.post, url:callShowloveurl, params:["upType":self.zanUserType,"relationId":self.currentModel.relationId], success: {(resltData) in
+               
+                CSID_RequestManager.request(.post, url:callShowloveurl, params:["upType":self.currentModel.upType == 252212 ? self.zanUserType : self.currentModel.upType,"relationId":self.currentModel.relationId.count > 0 ? self.currentModel.relationId : self.currentModel.objectId], success: {(resltData) in
                 
                             NSLog("resltData = \(resltData)")
                             toolsButton.isSelected = !toolsButton.isSelected
-                        self.currentModel.haveUp = !(self.currentModel.haveUp ?? false)
+                    self.currentModel.haveUp = !(self.currentModel.haveUp)
                 
                         }) { (error) in
 
                     }
             }else if tooltag == 1{/**预览*/
                 
-                self.callShowBlock("")
-
+                self.callShowBlock("插页广告")
+                
                     self.call_show_PreviewView.isHidden=false
                     self.call_show_RightView.isHidden=true
                     if self.recommendChangeblock != nil {
                         self.recommendChangeblock!(true)
                     }
-
+                
             }else if tooltag == 2{/**设置来电秀*/
-                
-                 self.callShowBlock("")
-                
                 let imageUrlStr:String = self.currentModel.imageUrl.count > 0 ? self.currentModel.imageUrl : self.currentModel.imgUrl
-                let alertController = UIAlertController()
-                let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
-                let specifiedAction = UIAlertAction(title: "指定联系人设置", style: .default) { (action) in
-                    let callshow:CSID_CallShowViewController = CSID_CallShowViewController.init()
-                    //定义URL对象
-                    let url = URL(string: imageUrlStr )
-                    //从网络获取数据流
-                    let data = try! Data(contentsOf: url!)
-                    callshow.imageData = data
-                    callshow.hidesBottomBarWhenPushed = true
-                    self.ParentController(viewself: self).navigationController?.pushViewController(callshow, animated: true)
-                }
-                let allAction = UIAlertAction(title: "全部人设置", style: .default) { (action) in
-                    let alertController = UIAlertController.init(title: "确定要给全部联系人设置来电秀吗？", message: nil, preferredStyle: .alert)
-                    let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
-                    let sureAction = UIAlertAction(title: "确定", style: .default) { (action) in
-                        //定义URL对象
-                        let url = URL(string: imageUrlStr )
-                        //从网络获取数据流
-                        let data = try! Data(contentsOf: url!)
-                        CSID_CallShowContact.AllContactSettings(imageData: data)
-                        HUD.flash(.labeledSuccess(title: nil, subtitle: "来电秀设置成功"), onView: self, delay: 1.0, completion: nil)
-                    }
-                    alertController.addAction(sureAction)
-                    alertController.addAction(cancelAction)
-                    self.ParentController(viewself: self).present(alertController, animated: true, completion: nil)
-                }
-                alertController.addAction(specifiedAction)
-                alertController.addAction(allAction)
-                alertController.addAction(cancelAction)
-                self.ParentController(viewself: self).present(alertController, animated: true, completion: nil)
+                
+                 self.callShowBlock("插页广告")
+                self.hsetCallBlock(imageUrlStr)
             }else if tooltag == 3{/**打开相册*/
-                
-//                self.callShowBlock("")
-//
-//                let photo = CSID_LocalPhotoViewController.init()
-//                photo.hidesBottomBarWhenPushed = true
-//                self.ParentController(viewself: self).navigationController?.pushViewController(photo, animated: true)
-                
-                
-                let vc = BSImagePickerViewController()
-                vc.maxNumberOfSelections = 1
-                
-                self.ParentController(viewself: self).bs_presentImagePickerController(vc, animated: true,
-                                                select: { (asset: PHAsset) -> Void in
-                                                    
-                                                    
-                                                    // User selected an asset.
-                                                    // Do something with it, start upload perhaps?
-                }, deselect: { (asset: PHAsset) -> Void in
-                    // User deselected an assets.
-                    // Do something, cancel upload?
-                }, cancel: { (assets: [PHAsset]) -> Void in
-                    // User cancelled. And this where the assets currently selected.
-                }, finish: { (assets: [PHAsset]) -> Void in
-                    // User finished with these assets
-                    let selcecImage:UIImage = CSID_ZxhPHAssetToImageTool.PHAssetToImage(asset: assets[0])
-                    
-                    let photo = CSID_LocalPhotoViewController.init()
-                    photo.localPhotoData = selcecImage.pngData()
-                    self.ParentController(viewself: self).navigationController?.pushViewController(photo, animated: true)
-                    
-
-                }, completion: nil)
-                
-                
+                self.hselectedPhotoBlock("打开相册")
             }
             
         }

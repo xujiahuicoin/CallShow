@@ -92,6 +92,14 @@ class CSID_CallShowSiteHeaderDetailViewController: CSID_BaseViewController {
             self.navigationController?.pushViewController(callshow)
         }
         let allAction = UIAlertAction(title: "全部人设置", style: .default) { (action) in
+            
+            if !self.CSID_Pub_isVip() {
+                
+                //不是VIP 去购买
+                self.CSID_Pub_GoToBuyVIPvc()
+                return
+            }
+            
             let alertController = UIAlertController.init(title: "确定要给全部联系人设置来电秀吗？", message: nil, preferredStyle: .alert)
             let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
             let sureAction = UIAlertAction(title: "确定", style: .default) { (action) in

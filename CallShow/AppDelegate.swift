@@ -20,8 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let path = Bundle.main.path(forResource: "Call_Show_CommonMessageList", ofType: "json")
         let jsonData=NSData(contentsOfFile: path!)
         let jsonResult = try! JSONSerialization.jsonObject(with: jsonData! as Data,                                                     options: JSONSerialization.ReadingOptions.mutableContainers)
-        let responDict : NSDictionary = jsonResult as! NSDictionary
-        
+        let responDict : NSDictionary = jsonResult as! NSDictionary        
         self.call_show_StartSaveCommonParamsWork(responDict: responDict["data"] as! NSDictionary)
         self.call_showCommonParamsReuestNetwork()
         

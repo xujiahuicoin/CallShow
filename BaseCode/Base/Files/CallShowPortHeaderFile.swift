@@ -13,9 +13,7 @@ import Foundation
 ///首页推荐、最新列表
 let defaultPageSize = "20"
 
-//====所有的===
 let commonAllResultDic = "commonAllResultDictionary"
-
 let commonDataDic = "commonDataDictionary"
 let callshowzanType = "callshowzanType"
 let homezanType = "homezanType"
