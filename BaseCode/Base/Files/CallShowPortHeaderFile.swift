@@ -19,7 +19,12 @@ let callshowzanType = "callshowzanType"
 let homezanType = "homezanType"
 let savenewestCategoryId = "savenewestCategoryId"
 let saverecommedCategoryId = "saverecommedCategoryId"
-
+/**通知*/
+let playClickStatusNotification = "playclickStatusNotification"
+let playMusicShowNotification = "playMusicShowNotification"
+/**play状态和popView显示*/
+let playClickStatusVaule = "playClickStatusVaule"
+let playMusicShowVaule = "playClickStatusVaule"
 
 let callShowRecommList = "http://api.wallpaper.taozantek.com/jp/rec/image/list.do"
 

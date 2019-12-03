@@ -84,7 +84,7 @@
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ef1-8p-DP4">
                     <rect key="frame" x="10" y="210" width="85" height="30"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmh-JN-Vp5">
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmh-JN-Vp5">
                             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="Ir6-Xu-tsv"/>
@@ -96,29 +96,43 @@
                                 <action selector="call_show_playpasueButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="vSt-HC-qTR"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqG-Yp-BdM">
-                            <rect key="frame" x="30" y="0.0" width="55" height="30"/>
+                        <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqG-Yp-BdM">
+                            <rect key="frame" x="55" y="0.0" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="dd9-vJ-NhC"/>
+                                <constraint firstAttribute="width" constant="30" id="fvq-iU-Jr9"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                            <state key="normal" title="下一首"/>
+                            <state key="normal" image="call_show_next"/>
                             <connections>
                                 <action selector="call_show_nextMusicButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="fvA-NS-yYc"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CdH-6E-UL9">
+                            <rect key="frame" x="30" y="0.0" width="25" height="30"/>
+                            <state key="normal" image="call_show_up"/>
+                            <connections>
+                                <action selector="call_show_upMusicButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="r1T-3a-w24"/>
                             </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.92941176469999998" green="0.71372549019999998" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="bqG-Yp-BdM" secondAttribute="trailing" id="9qa-WG-7pK"/>
+                        <constraint firstAttribute="bottom" secondItem="bqG-Yp-BdM" secondAttribute="bottom" id="Brd-eb-8X7"/>
                         <constraint firstItem="Gmh-JN-Vp5" firstAttribute="leading" secondItem="Ef1-8p-DP4" secondAttribute="leading" id="CoM-k4-Qdh"/>
                         <constraint firstAttribute="bottom" secondItem="Gmh-JN-Vp5" secondAttribute="bottom" id="DEh-vn-w1L"/>
-                        <constraint firstAttribute="bottom" secondItem="bqG-Yp-BdM" secondAttribute="bottom" id="NaT-B1-SYU"/>
                         <constraint firstAttribute="width" constant="85" id="PSc-Zk-Dja"/>
-                        <constraint firstItem="bqG-Yp-BdM" firstAttribute="leading" secondItem="Gmh-JN-Vp5" secondAttribute="trailing" id="TrQ-CR-rA6"/>
+                        <constraint firstItem="CdH-6E-UL9" firstAttribute="top" secondItem="Ef1-8p-DP4" secondAttribute="top" id="PUG-kJ-8n4"/>
+                        <constraint firstItem="bqG-Yp-BdM" firstAttribute="top" secondItem="Ef1-8p-DP4" secondAttribute="top" id="R0K-bo-cov"/>
+                        <constraint firstItem="CdH-6E-UL9" firstAttribute="leading" secondItem="Gmh-JN-Vp5" secondAttribute="trailing" id="RPp-d3-3yi"/>
+                        <constraint firstAttribute="bottom" secondItem="CdH-6E-UL9" secondAttribute="bottom" id="THc-K9-XAS"/>
                         <constraint firstAttribute="height" constant="30" id="XJ0-c9-uSF"/>
                         <constraint firstItem="Gmh-JN-Vp5" firstAttribute="top" secondItem="Ef1-8p-DP4" secondAttribute="top" id="YFo-eq-Y4m"/>
-                        <constraint firstAttribute="trailing" secondItem="bqG-Yp-BdM" secondAttribute="trailing" id="aSe-pr-oLE"/>
-                        <constraint firstItem="bqG-Yp-BdM" firstAttribute="top" secondItem="Ef1-8p-DP4" secondAttribute="top" id="vRn-x3-8Bk"/>
+                        <constraint firstItem="bqG-Yp-BdM" firstAttribute="leading" secondItem="CdH-6E-UL9" secondAttribute="trailing" id="Z4w-TX-hm0"/>
                     </constraints>
                 </view>
-                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLs-Mp-aI7">
+                <button hidden="YES" opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLs-Mp-aI7">
                     <rect key="frame" x="10" y="255" width="85" height="30"/>
                     <color key="backgroundColor" red="0.92941176470588238" green="0.71372549019607845" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -160,13 +174,14 @@
             <connections>
                 <outlet property="call_show_TakePhotoButton" destination="6go-Xr-yDb" id="cjJ-jt-sdF"/>
                 <outlet property="call_show_loveButton" destination="ofr-FT-QVo" id="BtX-lH-pSP"/>
+                <outlet property="call_show_musci_upButton" destination="CdH-6E-UL9" id="kpV-H1-FWV"/>
                 <outlet property="call_show_musicPlayButton" destination="Gmh-JN-Vp5" id="3cY-K0-qq7"/>
                 <outlet property="call_show_musicPopButton" destination="q1h-BK-7kW" id="ZUb-9P-sFn"/>
                 <outlet property="call_show_music_nextButton" destination="bqG-Yp-BdM" id="n7A-bQ-fko"/>
                 <outlet property="call_show_nextMusicView" destination="Ef1-8p-DP4" id="5R1-s4-WHU"/>
                 <outlet property="call_show_settingMusicButton" destination="ZLs-Mp-aI7" id="JaY-TO-PgN"/>
             </connections>
-            <point key="canvasLocation" x="318.84057971014494" y="-78.013392857142847"/>
+            <point key="canvasLocation" x="67" y="-97"/>
         </view>
     </objects>
     <resources>
@@ -174,9 +189,11 @@
         <image name="call_show_eyelook" width="30" height="18"/>
         <image name="call_show_love" width="24" height="22"/>
         <image name="call_show_music" width="42" height="42"/>
+        <image name="call_show_next" width="10" height="10"/>
         <image name="call_show_nolove" width="24" height="22"/>
-        <image name="call_show_paly" width="20" height="20"/>
+        <image name="call_show_paly" width="10" height="10"/>
         <image name="call_show_pause" width="20" height="20"/>
         <image name="call_show_takePhoto" width="42" height="42"/>
+        <image name="call_show_up" width="10" height="10"/>
     </resources>
 </document>

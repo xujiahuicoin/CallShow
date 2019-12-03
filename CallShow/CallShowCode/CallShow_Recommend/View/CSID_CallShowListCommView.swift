@@ -32,6 +32,10 @@ class CSID_CallShowListCommView: CSID_CallShowBaseView,UICollectionViewDelegate,
         addSubview(call_show_RightView)
         addSubview(call_show_PreviewView)
         
+    NotificationCenter.default.addObserver(self,selector:#selector(changeRightPlayStatusButtonAction(notification:)), name:NSNotification.Name(rawValue: playClickStatusNotification), object: nil)
+        
+    NotificationCenter.default.addObserver(self,selector:#selector(changeRightPlayMusicViewShowAction(notification:)), name:NSNotification.Name(rawValue: playMusicShowNotification), object: nil)
+                
         call_show_RightView.call_show_rightToolsClickFinishBlockAction { (toolsButton, tooltag) in
             
             if tooltag == 0{/**点赞*/
@@ -76,7 +80,25 @@ class CSID_CallShowListCommView: CSID_CallShowBaseView,UICollectionViewDelegate,
         }
         
     }
-    
+    deinit {
+         NotificationCenter.default.removeObserver(self)
+    }
+    @objc func changeRightPlayStatusButtonAction(notification:NSNotification){
+        
+        UserDefaults.standard.set((notification.userInfo!["playPauseButton"] as? Bool)!, forKey:playClickStatusVaule)
+        
+        call_show_RightView.call_show_musicPlayButton.isSelected =  (notification.userInfo!["playPauseButton"] as? Bool)!
+
+    }
+    @objc func changeRightPlayMusicViewShowAction(notification:NSNotification){
+        
+        let showMusicViewVaule : Bool = (notification.userInfo!["playmusicShowStatus"] as? Bool)!
+        
+        UserDefaults.standard.set(showMusicViewVaule, forKey:playMusicShowVaule)
+        call_show_RightView.call_show_settingMusicButton.isHidden = !showMusicViewVaule
+        call_show_RightView.call_show_nextMusicView.isHidden = !showMusicViewVaule
+        
+    }
     lazy var call_show_RightView: CSID_CollectRightSubView = {
         () -> CSID_CollectRightSubView in
         
@@ -84,8 +106,18 @@ class CSID_CallShowListCommView: CSID_CallShowBaseView,UICollectionViewDelegate,
         call_show_RightView?.frame = CGRect(x:CSID_WidthScreen-175, y:(CSID_heightScreen-305)/2, width:175, height:305)
         AddRadius((call_show_RightView?.call_show_nextMusicView!)!, rabF: 5)
         AddRadius((call_show_RightView?.call_show_settingMusicButton!)!, rabF: 5)
-               
         
+                if UserDefaults.standard.bool(forKey:playClickStatusVaule) == true {//暂停的
+                    call_show_RightView?.call_show_musicPlayButton.isSelected  = true
+                }
+                if UserDefaults.standard.bool(forKey:playMusicShowVaule) == true {//popView
+
+                    call_show_RightView?.call_show_musicPopButton.isSelected = true
+                    call_show_RightView?.call_show_settingMusicButton.isHidden = false
+                    call_show_RightView?.call_show_nextMusicView.isHidden = false
+                    
+                }
+  
         return call_show_RightView!
     }()
     
@@ -170,7 +202,7 @@ class CSID_CallShowListCommView: CSID_CallShowBaseView,UICollectionViewDelegate,
         }
 
     }
-        
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

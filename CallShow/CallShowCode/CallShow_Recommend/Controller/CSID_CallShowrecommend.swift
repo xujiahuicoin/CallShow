@@ -26,10 +26,11 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
 
         self.navigationController?.navigationBar.isHidden = false
     }
-
     override func viewDidLoad() {
 
         super.viewDidLoad()
+        let appDelegate = (UIApplication.shared.delegate) as? AppDelegate
+        appDelegate?.avPlayer.play()
         
         self.call_showRecommandListNetwork()
         self.call_showNewestListNetwork()
@@ -42,8 +43,7 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
         call_ShowHeaderView.addSubview(recommBotton)
         call_ShowHeaderView.addSubview(newestBotton)
         call_ShowHeaderView.addSubview(call_showMiddleLine)
-
-                   
+        
         callShowRecommendView.recommendChangeblock = { (boolVaule) in
     
             self.call_show_ShowHeaderSettingwork(vaules: boolVaule)
@@ -52,8 +52,6 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
          
             self.call_show_ShowHeaderSettingwork(vaules: boolVaule)
         }
-        
-        
         //设置来电秀 block
         callShowRecommendView.callShowBlock = {imageUrlStr in
             
@@ -98,7 +96,6 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
         }
         
     }
-    
     // 设置来电秀
     func setCallShow(imageUrlStr:String){
         let alertController = UIAlertController()
@@ -193,6 +190,13 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
            if self.callShowsRecommArrays.count<=0 {
                   self.call_showRecommandListNetwork()
             }
+    callShowRecommendView.call_show_RightView.call_show_musicPlayButton.isSelected = callShowNewestView.call_show_RightView.call_show_musicPlayButton.isSelected
+     
+    callShowRecommendView.call_show_RightView.call_show_settingMusicButton.isHidden = callShowNewestView.call_show_RightView.call_show_settingMusicButton.isHidden
+        
+    callShowRecommendView.call_show_RightView.call_show_nextMusicView.isHidden = callShowNewestView.call_show_RightView.call_show_settingMusicButton.isHidden
+          
+    callShowRecommendView.call_show_RightView.call_show_musicPopButton.isSelected = callShowNewestView.call_show_RightView.call_show_musicPopButton.isSelected
      }
     lazy var newestBotton : UIButton = {
         
@@ -206,7 +210,7 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
         
             return newestBotton
     }()
-    //推荐
+    //最新
     @objc func newestBottonViewAction(sender:UIButton) -> Void {
         
         sender.isSelected=true
@@ -216,6 +220,13 @@ class CSID_CallShowrecommend: CSID_BaseViewController,UIScrollViewDelegate{
         if self.callShowNewestArrays.count<=0 {
             self.call_showNewestListNetwork()
         }
+    callShowNewestView.call_show_RightView.call_show_musicPlayButton.isSelected = callShowRecommendView.call_show_RightView.call_show_musicPlayButton.isSelected
+    callShowNewestView.call_show_RightView.call_show_settingMusicButton.isHidden = callShowRecommendView.call_show_RightView.call_show_settingMusicButton.isHidden
+            
+    callShowNewestView.call_show_RightView.call_show_nextMusicView.isHidden = callShowRecommendView.call_show_RightView.call_show_settingMusicButton.isHidden
+        
+    callShowNewestView.call_show_RightView.call_show_musicPopButton.isSelected = callShowRecommendView.call_show_RightView.call_show_musicPopButton.isSelected
+        
      }
     lazy var call_showMiddleLine : UIView = {
         

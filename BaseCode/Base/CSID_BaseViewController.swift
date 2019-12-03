@@ -10,6 +10,7 @@ import UIKit
 import NVActivityIndicatorView
 import PKHUD
 import GoogleMobileAds
+
 class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivityIndicatorViewable,GADInterstitialDelegate,GADBannerViewDelegate,GADUnifiedNativeAdLoaderDelegate, GADVideoControllerDelegate,GADRewardBasedVideoAdDelegate {
     
     
@@ -57,10 +58,9 @@ class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivi
             //创建广告
             self.creatADSaction()
         }
-        
-        // Do any additional setup after loading the view.
-    }
     
+    }
+        
     func CSID_UIViewCollectEvent(eventObject: ViewEventObject) {
         
     }
@@ -257,7 +257,6 @@ class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivi
         
       return CSID_BuyTool().CSID_JudgeIsVipBool()
     }
-    ///判断
     
 }
 

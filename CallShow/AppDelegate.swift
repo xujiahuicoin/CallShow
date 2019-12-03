@@ -7,6 +7,7 @@
 
 import UIKit
 import IQKeyboardManagerSwift
+import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         /**默认保存---,请求后再保存*/
-    
+        UserDefaults.standard.set(false, forKey:playMusicShowVaule)
+        UserDefaults.standard.set(false, forKey:playClickStatusVaule)
+        
         let path = Bundle.main.path(forResource: "Call_Show_CommonMessageList", ofType: "json")
         let jsonData=NSData(contentsOfFile: path!)
         let jsonResult = try! JSONSerialization.jsonObject(with: jsonData! as Data,                                                     options: JSONSerialization.ReadingOptions.mutableContainers)
@@ -77,5 +80,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func CSID_getFreeTime(){
         CSID_BuyTool().CSID_Pub_GetFreeTimeSet()
     }
+    
+    lazy var avPlayer:AVAudioPlayer = {
+        
+        var avPlayer = AVAudioPlayer.init()
+        
+        let file = Bundle.main.path(forResource: ("call_show_music1" ), ofType: "mp3")
+        let url = NSURL(fileURLWithPath: file!)
+        do{
+            avPlayer = try AVAudioPlayer(contentsOf: url as URL)
+            avPlayer.numberOfLoops = -1
+            avPlayer.prepareToPlay()
+            
+        }catch{
+            print("mp3 error")
+        }
+        
+        return avPlayer
+    }()
     
 }
