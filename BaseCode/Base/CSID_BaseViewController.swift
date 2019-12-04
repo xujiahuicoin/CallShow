@@ -222,6 +222,7 @@ class CSID_BaseViewController: UIViewController,CSID_ViewEventsDelegate,NVActivi
     @objc func doStarInterstitial() {
         
         //如果不是VIP了 进行插页
+
         if !(CSID_BuyTool().CSID_JudgeIsVipBool()) {
             
             if self.interstitial == nil {

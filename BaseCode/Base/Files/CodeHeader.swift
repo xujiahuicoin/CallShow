@@ -14,17 +14,7 @@ import SCLAlertView
 
 //-----------------广告ID-------------------
 //-------广告Key---------
-////正式
-//let BaseADAPPID  = "ca-app-pub-6864430072527422~7346562236"
-////banner横幅
-//let BannerADID = "ca-app-pub-6864430072527422/1553473218"
-////原生广告
-//let NomalADID = "ca-app-pub-6864430072527422/6379613851"
-////插屏广告
-//let InteredADID = "ca-app-pub-6864430072527422/2776761834"
-////激励广告
-//let GULIADID = "ca-app-pub-6864430072527422/5514605819"
-
+#if DEBUG
 //测试Key----------------
 let BaseADAPPID = "ca-app-pub-3940256099942544~1458002511"
 //banner
@@ -35,6 +25,18 @@ let InteredADID = "ca-app-pub-3940256099942544/4411468910"
 let NomalADID = "ca-app-pub-3940256099942544/3986624511"
 //激励广告
 let GULIADID = "ca-app-pub-3940256099942544/1712485313"
+#else
+////正式
+let BaseADAPPID  = "ca-app-pub-6864430072527422~7346562236"
+//banner横幅
+let BannerADID = "ca-app-pub-6864430072527422/1553473218"
+//原生广告
+let NomalADID = "ca-app-pub-6864430072527422/6379613851"
+//插屏广告
+let InteredADID = "ca-app-pub-6864430072527422/2776761834"
+//激励广告
+let GULIADID = "ca-app-pub-6864430072527422/5514605819"
+#endif
 
 /////////////////////////////////////////////////////////////////////
 let CSID_goBuyVip = "CSID_goBuyVip"

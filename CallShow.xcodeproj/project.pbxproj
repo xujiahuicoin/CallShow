@@ -253,10 +253,8 @@
 		04C7C929238E16A600E72693 /* CSID_SiteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSID_SiteModel.swift; sourceTree = "<group>"; };
 		04DF583723714ED00079669B /* EnumFileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumFileHeader.swift; sourceTree = "<group>"; };
 		04DF5853237271B20079669B /* func_Expantion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = func_Expantion.swift; sourceTree = "<group>"; };
-		5A7E1DCF7E9F8317DC87C391 /* Pods-ChangeCoin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChangeCoin.debug.xcconfig"; path = "Target Support Files/Pods-ChangeCoin/Pods-ChangeCoin.debug.xcconfig"; sourceTree = "<group>"; };
 		61157524FF7C2CF97A730CBB /* Pods-CallShow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CallShow.release.xcconfig"; path = "Target Support Files/Pods-CallShow/Pods-CallShow.release.xcconfig"; sourceTree = "<group>"; };
 		9F52B52DED5FE0F3B8F6A635 /* Pods_CallShow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CallShow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA567C273F406D64EFE47B14 /* Pods-ChangeCoin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChangeCoin.release.xcconfig"; path = "Target Support Files/Pods-ChangeCoin/Pods-ChangeCoin.release.xcconfig"; sourceTree = "<group>"; };
 		FCAD1A10C6E52F2507299BAD /* Pods-CallShow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CallShow.debug.xcconfig"; path = "Target Support Files/Pods-CallShow/Pods-CallShow.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -758,8 +756,6 @@
 		31E5291EABFD13E956531D32 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5A7E1DCF7E9F8317DC87C391 /* Pods-ChangeCoin.debug.xcconfig */,
-				CA567C273F406D64EFE47B14 /* Pods-ChangeCoin.release.xcconfig */,
 				FCAD1A10C6E52F2507299BAD /* Pods-CallShow.debug.xcconfig */,
 				61157524FF7C2CF97A730CBB /* Pods-CallShow.release.xcconfig */,
 			);
@@ -1257,6 +1253,7 @@
 					"$(PROJECT_DIR)/ClassCode/Extension",
 					"$(PROJECT_DIR)/Class/Extension",
 				);
+				GADApplicationIdentifier = "ca-app-pub-3940256099942544~1458002511";
 				INFOPLIST_FILE = "$(SRCROOT)/CallShow/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1291,6 +1288,7 @@
 					"$(PROJECT_DIR)/ClassCode/Extension",
 					"$(PROJECT_DIR)/Class/Extension",
 				);
+				GADApplicationIdentifier = "ca-app-pub-6864430072527422~7346562236";
 				INFOPLIST_FILE = "$(SRCROOT)/CallShow/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
